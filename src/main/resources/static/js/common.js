@@ -8,7 +8,12 @@ function htmlToNode(html) {
 function LeftRightInput(type, title, name, options) {
     let html;
     let node;
+    let self;
     options = options === undefined ? {} : options;
+
+    function getName() {
+        return name;
+    }
     
     function getHtml() {
         if (html === undefined) {
@@ -35,20 +40,40 @@ function LeftRightInput(type, title, name, options) {
         if (node === undefined) {
             node = htmlToNode(getHtml());
         }
+        node.self = self;
         callback && callback(node);
         return node;
     }
-    
-    return {
-        getHtml: getHtml,
-        getNode: getNode
+
+    function check() {
+        return true;
     }
+
+    function getValue() {
+        return getNode().querySelector(`input[name="${name}"]`).value;
+    }
+    
+    self = {
+        getName: getName,
+        options: options,
+        getHtml: getHtml,
+        getNode: getNode,
+        check: check,
+        getValue: getValue
+    }
+
+    return self;
 }
 
 function BinaryRadio(title, label1, label0, name, value1, value0, options) {
     let html;
     let node;
+    let self;
     options = options === undefined ? {} : options;
+
+    function getName() {
+        return name;
+    }
     
     function getHtml() {
         if (html === undefined) {
@@ -106,20 +131,45 @@ function BinaryRadio(title, label1, label0, name, value1, value0, options) {
                 });
             }
         }
+        node.self = self;
         callback && callback(node);
         return node;
     }
 
-    return {
-        getHtml: getHtml,
-        getNode: getNode
+    function check() {
+        return true;
     }
+
+    function getValue() {
+        const inputArray = getNode().querySelectorAll(`input[name="${name}"]`);
+        for (let i = 0; i < inputArray.length; i++) {
+            if (inputArray[i].checked) {
+                return inputArray[i].value;
+            }
+        }
+        return null;
+    }
+
+    self = {
+        getName: getName,
+        options: options,
+        getHtml: getHtml,
+        getNode: getNode,
+        check: check,
+        getValue: getValue
+    }
+    return self;
 }
 
 function DropdownSelect(title, name, labelArr, valueArr, options) {
     let html;
     let node;
+    let self;
     options = options === undefined ? {} : options;
+
+    function getName() {
+        return name;
+    }
     
     function getHtml() {
         if (html === undefined) {
@@ -193,20 +243,53 @@ function DropdownSelect(title, name, labelArr, valueArr, options) {
                 node.querySelector('select').addEventListener('change', showSelectOtherInput);
             }
         }
+        node.self = self;
         callback && callback(node);
         return node;
     }
 
-    return {
-        getHtml: getHtml,
-        getNode: getNode
+    function check() {
+        return true;
     }
+
+    function getValue() {
+        const otherInput = getNode().querySelector(`input[name="${name}_other"]`);
+        if (options.otherLabel !== undefined && otherInput !== null && otherInput.required) {
+            return otherInput.value;
+        }
+        const optionArray = getNode().querySelectorAll(`select[name="${name}"] > option[value]`);
+        let value = null;
+        for (let i = 0; i < optionArray.length; i++) {
+            if (optionArray[i].selected) {
+                value = optionArray[i].value;
+            }
+        }
+        if (value !== null && /^[0-9]+$/g.test(value)) {
+            value = parseInt(value);
+        }
+        return value;
+    }
+
+    self = {
+        getName: getName,
+        options: options,
+        getHtml: getHtml,
+        getNode: getNode,
+        check: check,
+        getValue: getValue
+    }
+    return self;
 }
 
 function MultiCheckbox(title, name, labelArr, valueArr, options) {
     let html;
     let node;
+    let self;
     options = options === undefined ? {} : options;
+
+    function getName() {
+        return name;
+    }
     
     function getHtml() {
         if (html === undefined) {
@@ -252,33 +335,47 @@ function MultiCheckbox(title, name, labelArr, valueArr, options) {
         if (node === undefined) {
             node = htmlToNode(getHtml());
         }
+        node.self = self;
         callback && callback(node);
         return node;
     }
 
-    return {
-        getHtml: getHtml,
-        getNode: getNode
+    function check() {
+        if (!options.required) {
+            return true;
+        }
+        const inputArray = getNode().querySelectorAll(`input[name="${name}"]`);
+        for (let i = 0; i < inputArray.length; i++) {
+            if (inputArray[i].checked) {
+                return true;
+            }
+        }
+        return null;
     }
+
+    function getValue() {
+        const values = [];
+        getNode().querySelectorAll(`input[name="${name}"]`).forEach((input) => {
+            values.push(Number(input.checked));
+        });
+        return values.join('');
+    }
+
+    self = {
+        getName: getName,
+        options: options,
+        getHtml: getHtml,
+        getNode: getNode,
+        check: check,
+        getValue: getValue
+    }
+    return self;
 }
 // endregion
 
 // region 表单验证的函数
 function phoneNumberCheck(num) {
     return /^1[0-9]{10}$/g.test(num);
-}
-
-function selectOtherCheck(form, name) {
-    const otherName = `${name}_other`;
-    return form[otherName].required ? form[otherName].value : form[name].value;
-}
-
-function multiCheckboxCheck(form, name) {
-    const result = [];
-    form[name].forEach((input) => {
-        result.push(Number(input.checked));
-    });
-    return result.join('');
 }
 
 function positiveFloatCheck(num) {

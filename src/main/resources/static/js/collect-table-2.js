@@ -1,97 +1,171 @@
 (() => {
     'use strict';
 
-    // 蒙特利尔认知评估量表
-    const MoCAForm = document.querySelector('form[name="cognitive-function"] > .MoCA');
-    const MoCAChildren = [
+    // 生活方式
+    const lifeModeForm = document.querySelector('form[name="general-info"] > .life-mode');
+    const lifeModeChildren = [
+        DropdownSelect(
+            '您的睡眠情况是',
+            'sleep',
+            ['良好', '一般', '较差'],
+            ['0', '1', '2']
+        ),
+        DropdownSelect(
+            '您每天的睡眠（午间和夜间）时间',
+            'sleep_time_day',
+            ['小于4小时', '4-6小时', '6-8小时', '大于8小时'],
+            ['0', '1', '2', '3']
+        ),
         MultiCheckbox(
-            '视空间与执行功能',
-            'space-function',
-            ['连线：1甲2乙3丙4丁5戊', '复制立方体', '画钟表：轮廓', '画钟表：数字', '画钟表：指针'],
-            ['sequence-line', 'copy-cube', 'clock-outline', 'clock-number', 'clock-pointer']
-        ).getNode(),
+            '您的饮食口味是（可多选）',
+            'diet',
+            ['清淡', '偏油', '偏咸', '偏甜', '偏辣'],
+            ['0', '1', '2', '3', '4'],
+            {required: true}
+        ),
         MultiCheckbox(
-            '命名',
-            'name',
-            ['1', '2', '3'],
-            ['lion', 'rhinoceros', 'camel']
-        ).getNode(),
+            '您平时除主食（米饭、面等）外，还经常吃下面哪种食物：（可多选）',
+            'food_extra',
+            ['肉类', '蔬菜类', '牛奶、豆制品', '水果', '坚果'],
+            ['0', '1', '2', '3', '4'],
+            {otherLabel: '其他食物', required: true}
+        ),
+        DropdownSelect(
+            '您常吃新鲜的肉类、蔬菜、水果吗？',
+            'fresh_food',
+            ['经常', '很少', '不确定'],
+            ['0', '1', '2']
+        ),
+        BinaryRadio('您经常吃腊肉、腊肠、泡菜、咸菜吗？', '是', '否', 'preserved_food', '1', '0'),
+        BinaryRadio('您经常吃维生素或其他营养素吗？', '是', '否', 'nutrient', '1', '0'),
+        BinaryRadio('您是否吸烟', '是', '否', 'smoke', '1', '0', {controlComponent: '#smoke_rate_box #smoke_year_box #smoke_day_box'}),
+        DropdownSelect(
+            '吸烟频率',
+            'smoke_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'smoke_rate_box', hidden: true}
+        ),
+        LeftRightInput('number', '吸烟年数', 'smoke_year', {id: 'smoke_year_box', hidden: true, dataRequired: true}),
+        LeftRightInput('number', '平均吸烟（支/天）', 'smoke_day', {id: 'smoke_day_box', hidden: true, dataRequired: true}),
+        BinaryRadio('您是否饮酒', '是', '否', 'alcohol_abuse', '1', '0', {controlComponent: '#alcohol_abuse_rate_box #alcohol_type_box #alcohol_day_box'}),
+        DropdownSelect(
+            '饮酒频率',
+            'alcohol_abuse_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'alcohol_abuse_rate_box', hidden: true}
+        ),
         MultiCheckbox(
-            '注意',
-            'attention',
-            ['顺背数字', '倒背数字', '当数字1出现时用手敲打一下桌面', '100连续减7（1）', '100连续减7（2）', '100连续减7（3）', '100连续减7（4）', '100连续减7（5）'],
-            ['sequence-recite', 'inverted-recite', 'beat', 'minus-1', 'minus-2', 'minus-3', 'minus-4', 'minus-5']
-        ).getNode(),
+            '饮酒的种类（可多选）',
+            'alcohol_type',
+            ['白酒', '红酒', '啤酒'],
+            ['0', '1', '2'],
+            {otherLabel: '其他酒类', id: 'alcohol_type_box', required: true, hidden: true}
+        ),
+        LeftRightInput('number', '平均饮酒（毫升/天）', 'alcohol_day', {id: 'alcohol_day_box', hidden: true, dataRequired: true}),
+        BinaryRadio('您是否喝茶', '是', '否', 'drink_tea', '1', '0', {controlComponent: '#drink_tea_rate_box #drink_tea_day_box'}),
+        DropdownSelect(
+            '喝茶频率',
+            'drink_tea_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'drink_tea_rate_box', hidden: true}
+        ),
+        LeftRightInput('number', '平均喝茶（杯/天，按50毫升杯子为准）', 'drink_tea_day', {id: 'drink_tea_day_box', hidden: true, dataRequired: true}),
+        BinaryRadio('您是否喝油茶', '是', '否', 'oiltea', '1', '0', {controlComponent: '#oiltea_rate_box #oiltea_day_box'}),
+        DropdownSelect(
+            '喝油茶频率',
+            'oiltea_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'oiltea_rate_box', hidden: true}
+        ),
+        LeftRightInput('number', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
+        BinaryRadio('您是否有阅读（读书/看报）习惯', '是', '否', 'read', '1', '0', {controlComponent: '#read_rate_box'}),
+        DropdownSelect(
+            '阅读频率',
+            'read_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'read_rate_box', hidden: true}
+        ),
+        BinaryRadio('您是否看电视', '是', '否', 'wacth_TV', '1', '0', {controlComponent: '#wacth_TV_rate_box'}),
+        DropdownSelect(
+            '看电视频率',
+            'wacth_TV_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'wacth_TV_rate_box', hidden: true}
+        ),
+        BinaryRadio('您是否听广播', '是', '否', 'radio', '1', '0', {controlComponent: '#radio_rate_box'}),
+        DropdownSelect(
+            '听广播频率',
+            'radio_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'radio_rate_box', hidden: true}
+        ),
+        BinaryRadio('您是否使用智能手机并上网', '是', '否', 'use_smartphone', '1', '0', {controlComponent: '#use_smartphone_rate_box'}),
+        DropdownSelect(
+            '使用智能手机上网的频率',
+            'use_smartphone_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'use_smartphone_rate_box', hidden: true}
+        ),
+        BinaryRadio('您是否做家务', '是', '否', 'housework', '1', '0', {controlComponent: '#housework_rate_box'}),
+        DropdownSelect(
+            '做家务的频率',
+            'housework_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'housework_rate_box', hidden: true}
+        ),
+        BinaryRadio('您是否参加体育锻炼', '是', '否', 'exercise', '1', '0', {controlComponent: '#exercise_rate_box #exercise_type_box'}),
+        DropdownSelect(
+            '体育锻炼的频率',
+            'exercise_rate',
+            ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
+            ['0', '1', '2'],
+            {id: 'exercise_rate_box', hidden: true}
+        ),
         MultiCheckbox(
-            '语言',
-            'language',
-            ['重复句子1', '重复句子2', '流畅性：在1分钟内尽可能多地说出动物的名字'],
-            ['repeat-1', 'repeat-2', 'fluency']
-        ).getNode(),
+            '体育锻炼项目（可多选）',
+            'exercise_type',
+            ['散步', '慢跑', '健身操', '太极拳', '广场舞', '球类'],
+            ['0', '1', '2', '3', '4', '5'],
+            {otherLabel: '其他体育锻炼项目', id: 'exercise_type_box', required: true, hidden: true}
+        ),
         MultiCheckbox(
-            '抽象',
-            'abstraction',
-            ['词语相似性：火车-自行车', '词语相似性：手表-尺子'],
-            ['similarity-1', 'similarity-2']
-        ).getNode(),
+            '兴趣爱好（可多选或不选）',
+            'hobby',
+            ['书法绘画', '手工活动', '摄影', '演奏乐器'],
+            ['0', '1', '2', '3'],
+            {otherLabel: '其他兴趣爱好'}
+        ),
         MultiCheckbox(
-            '延迟回忆',
-            'delayed-recall',
-            ['1', '2', '3', '4', '5'],
-            ['face', 'velvet', 'church', 'chrysanthemum', 'red']
-        ).getNode(),
+            '参与的文娱活动（可多选或不选）',
+            'recreational_activities',
+            ['棋牌（扑克、麻将、象棋等）', '唱歌', '跳舞', '音乐表演'],
+            ['0', '1', '2', '3'],
+            {otherLabel: '其他文娱活动'}
+        ),
         MultiCheckbox(
-            '定向',
-            'direction',
-            ['日期', '月份', '年代', '星期几', '地点', '城市'],
-            ['day', 'month', 'year', 'week', 'place', 'city']
-        ).getNode(),
+            '参与的社交活动（可多选或不选）',
+            'social',
+            ['探亲访友', '社区活动', '聚会', '旅游'],
+            ['0', '1', '2', '3'],
+            {otherLabel: '其他社交活动'}
+        ),
+        DropdownSelect(
+            '您与子女的关系',
+            'personal_relationship',
+            ['亲密', '一般', '不好'],
+            ['0', '1', '2']
+        )
     ];
-    MoCAChildren.forEach((node) => {
-        MoCAForm.appendChild(node);
-    });
-
-    // 蒙特利尔认知评估量表
-    const MMSEForm = document.querySelector('form[name="cognitive-function"] > .MMSE');
-    const MMSEChildren = [
-        MultiCheckbox(
-            '时间定向力',
-            'time-direction',
-            ['年', '月', '日', '星期', '季节'],
-            ['year', 'month', 'day', 'week', 'season']
-        ).getNode(),
-        MultiCheckbox(
-            '场所定向力',
-            'place-direction',
-            ['国家', '省、市', '街道（地址）', '什么地方（场所）', '几楼'],
-            ['country', 'province', 'street', 'place', 'level']
-        ).getNode(),
-        MultiCheckbox(
-            '记忆力',
-            'memory',
-            ['花园', '冰箱', '国旗'],
-            ['garden', 'refrigerator', 'national-flag']
-        ).getNode(),
-        MultiCheckbox(
-            '计算力',
-            'calculation',
-            ['100连续减7（1）', '100连续减7（2）', '100连续减7（3）', '100连续减7（4）', '100连续减7（5）'],
-            ['minus-1', 'minus-2', 'minus-3', 'minus-4', 'minus-5']
-        ).getNode(),
-        MultiCheckbox(
-            '回忆力',
-            'recall',
-            ['花园', '冰箱', '国旗'],
-            ['garden', 'refrigerator', 'national-flag']
-        ).getNode(),
-        MultiCheckbox(
-            '语言及时空间能力',
-            'ability',
-            ['提问物品1', '提问物品2', '重复句子', '按指示去做1', '按指示去做2', '按指示去做3', '念，并做', '写句子', '画图'],
-            ['what-1', 'what-2', 'repeat', 'execute-1', 'execute-2', 'execute-3', 'speak-and-execute', 'write', 'draw']
-        ).getNode(),
-    ];
-    MMSEChildren.forEach((node) => {
-        MMSEForm.appendChild(node);
+    lifeModeChildren.forEach((node) => {
+        lifeModeForm.appendChild(node);
     });
 })();
