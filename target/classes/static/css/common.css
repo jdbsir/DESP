@@ -1,0 +1,134 @@
+/* 工具类 */
+.hidden {
+    display: none!important;
+}
+
+/* 宏观布局 */
+#app {
+    max-width: 510px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.collect-table-h1 {
+    margin-bottom: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.collect-table-h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* 表单组件布局：
+================================================================================
+第一种布局：
+<div class="left-right-2">
+    <node class="left"></node>
+    <node class="right"></node>
+</div>
+这种布局中.left为固定宽度，right占父元素的剩余宽度
+================================================================================
+第二种布局：
+<div class="left-right-2 binary">
+    <node class="left"></node>
+    <node class="right">
+        <input type="radio" />
+        <input type="radio" />
+    </node>
+</div>
+这种布局在第一种布局的基础上加入2个单选框
+================================================================================
+第三种布局：
+<div class="left-right-2 include-other-input">
+    <node class="left">下拉菜单</node>
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option data-other-input="1" data-target="#other-anytext-input">其他</option>
+    </select>
+    <div id="other-anytext-input" class="left-right-2 hidden">
+        <label class="left">其他</label>
+        <input type="text" class="right" />
+    </div>
+</div>
+这种布局适用于有“其他”自定义输入选项的下拉菜单，注意“其他”选项的data-target值必须
+是#other开头，input结尾，对应id="other-anytext-input"
+================================================================================
+第四种布局：
+<div class="checkbox">
+    <fieldset>
+        <legend>复选框</legend>
+        <label>
+            <input type="checkbox" />
+            选项1
+        </label>
+        <label>
+            <input type="checkbox" />
+            选项2
+        </label>
+        <label>
+            <input type="checkbox" />
+            选项3
+        </label>
+    </fieldset>
+</div>
+可以选择多项的复选框，每一个选项都独占一行
+================================================================================
+*/
+.collect-form {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.collect-form > div > div {
+    margin-bottom: 10px;
+}
+
+.collect-form .left-right-2 .left {
+    display: block;
+    min-height: 40px;
+    margin-bottom: 0;
+    padding: 10px .75rem;
+    line-height: 20px;
+}
+
+.collect-form .left-right-2 .right {
+    height: 40px;
+    margin-bottom: 0;
+    padding: 0 .75rem;
+    line-height: 40px;
+}
+
+.collect-form .binary .left {
+    width: 100%;
+}
+
+.collect-form .binary input:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.collect-form .include-other-input [id^="other"][id$="input"] {
+    margin-top: 4px;
+}
+
+.collect-form .checkbox > fieldset {
+    margin-bottom: 0;
+}
+
+.collect-form .checkbox > fieldset > legend {
+    min-height: 40px;
+    padding: 10px .75rem;
+    line-height: 20px;
+}
+
+.collect-form .checkbox > fieldset > label {
+    display: block;
+    padding-left: .75rem;
+    cursor: pointer;
+}
