@@ -1,3 +1,14 @@
+// region 工具函数
+function inArray(array, value) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            return true;
+        }
+    }
+    return false;
+}
+// endregion
+
 // region 生成HTML组件的函数
 function htmlToNode(html) {
     const parent = document.createElement('div');
@@ -142,12 +153,17 @@ function BinaryRadio(title, label1, label0, name, value1, value0, options) {
 
     function getValue() {
         const inputArray = getNode().querySelectorAll(`input[name="${name}"]`);
+        let result = null;
         for (let i = 0; i < inputArray.length; i++) {
             if (inputArray[i].checked) {
-                return inputArray[i].value;
+                result = inputArray[i].value;
+                break;
             }
         }
-        return null;
+        if (result !== null && (result === '0' || result === '1')) {
+            result = parseInt(result);
+        }
+        return result;
     }
 
     self = {
@@ -341,7 +357,7 @@ function MultiCheckbox(title, name, labelArr, valueArr, options) {
     }
 
     function check() {
-        if (!options.required) {
+        if (!options.required || inArray(getNode().classList, 'hidden')) {
             return true;
         }
         const inputArray = getNode().querySelectorAll(`input[name="${name}"]`);
@@ -350,15 +366,23 @@ function MultiCheckbox(title, name, labelArr, valueArr, options) {
                 return true;
             }
         }
-        return null;
+        const otherValue = getNode().querySelector(`input[name="${name}_other"]`).value;
+        return options.otherLabel !== undefined && otherValue !== '';
     }
 
     function getValue() {
-        const values = [];
+        let values = [];
         getNode().querySelectorAll(`input[name="${name}"]`).forEach((input) => {
             values.push(Number(input.checked));
         });
-        return values.join('');
+        values = values.join('');
+        if (options.otherLabel === undefined) {
+            return values;
+        }
+        const result = {};
+        result[name] = values;
+        result[`${name}_other`] = getNode().querySelector(`input[name="${name}_other"]`).value;
+        return result;
     }
 
     self = {

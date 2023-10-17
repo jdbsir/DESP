@@ -2,7 +2,8 @@
     'use strict';
 
     // 生活方式
-    const lifeModeForm = document.querySelector('form[name="general-info"] > .life-mode');
+    const lifeModeForm = document.querySelector('form[name="life-mode"]');
+    const submitButton = lifeModeForm.querySelector('[type="submit"]');
     const lifeModeChildren = [
         DropdownSelect(
             '您的睡眠情况是',
@@ -46,8 +47,8 @@
             ['0', '1', '2'],
             {id: 'smoke_rate_box', hidden: true}
         ),
-        LeftRightInput('number', '吸烟年数', 'smoke_year', {id: 'smoke_year_box', hidden: true, dataRequired: true}),
-        LeftRightInput('number', '平均吸烟（支/天）', 'smoke_day', {id: 'smoke_day_box', hidden: true, dataRequired: true}),
+        LeftRightInput('text', '吸烟年数', 'smoke_year', {id: 'smoke_year_box', hidden: true, dataRequired: true}),
+        LeftRightInput('text', '平均吸烟（支/天）', 'smoke_day', {id: 'smoke_day_box', hidden: true, dataRequired: true}),
         BinaryRadio('您是否饮酒', '是', '否', 'alcohol_abuse', '1', '0', {controlComponent: '#alcohol_abuse_rate_box #alcohol_type_box #alcohol_day_box'}),
         DropdownSelect(
             '饮酒频率',
@@ -63,7 +64,7 @@
             ['0', '1', '2'],
             {otherLabel: '其他酒类', id: 'alcohol_type_box', required: true, hidden: true}
         ),
-        LeftRightInput('number', '平均饮酒（毫升/天）', 'alcohol_day', {id: 'alcohol_day_box', hidden: true, dataRequired: true}),
+        LeftRightInput('text', '平均饮酒（毫升/天）', 'alcohol_day', {id: 'alcohol_day_box', hidden: true, dataRequired: true}),
         BinaryRadio('您是否喝茶', '是', '否', 'drink_tea', '1', '0', {controlComponent: '#drink_tea_rate_box #drink_tea_day_box'}),
         DropdownSelect(
             '喝茶频率',
@@ -72,7 +73,7 @@
             ['0', '1', '2'],
             {id: 'drink_tea_rate_box', hidden: true}
         ),
-        LeftRightInput('number', '平均喝茶（杯/天，按50毫升杯子为准）', 'drink_tea_day', {id: 'drink_tea_day_box', hidden: true, dataRequired: true}),
+        LeftRightInput('text', '平均喝茶（杯/天，按50毫升杯子为准）', 'drink_tea_day', {id: 'drink_tea_day_box', hidden: true, dataRequired: true}),
         BinaryRadio('您是否喝油茶', '是', '否', 'oiltea', '1', '0', {controlComponent: '#oiltea_rate_box #oiltea_day_box'}),
         DropdownSelect(
             '喝油茶频率',
@@ -81,7 +82,7 @@
             ['0', '1', '2'],
             {id: 'oiltea_rate_box', hidden: true}
         ),
-        LeftRightInput('number', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
+        LeftRightInput('text', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
         BinaryRadio('您是否有阅读（读书/看报）习惯', '是', '否', 'read', '1', '0', {controlComponent: '#read_rate_box'}),
         DropdownSelect(
             '阅读频率',
@@ -90,13 +91,13 @@
             ['0', '1', '2'],
             {id: 'read_rate_box', hidden: true}
         ),
-        BinaryRadio('您是否看电视', '是', '否', 'wacth_TV', '1', '0', {controlComponent: '#wacth_TV_rate_box'}),
+        BinaryRadio('您是否看电视', '是', '否', 'watch_TV', '1', '0', {controlComponent: '#watch_TV_rate_box'}),
         DropdownSelect(
             '看电视频率',
-            'wacth_TV_rate',
+            'watch_TV_rate',
             ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
             ['0', '1', '2'],
-            {id: 'wacth_TV_rate_box', hidden: true}
+            {id: 'watch_TV_rate_box', hidden: true}
         ),
         BinaryRadio('您是否听广播', '是', '否', 'radio', '1', '0', {controlComponent: '#radio_rate_box'}),
         DropdownSelect(
@@ -165,7 +166,64 @@
             ['0', '1', '2']
         )
     ];
-    lifeModeChildren.forEach((node) => {
-        lifeModeForm.appendChild(node);
+    lifeModeChildren.forEach((obj) => {
+        lifeModeForm.insertBefore(obj.getNode(), submitButton);
     });
+    lifeModeForm.addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+        e.preventDefault();
+
+        // 获取表单值
+        const data = {};
+        const alertMessageObject = {
+            'diet': '饮食口味至少选一个！',
+            'food_extra': '除主食外食物至少选一个！',
+            'alcohol_type': '饮酒种类至少选一个！',
+            'exercise_type': '体育锻炼项目至少选一个！'
+        };
+        for (let i = 0; i < lifeModeChildren.length; i++) {
+            let obj = lifeModeChildren[i];
+            let name = obj.getName();
+
+            // 自动的表单验证
+            if (!obj.check()) {
+                if (alertMessageObject[name] !== undefined) {
+                    alert(alertMessageObject[name]);
+                }
+                return undefined;
+            }
+
+            // 将表单值转换成json
+            let value = obj.getValue();
+            if (typeof(value) !== 'object') {
+                data[name] = value;
+                continue;
+            }
+            for (let k in value) {
+                data[k] = value[k];
+            }
+        }
+
+        // 转换成正数float
+        const positiveFloatCheckObject = {
+            'smoke_year': '吸烟年数',
+            'smoke_day': '平均吸烟（支/天）',
+            'alcohol_day': '平均饮酒（毫升/天）',
+            'drink_tea_day': '平均喝茶（杯/天）',
+            'oiltea_day': '平均喝油茶（碗/天）'
+        };
+        for (let k in positiveFloatCheckObject) {
+            if (data[k] !== '' && !positiveFloatCheck(data[k])) {
+                alert(`${positiveFloatCheckObject[k]}不合法！`);
+                return undefined;
+            }
+            data[k] = parseFloat(data[k]);
+        }
+
+        console.log(data);
+        ajaxPostJson(lifeModeForm.action, data).then((response) => {
+            console.log(response);
+        });
+    }
 })();

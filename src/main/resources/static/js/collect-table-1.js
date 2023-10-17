@@ -2,7 +2,8 @@
     'use strict';
 
     // 人口学特征
-    const demoCharacterForm = document.querySelector('form[name="demo-character"] > .demo-character');
+    const demoCharacterForm = document.querySelector('form[name="demo-character"]');
+    const submitButton = demoCharacterForm.querySelector('[type="submit"]');
     const demoCharacterChildren = [
         LeftRightInput('text', '姓名', 'name'),
         BinaryRadio('性别', '男', '女', 'gender', 'man', 'woman'),
@@ -82,24 +83,41 @@
         LeftRightInput('text', '舒张压（mmHg）', 'diastolic_pressure'),
     ];
     demoCharacterChildren.forEach((obj) => {
-        demoCharacterForm.appendChild(obj.getNode());
+        demoCharacterForm.insertBefore(obj.getNode(), submitButton);
     });
-
-    // 提交表单前验证、转换
-    document.querySelector('form[name="general-info"]').addEventListener('submit', submitForm);
+    demoCharacterForm.addEventListener('submit', submitForm);
 
     function submitForm(e) {
         e.preventDefault();
 
         // 获取表单值
         const data = {};
+        const alertMessageObject = {
+            'medical_insurance': '医疗保险至少选一个！'
+        };
         for (let i = 0; i < demoCharacterChildren.length; i++) {
             let obj = demoCharacterChildren[i];
-            let key = obj.getName();
+            let name = obj.getName();
+
+            // 自动的表单验证
+            if (!obj.check()) {
+                if (alertMessageObject[name] !== undefined) {
+                    alert(alertMessageObject[name]);
+                }
+                return undefined;
+            }
+
+            // 将表单值转换成json
             let value = obj.getValue();
-            data[key] = value;
+            if (typeof(value) !== 'object') {
+                data[name] = value;
+                continue;
+            }
+            for (let k in value) {
+                data[k] = value[k];
+            }
         }
-        
+
         // 电话
         const phoneNumberCheckObject = {
             'phone': '电话',
@@ -126,11 +144,11 @@
                 alert(`${positiveFloatCheckObject[k]}不合法！`);
                 return undefined;
             }
-            data[k] = parseFloat(num);
+            data[k] = parseFloat(data[k]);
         }
 
         console.log(data);
-        ajaxPostJson('/collect_table_1', data).then((response) => {
+        ajaxPostJson(demoCharacterForm.action, data).then((response) => {
             console.log(response);
         });
     }
