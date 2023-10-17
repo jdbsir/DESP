@@ -214,11 +214,12 @@
             'oiltea_day': '平均喝油茶（碗/天）'
         };
         for (let k in positiveFloatCheckObject) {
-            if (data[k] !== '' && !positiveFloatCheck(data[k])) {
+            let v = data[k];
+            if (v !== '' && !positiveFloatCheck(v)) {
                 alert(`${positiveFloatCheckObject[k]}不合法！`);
                 return undefined;
             }
-            data[k] = parseFloat(data[k]);
+            data[k] = v === '' ? '' : parseFloat(v);
         }
 
         console.log(data);
