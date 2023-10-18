@@ -385,13 +385,18 @@ function MultiCheckbox(title, name, labelArr, valueArr, options) {
         return result;
     }
 
+    function getValueArray() {
+        return valueArr;
+    }
+
     self = {
         getName: getName,
         options: options,
         getHtml: getHtml,
         getNode: getNode,
         check: check,
-        getValue: getValue
+        getValue: getValue,
+        getValueArray: getValueArray
     }
     return self;
 }
