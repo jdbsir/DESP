@@ -13,5 +13,5 @@ import lombok.Data;
 public class Subject {
     @TableId(type = IdType.AUTO)//id自增
     private Integer id;
-    private Integer subject_id;
+    private Long subject_id;
 }

@@ -1,7 +1,9 @@
 package com.hung.controller;
 
 import com.hung.common.Result;
+import com.hung.common.SnowflakeIdWorker;
 import com.hung.pojo.DemoCharacter;
+import com.hung.pojo.Subject;
 import com.hung.service.DemoCharacterServiceInterface;
 import com.hung.service.SubjectServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class DemoCharacterController {
     @Autowired
     private DemoCharacterServiceInterface demoCharacterServiceInterface;
@@ -29,10 +31,9 @@ public class DemoCharacterController {
     public Result insertSubject(@RequestBody DemoCharacter demoCharacter){
         if(demoCharacter.getSubject_id()!=null){
             System.out.print(demoCharacter);
-            return demoCharacterServiceInterface.insertSubject(demoCharacter);
+            return demoCharacterServiceInterface.insertDemoCharacter(demoCharacter);
         }
         System.out.print(demoCharacter);
-        demoCharacter.setSubject_id(3);
-        return demoCharacterServiceInterface.insertSubject(demoCharacter);
+        return demoCharacterServiceInterface.insertDemoCharacterNoSubjectId(demoCharacter);
     }
 }
