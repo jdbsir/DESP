@@ -1,32 +1,17 @@
 package com.hung.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 
+/**
+ * subject对应的实体类
+ */
 @Data
 @TableName("subject")
 public class Subject {
+    @TableId(type = IdType.AUTO)//id自增
     private Integer id;
-    private String name;
-    private String gender;
-    private String bornDate;
-    private String phone;
-    private String homePhone;
-    private String address;
-    private String race;
-    private Integer fluency;
-    private Integer areaType;
-    private String liveType;
-    private Integer education;
-    private Integer marital;
-    private Integer retire;
-    private String occupation;
-    private String income;
-    private Integer incomeLevel;
-    private Integer medicalInsurance;
-    private Float height;
-    private Float weight;
-    private Float waistline;
-    private Float systolicPressure;
-    private Float diastolicPressure;
+    private Long subject_id;
 }

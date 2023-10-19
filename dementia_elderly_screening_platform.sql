@@ -16,6 +16,19 @@ Date: 2023-10-06 12:11:53
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
+<<<<<<< HEAD
+-- Table structure for `subject`
+-- ----------------------------
+
+DROP TABLE IF EXISTS `subject`;
+CREATE TABLE `subject` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
+  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  PRIMARY KEY (`id`,`subject_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='受试者历史数据表';
+-- ----------------------------
+=======
+>>>>>>> origin/master
 -- Table structure for `adl`
 -- ----------------------------
 DROP TABLE IF EXISTS `adl`;
@@ -180,8 +193,13 @@ CREATE TABLE `life_style` (
   `oiltea_day` int(11) DEFAULT NULL COMMENT '平均碗/天',
   `read` int(11) DEFAULT NULL COMMENT '阅读',
   `read_rate` int(11) DEFAULT NULL COMMENT '阅读频率',
+<<<<<<< HEAD
+  `watch_TV` int(11) DEFAULT NULL COMMENT '看电视',
+  `watch_TV_rate` int(11) DEFAULT NULL COMMENT '看电视频率',
+=======
   `wacth_TV` int(11) DEFAULT NULL COMMENT '看电视',
   `wacth_TV_rate` int(11) DEFAULT NULL COMMENT '看电视频率',
+>>>>>>> origin/master
   `radio` int(11) DEFAULT NULL COMMENT '听广播',
   `radio_rate` int(11) DEFAULT NULL COMMENT '听广播频率',
   `use_smartphone` int(11) DEFAULT NULL COMMENT '使用智能手机并上网',
@@ -196,7 +214,11 @@ CREATE TABLE `life_style` (
   `recreational_activities` int(11) DEFAULT NULL COMMENT '文娱活动',
   `recreational_activities_type` text COMMENT '文娱活动项目',
   `social` int(11) DEFAULT NULL COMMENT '社交活动',
+<<<<<<< HEAD
+  `social_type` text COMMENT '社交活动项目',
+=======
   `social _type` text COMMENT '社交活动项目',
+>>>>>>> origin/master
   `personal_relationship` int(11) DEFAULT NULL COMMENT '与子女的关系',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='生活方式';
@@ -374,11 +396,20 @@ CREATE TABLE `npiq` (
 -- ----------------------------
 
 -- ----------------------------
+<<<<<<< HEAD
+-- Table structure for `demo_character`
+-- ----------------------------
+DROP TABLE IF EXISTS `demo_character`;
+CREATE TABLE `demo_character` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
+  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+=======
 -- Table structure for `subject`
 -- ----------------------------
 DROP TABLE IF EXISTS `subject`;
 CREATE TABLE `subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '受试者ID编号',
+>>>>>>> origin/master
   `name` varchar(50) DEFAULT NULL COMMENT '姓名',
   `gender` varchar(50) DEFAULT '' COMMENT '性别',
   `born_date` varchar(20) DEFAULT NULL COMMENT '出生年月',
@@ -407,8 +438,13 @@ CREATE TABLE `subject` (
 -- ----------------------------
 -- Records of subject
 -- ----------------------------
+<<<<<<< HEAD
+INSERT INTO `demo_character` VALUES ('1', '1', '张三', '男', '19991006', '12345678910', '5532445', '广西壮族自治区桂林市七星区育才路17号', '汉族', '1', '1', '3', '6', '1', '1', '教师', '1', '6', '1', '168', '100', '56', '98', '123');
+INSERT INTO `demo_character` VALUES ('2', '2', '李四', '女', '19980324', '98765432110', '9756766', '广西壮族自治区桂林市临桂区吾悦广场', '壮族', '2', '2', '1', '4', '2', '1', '4', '2', '3', '3', '156', '92', '48', '88', '109');
+=======
 INSERT INTO `subject` VALUES ('1', '张三', '男', '19991006', '12345678910', '5532445', '广西壮族自治区桂林市七星区育才路17号', '汉族', '1', '1', '3', '6', '1', '1', '教师', '1', '6', '1', '168', '100', '56', '98', '123');
 INSERT INTO `subject` VALUES ('2', '李四', '女', '19980324', '98765432110', '9756766', '广西壮族自治区桂林市临桂区吾悦广场', '壮族', '2', '2', '1', '4', '2', '1', '4', '2', '3', '3', '156', '92', '48', '88', '109');
+>>>>>>> origin/master
 
 -- ----------------------------
 -- Table structure for `sys_log`
