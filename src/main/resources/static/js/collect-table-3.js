@@ -78,7 +78,6 @@
             }
         }
 
-        console.log(data);
         ajaxPostJson(healthConditionForm.action, data).then((response) => {
             console.log(response);
         });
