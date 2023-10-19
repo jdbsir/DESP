@@ -68,7 +68,6 @@
         }
         data['MMSE'] = mmseScore;
 
-        console.log(data);
         ajaxPostJson(MMSEForm.action, data).then((response) => {
             console.log(response);
         });

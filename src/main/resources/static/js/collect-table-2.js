@@ -222,7 +222,6 @@
             data[k] = v === '' ? '' : parseFloat(v);
         }
 
-        console.log(data);
         ajaxPostJson(lifeModeForm.action, data).then((response) => {
             console.log(response);
         });

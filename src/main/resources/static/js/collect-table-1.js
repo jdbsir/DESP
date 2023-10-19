@@ -147,7 +147,6 @@
             data[k] = parseFloat(data[k]);
         }
 
-        console.log(data);
         ajaxPostJson(demoCharacterForm.action, data).then((response) => {
             console.log(response);
         });

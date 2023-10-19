@@ -99,7 +99,6 @@
         }
         data['MOCA'] = mocaScore
         
-        console.log(data);
         ajaxPostJson(MoCAForm.action, data).then((response) => {
             console.log(response);
         });
