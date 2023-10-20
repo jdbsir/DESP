@@ -44,6 +44,7 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
         subject.setSubject_id(subject_id);
         subjectServiceInterface.insertSubject(subject);
         demoCharacter.setSubject_id(subject_id);
+        System.out.print(subject);
         try {
             int resultValue=demoCharacterMapper.insert(demoCharacter);
             if(resultValue<1){
