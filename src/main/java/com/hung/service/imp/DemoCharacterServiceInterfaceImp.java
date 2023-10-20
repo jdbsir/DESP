@@ -35,6 +35,7 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
         return Result.success();
     }
 
+
     @Override
     public Result insertDemoCharacterNoSubjectId(DemoCharacter demoCharacter) {
         Subject subject=new Subject();

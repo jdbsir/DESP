@@ -23,7 +23,7 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `subject`;
 CREATE TABLE `subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   PRIMARY KEY (`id`,`subject_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='受试者历史数据表';
 -- ----------------------------
@@ -34,7 +34,7 @@ CREATE TABLE `subject` (
 DROP TABLE IF EXISTS `adl`;
 CREATE TABLE `adl` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `vehicles` int(11) DEFAULT NULL COMMENT '1.使用公共车辆',
   `walk` int(11) DEFAULT NULL COMMENT '2.行走',
   `cook` int(11) DEFAULT NULL COMMENT '3.做饭菜',
@@ -82,7 +82,7 @@ DROP TABLE IF EXISTS `doctor_subject`;
 CREATE TABLE `doctor_subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `doctor_id` int(11) NOT NULL,
-  `subject_id` int(11) NOT NULL,
+  `subject_id` bigint(32) NOT NULL,
   `is_check` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -99,7 +99,7 @@ INSERT INTO `doctor_subject` VALUES ('2', '1', '2', '0');
 DROP TABLE IF EXISTS `gdscale`;
 CREATE TABLE `gdscale` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `GDSATIS` int(11) DEFAULT NULL COMMENT '1.你对生活基本上满意吗？',
   `GDDROP` int(11) DEFAULT NULL COMMENT '2.你是否已放弃了许多活动与兴趣？',
   `GDEMPTY` int(11) DEFAULT NULL COMMENT '3.你是否觉得生活空虚？',
@@ -146,7 +146,7 @@ CREATE TABLE `gdscale` (
 DROP TABLE IF EXISTS `health_statu`;
 CREATE TABLE `health_statu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `family_his` int(11) DEFAULT NULL COMMENT '父母或兄弟姐妹中，是否有人患老年痴呆',
   `visual` int(11) DEFAULT NULL COMMENT '视力情况',
   `hearing` int(11) DEFAULT NULL COMMENT '听力情况',
@@ -169,7 +169,7 @@ INSERT INTO `health_statu` VALUES ('2', '2', '1', '3', '3', '4', '7', null, '3')
 DROP TABLE IF EXISTS `life_style`;
 CREATE TABLE `life_style` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `sleep` int(11) DEFAULT NULL COMMENT '睡眠情况',
   `sleep_time_day` int(11) DEFAULT NULL COMMENT '每天的睡眠（午间和夜间）时间',
   `diet` int(11) DEFAULT NULL COMMENT '饮食口味',
@@ -254,7 +254,7 @@ CREATE TABLE `log` (
 DROP TABLE IF EXISTS `mmse`;
 CREATE TABLE `mmse` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL,
+  `subject_id` bigint(32) NOT NULL,
   `MMYEAR` int(11) DEFAULT NULL COMMENT '时间定向力-年',
   `MMMONTH` int(11) DEFAULT NULL COMMENT '时间定向力-月',
   `MMDATE` int(11) DEFAULT NULL COMMENT '时间定向力-日',
@@ -301,7 +301,7 @@ CREATE TABLE `mmse` (
 DROP TABLE IF EXISTS `moca`;
 CREATE TABLE `moca` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者ID',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者ID',
   `MOCA` int(11) DEFAULT NULL COMMENT 'moca总分',
   `TRAILS` int(11) DEFAULT NULL COMMENT '视空间与执行功能-连线',
   `CUBE` int(11) DEFAULT NULL COMMENT '视空间与执行功能-复制立方体',
@@ -360,7 +360,7 @@ CREATE TABLE `moca` (
 DROP TABLE IF EXISTS `npiq`;
 CREATE TABLE `npiq` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `NPIA` int(11) DEFAULT NULL COMMENT '妄想',
   `NPIASEV` int(11) DEFAULT NULL COMMENT '妄想严重程度',
   `NPIB` int(11) DEFAULT NULL COMMENT '幻觉',
@@ -400,15 +400,16 @@ CREATE TABLE `npiq` (
 -- Table structure for `demo_character`
 -- ----------------------------
 DROP TABLE IF EXISTS `demo_character`;
-CREATE TABLE `demo_character` (
+CREATE TABLE `subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
-  `subject_id` int(11) NOT NULL COMMENT '受试者id',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
 =======
 -- Table structure for `subject`
 -- ----------------------------
 DROP TABLE IF EXISTS `subject`;
-CREATE TABLE `subject` (
+CREATE TABLE `demo_character`` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '受试者ID编号',
+  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
 >>>>>>> origin/master
   `name` varchar(50) DEFAULT NULL COMMENT '姓名',
   `gender` varchar(50) DEFAULT '' COMMENT '性别',
