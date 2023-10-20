@@ -222,7 +222,10 @@
             data[k] = v === '' ? '' : parseFloat(v);
         }
 
-        ajaxPostJson(lifeModeForm.action, data).then((response) => {
+        // 获取请求链接
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        let postUrl = `${lifeModeForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
             console.log(response);
         });
     }

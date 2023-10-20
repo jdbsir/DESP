@@ -7,6 +7,47 @@ function inArray(array, value) {
     }
     return false;
 }
+
+function parseQueryParam(search) {
+    if (search === undefined) {
+        search = location.search;
+    }
+    if (search === '' || search === '?') {
+        return {};
+    }
+
+    const items = search.split('&');
+    const queryParam = {};
+    for (let i = 0; i < items.length; i++) {
+        let kv = items[i].split('=', 2);
+        let key = decodeURIComponent(kv[0]);
+        let value = decodeURIComponent(kv[1]);
+        queryParam[key] = value;
+    }
+
+    return queryParam;
+}
+
+function unparseQueryParam(obj) {
+    if (Object.keys(obj).length === 0) {
+        return '';
+    }
+
+    const qp = [];
+    for (let k in obj) {
+        let v = encodeURIComponent(obj[k]);
+        qp.push(`${k}=${v}`);
+    }
+    return qp.join('&');
+}
+
+function appendQueryParam(obj) {
+    const qpObj = parseQueryParam();
+    for (let k in obj) {
+        qpObj[k] = obj[k];
+    }
+    return unparseQueryParam(qpObj);
+}
 // endregion
 
 // region 生成HTML组件的函数
