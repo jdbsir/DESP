@@ -97,7 +97,20 @@
     function submitForm(e) {
         e.preventDefault();
 
-        // 获取表单数据
+        // 获取表单数据并计分
         const data = {};
+        let ADLSCORE = 0;
+        const scoreMap = [0, 5, 10, 15];
+        for (let i = 0; i < adlChildren.length; i++) {
+            let obj = adlChildren[i];
+            let value = obj.getValue();
+            data[obj.getName()] = value;
+            ADLSCORE = ADLSCORE + scoreMap[value];
+        }
+        data['ADLSCORE'] = ADLSCORE;
+
+        ajaxPostJson(adlForm.action, data).then((response) => {
+            console.log(response);
+        });
     }
 })();
