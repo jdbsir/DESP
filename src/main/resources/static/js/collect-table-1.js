@@ -148,7 +148,11 @@
         }
 
         ajaxPostJson(demoCharacterForm.action, data).then((response) => {
-            console.log(response);
+            if (response.code === 1) {
+                location.href = `/collect_table_2?${appendQueryParam({'subject_id': response.data})}`;
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();
