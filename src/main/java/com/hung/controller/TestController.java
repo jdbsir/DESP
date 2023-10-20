@@ -12,6 +12,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class TestController {
+    /*
     @RequestMapping("/test")
     @ResponseBody
     public List<Test> testController(){
@@ -23,6 +24,6 @@ public class TestController {
         List<Test> testList=new ArrayList<Test>();
         testList.add(test);
         return testList;
-    }
+    }*/
 
 }
