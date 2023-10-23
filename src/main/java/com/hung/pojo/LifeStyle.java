@@ -10,7 +10,7 @@ import lombok.Data;
 public class LifeStyle {
     @TableId(type = IdType.AUTO)
     private Integer id;
-    private Integer subject_id;
+    private Long subject_id;
     private Integer sleep;
     private Integer sleep_time_day;
     private String diet;
