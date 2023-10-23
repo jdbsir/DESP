@@ -78,8 +78,15 @@
             }
         }
 
-        ajaxPostJson(healthConditionForm.action, data).then((response) => {
-            console.log(response);
+        // 发送并处理请求
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        const postUrl = `${healthConditionForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
+            if (response.code === 1) {
+                location.href = `/collect_table_4?${appendQueryParam({'subject_id': subjectId})}`;
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();

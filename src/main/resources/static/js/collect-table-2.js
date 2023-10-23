@@ -222,11 +222,15 @@
             data[k] = v === '' ? '' : parseFloat(v);
         }
 
-        // 获取请求链接
+        // 发送并处理请求
         const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
-        let postUrl = `${lifeModeForm.action}?subject_id=${subjectId}`;
+        const postUrl = `${lifeModeForm.action}?subject_id=${subjectId}`;
         ajaxPostJson(postUrl, data).then((response) => {
-            console.log(response);
+            if (response.code === 1) {
+                location.href = `/collect_table_3?${appendQueryParam({'subject_id': subjectId})}`;
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();

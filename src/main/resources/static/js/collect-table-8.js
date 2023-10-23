@@ -107,10 +107,17 @@
             data[obj.getName()] = value;
             ADLSCORE = ADLSCORE + scoreMap[value];
         }
-        data['ADLSCORE'] = ADLSCORE;
+        data['adlscore'] = ADLSCORE;
 
-        ajaxPostJson(adlForm.action, data).then((response) => {
-            console.log(response);
+        // 发送并处理请求
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        const postUrl = `${adlForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
+            if (response.code === 1) {
+                location.href = '/';
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();
