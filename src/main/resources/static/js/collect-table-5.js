@@ -51,7 +51,7 @@
         e.preventDefault();
 
         // 获取表单值
-        const data = {};
+        let data = {};
         for (let i = 0; i < MMSEChildren.length; i++) {
             let obj = MMSEChildren[i];
             let valueArray = obj.getValueArray();
@@ -68,8 +68,17 @@
         }
         data['MMSE'] = mmseScore;
 
-        ajaxPostJson(MMSEForm.action, data).then((response) => {
-            console.log(response);
+        data = upperToLower(data);
+
+        // 发送并处理请求
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        const postUrl = `${MMSEForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
+            if (response.code === 1) {
+                location.href = `/collect_table_6?${appendQueryParam({'subject_id': subjectId})}`;
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();

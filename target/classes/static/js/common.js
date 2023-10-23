@@ -10,7 +10,7 @@ function inArray(array, value) {
 
 function parseQueryParam(search) {
     if (search === undefined) {
-        search = location.search;
+        search = location.search.slice(1);
     }
     if (search === '' || search === '?') {
         return {};
@@ -35,7 +35,7 @@ function unparseQueryParam(obj) {
 
     const qp = [];
     for (let k in obj) {
-        let v = encodeURIComponent(obj[k]);
+        let v = obj[k];
         qp.push(`${k}=${v}`);
     }
     return qp.join('&');
@@ -47,6 +47,14 @@ function appendQueryParam(obj) {
         qpObj[k] = obj[k];
     }
     return unparseQueryParam(qpObj);
+}
+
+function upperToLower(data) {
+    const newData = {};
+    for (let k in data) {
+        newData[k.toLowerCase()] = data[k];
+    }
+    return newData;
 }
 // endregion
 

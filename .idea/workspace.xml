@@ -5,15 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/pojo/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/pico.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/pico.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-6.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-8.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" afterDir="false" />
@@ -67,35 +77,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/Java/DementiaEldlyScreeningPlatform&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging master",
+    "last_opened_file_path": "D:/Project/Java/DementiaEldlyScreeningPlatform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\Java\DementiaEldlyScreeningPlatform\src\main\java\com\hung\pojo" />
@@ -131,7 +141,7 @@
       <workItem from="1697183688865" duration="4393000" />
       <workItem from="1697271429795" duration="47427000" />
       <workItem from="1697769014295" duration="9435000" />
-      <workItem from="1697939620011" duration="7095000" />
+      <workItem from="1697939620011" duration="7553000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />

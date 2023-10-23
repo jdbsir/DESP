@@ -147,9 +147,11 @@
             data[k] = parseFloat(data[k]);
         }
 
+        // 发送并处理请求
         ajaxPostJson(demoCharacterForm.action, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect_table_2?${appendQueryParam({'subject_id': response['data']['subject_id']})}`;
+                const subjectId = encodeURIComponent(response.data.subject_id);
+                location.href = `/collect_table_2?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
                 alert(response.msg);
             }

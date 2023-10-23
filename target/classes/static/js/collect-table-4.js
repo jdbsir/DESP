@@ -63,7 +63,7 @@
         e.preventDefault();
 
         // 获取表单值
-        const data = {};
+        let data = {};
         for (let i = 0; i < MoCAChildren.length; i++) {
             let obj = MoCAChildren[i];
             let valueArray = obj.getValueArray();
@@ -97,10 +97,24 @@
         } else if (trueCount >= 1) {
             mocaScore = mocaScore + 1;
         }
-        data['MOCA'] = mocaScore
+        data['MOCA'] = mocaScore;
+
+        data = upperToLower(data);
         
-        ajaxPostJson(MoCAForm.action, data).then((response) => {
-            console.log(response);
+        // 发送并处理请求
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        const postUrl = `${MoCAForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
+            if (response.code === 0) {
+                alert(response.msg);
+                return undefined;
+            }
+
+            if (mocaScore < 26) {
+                location.href = `/collect_table_5?${appendQueryParam({'subject_id': subjectId})}`;
+            } else {
+                location.href = `/collect_table_6?${appendQueryParam({'subject_id': subjectId})}`;
+            }
         });
     }
 })();

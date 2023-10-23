@@ -290,7 +290,7 @@
         e.preventDefault();
 
         // 获取表单数据并计分
-        const data = {};
+        let data = {};
         let NPISCORE = 0;
         for (let i = 0; i < npiqChildren.length; i = i + 3) {
             let name = npiqChildren[i].getName();
@@ -302,8 +302,17 @@
         }
         data['NPISCORE'] = NPISCORE;
 
-        ajaxPostJson(npiqForm.action, data).then((response) => {
-            console.log(response);
+        data = upperToLower(data);
+
+        // 发送并处理请求
+        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
+        const postUrl = `${npiqForm.action}?subject_id=${subjectId}`;
+        ajaxPostJson(postUrl, data).then((response) => {
+            if (response.code === 1) {
+                location.href = `/collect_table_8?${appendQueryParam({'subject_id': subjectId})}`;
+            } else {
+                alert(response.msg);
+            }
         });
     }
 })();
