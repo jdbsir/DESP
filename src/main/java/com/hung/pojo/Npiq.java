@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 //简明版神经网络
@@ -13,6 +14,7 @@ public class Npiq {
 
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     @TableField("NPIA")
     private Integer npia;

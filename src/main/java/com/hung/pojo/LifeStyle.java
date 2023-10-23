@@ -1,8 +1,10 @@
 package com.hung.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 @Data
@@ -10,6 +12,7 @@ import lombok.Data;
 public class LifeStyle {
     @TableId(type = IdType.AUTO)
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     private Integer sleep;
     private Integer sleep_time_day;
@@ -34,8 +37,10 @@ public class LifeStyle {
     private Integer oiltea_day;
     private Integer read;
     private Integer read_rate;
-    private Integer watch_TV;
-    private Integer watch_TV_rate;
+    @TableField("watch_TV")
+    private Integer watch_tv;
+    @TableField("watch_TV_rate")
+    private Integer watch_tv_rate;
     private Integer radio;
     private Integer radio_rate;
     private Integer use_smartphone;

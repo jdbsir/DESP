@@ -4,15 +4,16 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 //老年抑郁量表
 @Data
 @TableName("gdscale")
 public class Gdscale {
-
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     @TableField("GDSATIS")
     private Integer gdsatis;

@@ -6,12 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/LifeStyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/LifeStyleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/LifeStyleServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/LifeStyleServiceInterfaceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +131,7 @@
       <workItem from="1697183688865" duration="4393000" />
       <workItem from="1697271429795" duration="47427000" />
       <workItem from="1697769014295" duration="9435000" />
-      <workItem from="1697939620011" duration="10302000" />
+      <workItem from="1697939620011" duration="13648000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />

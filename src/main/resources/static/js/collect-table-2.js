@@ -91,13 +91,13 @@
             ['0', '1', '2'],
             {id: 'read_rate_box', hidden: true}
         ),
-        BinaryRadio('您是否看电视', '是', '否', 'watch_TV', '1', '0', {controlComponent: '#watch_TV_rate_box'}),
+        BinaryRadio('您是否看电视', '是', '否', 'watch_tv', '1', '0', {controlComponent: '#watch_tv_rate_box'}),
         DropdownSelect(
             '看电视频率',
-            'watch_TV_rate',
+            'watch_tv_rate',
             ['每天', '经常（3-6天/周）', '偶尔（1-2天/周）'],
             ['0', '1', '2'],
-            {id: 'watch_TV_rate_box', hidden: true}
+            {id: 'watch_tv_rate_box', hidden: true}
         ),
         BinaryRadio('您是否听广播', '是', '否', 'radio', '1', '0', {controlComponent: '#radio_rate_box'}),
         DropdownSelect(

@@ -83,7 +83,7 @@
         const postUrl = `${healthConditionForm.action}?subject_id=${subjectId}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect_table_4?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-4.html?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
                 alert(response.msg);
             }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 //简易智力状态检查表
@@ -13,6 +14,7 @@ public class Mmse {
 
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     @TableField("MMYEAR")
     private Integer mmyera;

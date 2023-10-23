@@ -1,13 +1,17 @@
 package com.hung.pojo;
 
 import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 
 //日常生活能力量表
 @Data
+@TableName("adl")
 public class Adl {
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     private Integer vehicles;
     private Integer walk;
