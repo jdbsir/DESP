@@ -149,7 +149,7 @@
 
         ajaxPostJson(demoCharacterForm.action, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect_table_2?${appendQueryParam({'subject_id': response.data})}`;
+                location.href = `/collect_table_2?${appendQueryParam({'subject_id': response['data']['subject_id']})}`;
             } else {
                 alert(response.msg);
             }
