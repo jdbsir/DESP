@@ -1,15 +1,12 @@
 package com.hung.pojo;
 
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.enums.IdType;
+import com.baomidou.mybatisplus.annotations.TableField;
 import lombok.Data;
+
 
 //日常生活能力量表
 @Data
-@TableName("adl")
 public class Adl {
-    @TableId(type = IdType.AUTO)
     private Integer id;
     private Long subject_id;
     private Integer vehicles;
@@ -26,8 +23,8 @@ public class Adl {
     private Integer bathroom;
     private Integer phone;
     private Integer money;
-
-    private Integer ADLSCORE;
+    @TableField("ADLSCORE")
+    private Integer adlscore;
     private String time;
     private Long unix_timestamp;
 
