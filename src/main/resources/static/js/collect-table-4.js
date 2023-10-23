@@ -111,9 +111,9 @@
             }
 
             if (mocaScore < 26) {
-                location.href = `/collect_table_5?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-5.html?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
-                location.href = `/collect_table_6?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-6.html?${appendQueryParam({'subject_id': subjectId})}`;
             }
         });
     }

@@ -309,7 +309,7 @@
         const postUrl = `${npiqForm.action}?subject_id=${subjectId}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect_table_8?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-8.html?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
                 alert(response.msg);
             }

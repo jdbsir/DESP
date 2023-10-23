@@ -75,7 +75,7 @@
         const postUrl = `${MMSEForm.action}?subject_id=${subjectId}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect_table_6?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-6.html?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
                 alert(response.msg);
             }
