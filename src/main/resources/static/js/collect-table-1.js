@@ -151,7 +151,7 @@
         ajaxPostJson(demoCharacterForm.action, data).then((response) => {
             if (response.code === 1) {
                 const subjectId = encodeURIComponent(response.data.subject_id);
-                location.href = `/collect_table_2?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-2.html?${appendQueryParam({'subject_id': subjectId})}`;
             } else {
                 alert(response.msg);
             }
