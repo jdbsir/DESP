@@ -1,37 +1,69 @@
 package com.hung.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 //简明版神经网络
 @Data
+@TableName("npiq")
 public class Npiq {
 
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     private Long subject_id;
-    private Integer NPIA;
-    private Integer NPIASEV;
-    private Integer NPIB;
-    private Integer NPIBSEV;
-    private Integer NPIC;
-    private Integer NPICSEV;
-    private Integer NPID;
-    private Integer NPIDSEV;
-    private Integer NPIE;
-    private Integer NPIESEV;
-    private Integer NPIF;
-    private Integer NPIFSEV;
-    private Integer NPIG;
-    private Integer NPIGSEV;
-    private Integer NPIH;
-    private Integer NPIHSEV;
-    private Integer NPII;
-    private Integer NPIISEV;
-    private Integer NPIJ;
-    private Integer NPIJSEV;
-    private Integer NPIK;
-    private Integer NPIKSEV;
-    private Integer NPIL;
-    private Integer NPILSEV;
-    private Integer NPISCORE;
+    @TableField("NPIA")
+    private Integer npia;
+    @TableField("NPIASEV")
+    private Integer npiasev;
+    @TableField("NPIB")
+    private Integer npib;
+    @TableField("NPIBSEV")
+    private Integer npibsev;
+    @TableField("NPIC")
+    private Integer npic;
+    @TableField("NPICSEV")
+    private Integer npicsev;
+    @TableField("NPID")
+    private Integer npid;
+    @TableField("NPIDSEV")
+    private Integer npidsev;
+    @TableField("NPIE")
+    private Integer npie;
+    @TableField("NPIESEV")
+    private Integer npiesev;
+    @TableField("NPIF")
+    private Integer npif;
+    @TableField("NPIFSEV")
+    private Integer npifsev;
+    @TableField("NPIG")
+    private Integer npig;
+    @TableField("NPIGSEV")
+    private Integer npigsev;
+    @TableField("NPIH")
+    private Integer npih;
+    @TableField("NPIHSEV")
+    private Integer npihsev;
+    @TableField("NPII")
+    private Integer npii;
+    @TableField("NPIISEV")
+    private Integer npiisev;
+    @TableField("NPIJ")
+    private Integer npij;
+    @TableField("NPIJSEV")
+    private Integer npijsev;
+    @TableField("NPIK")
+    private Integer npik;
+    @TableField("NPIKSEV")
+    private Integer npiksev;
+    @TableField("NPIL")
+    private Integer npil;
+    @TableField("NPILSEV")
+    private Integer npilsev;
+    @TableField("NPISCORE")
+    private Integer npiscore;
     private String time;
     private Long unix_timestamp;
 

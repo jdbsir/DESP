@@ -1,47 +1,81 @@
 package com.hung.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import lombok.Data;
 
 //老年抑郁量表
-
 @Data
-@TableName()
+@TableName("gdscale")
 public class Gdscale {
 
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     private Long subject_id;
-    private Integer GDSATIS;
-    private Integer GDDROP;
-    private Integer GDEMPTY;
-    private Integer GDBORED;
-    private Integer GDSPIRIT;
-    private Integer GDMIND;
-    private Integer GDENERGY;
-    private Integer GDAFRAID;
-    private Integer GDHAPPY;
-    private Integer GDHELP;
-    private Integer GDFIDGET;
-    private Integer GDHOME;
-    private Integer GDFUTURE;
-    private Integer GDMEMORY;
-    private Integer GDALIVE;
-    private Integer GDDEPRESSED;
-    private Integer GDMEANINGLESS;
-    private Integer GDWORRY;
-    private Integer GDEXCITING;
-    private Integer GDNEWJOB;
-    private Integer GDVITALITY;
-    private Integer GDHOPE;
-    private Integer GDBETTER;
-    private Integer GDSAD;
-    private Integer GDCRYING;
-    private Integer GDCONCENTRATE;
-    private Integer GDMORNING;
-    private Integer GDPARTY;
-    private Integer GDDECISION;
+    @TableField("GDSATIS")
+    private Integer gdsatis;
+    @TableField("GDDROP")
+    private Integer gddrop;
+    @TableField("GDEMPTY")
+    private Integer gdempty;
+    @TableField("GDBORED")
+    private Integer gdbored;
+    @TableField("GDSPIRIT")
+    private Integer gdspirit;
+    @TableField("GDMIND")
+    private Integer gdmind;
+    @TableField("GDENERGY")
+    private Integer gdenergy;
+    @TableField("GDAFRAID")
+    private Integer gdafraid;
+    @TableField("GDHAPPY")
+    private Integer gdhappy;
+    @TableField("GDHELP")
+    private Integer gdhelp;
+    @TableField("GDFIDGET")
+    private Integer gdfidget;
+    @TableField("GDHOME")
+    private Integer gdhome;
+    @TableField("GDFUTURE")
+    private Integer gdfuture;
+    @TableField("GDMEMORY")
+    private Integer gdmemory;
+    @TableField("GDALIVE")
+    private Integer gdalive;
+    @TableField("GDDEPRESSED")
+    private Integer gddepressed;
+    @TableField("GDMEANINGLESS")
+    private Integer gdmeaningless;
+    @TableField("GDWORRY")
+    private Integer gdworry;
+    @TableField("GDEXCITING")
+    private Integer gdexciting;
+    @TableField("GDNEWJOB")
+    private Integer gdnewjob;
+    @TableField("GDVITALITY")
+    private Integer gdvitality;
+    @TableField("GDHOPE")
+    private Integer gdhope;
+    @TableField("GDBETTER")
+    private Integer gdbetter;
+    @TableField("GDSAD")
+    private Integer gdsad;
+    @TableField("GDCRYING")
+    private Integer gdcrying;
+    @TableField("GDCONCENTRATE")
+    private Integer gdconcentrate;
+    @TableField("GDMORNING")
+    private Integer gdmorning;
+    @TableField("GDPARTY")
+    private Integer gdparty;
+    @TableField("GDDECISION")
+    private Integer gddecision;
+    @TableField("gdclera")
     private Integer GDCLEAR;
-    private Integer GDTOTAL;
+    @TableField("GDTOTAL")
+    private Integer gdtotal;
     private String time;
     private Long unix_timestamp;
 }
