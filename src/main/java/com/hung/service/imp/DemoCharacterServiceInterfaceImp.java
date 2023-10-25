@@ -32,7 +32,7 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
             return Result.error("数据保存失败，请重新提交保存");
         }
-        return Result.success();
+        return Result.success(demoCharacter.getSubject_id());
     }
 
 

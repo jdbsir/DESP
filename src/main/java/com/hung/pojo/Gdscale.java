@@ -73,8 +73,8 @@ public class Gdscale {
     private Integer gdparty;
     @TableField("GDDECISION")
     private Integer gddecision;
-    @TableField("gdclera")
-    private Integer GDCLEAR;
+    @TableField("GDCLEAR")
+    private Integer gdclear;
     @TableField("GDTOTAL")
     private Integer gdtotal;
     private String time;
