@@ -18,6 +18,7 @@ public class LifeStyle {
     private Integer sleep_time_day;
     private String diet;
     private String food_extra;
+    private String food_extra_other;
     private Integer fresh_food;
     private Integer preserved_food;
     private Integer nutrient;
@@ -28,6 +29,7 @@ public class LifeStyle {
     private Integer alcohol_abuse;
     private Integer alcohol_abuse_rate;
     private String alcohol_type;
+    private String alcohol_type_other;
     private Integer alcohol_day;
     private Integer drink_tea;
     private Integer drink_tea_rate;
@@ -35,11 +37,10 @@ public class LifeStyle {
     private Integer oiltea;
     private Integer oiltea_rate;
     private Integer oiltea_day;
+    @TableField("read_book")
     private Integer read;
     private Integer read_rate;
-    @TableField("watch_TV")
     private Integer watch_tv;
-    @TableField("watch_TV_rate")
     private Integer watch_tv_rate;
     private Integer radio;
     private Integer radio_rate;
@@ -50,12 +51,16 @@ public class LifeStyle {
     private Integer exercise;
     private Integer exercise_rate;
     private String exercise_type;
-    private Integer hobby;
-    private String hobby_type;
-    private Integer recreational_activities;
-    private String recreational_activities_type;
-    private Integer social;
-    private Integer social_type;
+    private String exercise_type_other;
+    private String hobby;
+    @TableField("hobby_type")
+    private String hobby_other;
+    private String recreational_activities;
+    @TableField("recreational_activities_type")
+    private String recreational_activities_other;
+    private String social;
+    @TableField("social_type")
+    private String social_other;
     private Integer personal_relationship;
 
 

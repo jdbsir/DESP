@@ -17,7 +17,7 @@ public class Mmse {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long subject_id;
     @TableField("MMYEAR")
-    private Integer mmyera;
+    private Integer mmyear;
     @TableField("MMMONTH")
     private Integer mmmonth;
     @TableField("MMDATE")
