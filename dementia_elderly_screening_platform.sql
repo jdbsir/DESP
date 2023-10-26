@@ -16,19 +16,20 @@ Date: 2023-10-06 12:11:53
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
-<<<<<<< HEAD
--- Table structure for `subject`
+-- Table structure for `doctor`
 -- ----------------------------
-
 DROP TABLE IF EXISTS `subject`;
 CREATE TABLE `subject` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
-  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
-  PRIMARY KEY (`id`,`subject_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='受试者历史数据表';
+    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '受试者数据id',
+    `subject_id` bigint(32) DEFAULT NULL COMMENT '受试者id',
+    PRIMARY KEY (`id`,`subject_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- ----------------------------
-=======
->>>>>>> origin/master
+-- Records of subject
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `adl`
 -- ----------------------------
 DROP TABLE IF EXISTS `adl`;
@@ -51,7 +52,7 @@ CREATE TABLE `adl` (
   `money` int(11) DEFAULT NULL COMMENT '14.处理自己钱物',
   `ADLSCORE` int(11) DEFAULT NULL COMMENT 'ADL总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -68,12 +69,11 @@ CREATE TABLE `doctor` (
   `username` varchar(20) DEFAULT NULL,
   `weixin_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of doctor
 -- ----------------------------
-INSERT INTO `doctor` VALUES ('1', 'doctor_1', '112');
 
 -- ----------------------------
 -- Table structure for `doctor_subject`
@@ -85,13 +85,11 @@ CREATE TABLE `doctor_subject` (
   `subject_id` bigint(32) NOT NULL,
   `is_check` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of doctor_subject
 -- ----------------------------
-INSERT INTO `doctor_subject` VALUES ('1', '1', '1', '0');
-INSERT INTO `doctor_subject` VALUES ('2', '1', '2', '0');
 
 -- ----------------------------
 -- Table structure for `gdscale`
@@ -132,7 +130,7 @@ CREATE TABLE `gdscale` (
   `GDCLEAR` int(11) DEFAULT NULL COMMENT '30.你的头脑象往常一样清晰吗？',
   `GDTOTAL` int(11) DEFAULT NULL COMMENT 'GDSCALE总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -155,13 +153,11 @@ CREATE TABLE `health_statu` (
   `other_disease` text COMMENT '是否以下疾病',
   `mental_performance` text COMMENT '精神系统疾病表现',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='健康状况';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='健康状况';
 
 -- ----------------------------
 -- Records of health_statu
 -- ----------------------------
-INSERT INTO `health_statu` VALUES ('1', '1', '0', '2', '2', '1', '1', null, '2');
-INSERT INTO `health_statu` VALUES ('2', '2', '1', '3', '3', '4', '7', null, '3');
 
 -- ----------------------------
 -- Table structure for `life_style`
@@ -193,8 +189,6 @@ CREATE TABLE `life_style` (
   `oiltea_day` int(11) DEFAULT NULL COMMENT '平均碗/天',
   `read` int(11) DEFAULT NULL COMMENT '阅读',
   `read_rate` int(11) DEFAULT NULL COMMENT '阅读频率',
-  `watch_TV` int(11) DEFAULT NULL COMMENT '看电视',
-  `watch_TV_rate` int(11) DEFAULT NULL COMMENT '看电视频率',
   `wacth_TV` int(11) DEFAULT NULL COMMENT '看电视',
   `wacth_TV_rate` int(11) DEFAULT NULL COMMENT '看电视频率',
   `radio` int(11) DEFAULT NULL COMMENT '听广播',
@@ -211,17 +205,14 @@ CREATE TABLE `life_style` (
   `recreational_activities` int(11) DEFAULT NULL COMMENT '文娱活动',
   `recreational_activities_type` text COMMENT '文娱活动项目',
   `social` int(11) DEFAULT NULL COMMENT '社交活动',
-  `social_type` text COMMENT '社交活动项目',
   `social _type` text COMMENT '社交活动项目',
   `personal_relationship` int(11) DEFAULT NULL COMMENT '与子女的关系',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='生活方式';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='生活方式';
 
 -- ----------------------------
 -- Records of life_style
 -- ----------------------------
-INSERT INTO `life_style` VALUES ('1', '1', '3', '2', '1', '3', '2', '1', null, '1', '1', '30', '2', '1', '3', '1', '20', '1', '2', '100', '1', '1', '100', '1', '3', '1', '3', '1', '3', '1', '3', '1', '3', '1', '3', '4', '1', '1', '2', null, '1', '1', '1');
-INSERT INTO `life_style` VALUES ('2', '2', '2', '3', '2', '2', '3', '1', '1', null, null, null, null, null, null, null, null, '1', '1', '200', '1', '1', '100', '1', '2', '1', '1', null, null, '2', null, '1', '1', '1', '1', '1', '2', '', '1', '广场舞', '1', '134', '2');
 
 -- ----------------------------
 -- Table structure for `log`
@@ -281,7 +272,7 @@ CREATE TABLE `mmse` (
   `MMDRAW` int(11) DEFAULT NULL COMMENT '语言及时空间能力-照样子画图',
   `MMSE` int(11) DEFAULT NULL COMMENT 'MMSE总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '记录时间戳',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '记录时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -340,7 +331,7 @@ CREATE TABLE `moca` (
   `PLACE` int(11) DEFAULT NULL COMMENT '定向-地点',
   `CITY` int(11) DEFAULT NULL COMMENT '定向-城市',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '记录时间戳',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '记录时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -381,7 +372,7 @@ CREATE TABLE `npiq` (
   `NPILSEV` int(11) DEFAULT NULL COMMENT '食欲/进食严重程度',
   `NPISCORE` int(11) DEFAULT NULL COMMENT 'NPIQ总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -390,19 +381,12 @@ CREATE TABLE `npiq` (
 -- ----------------------------
 
 -- ----------------------------
-<<<<<<< HEAD
 -- Table structure for `demo_character`
 -- ----------------------------
 DROP TABLE IF EXISTS `demo_character`;
-CREATE TABLE `subject` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据id',
-  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
--- Table structure for `subject`
--- ----------------------------
-DROP TABLE IF EXISTS `subject`;
-CREATE TABLE `demo_character`(
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '受试者ID编号',
-  `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
+CREATE TABLE `demo_character` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据ID编号',
+  `subject_id` bigint(32) DEFAULT NULL COMMENT '受试者ID编号',
   `name` varchar(50) DEFAULT NULL COMMENT '姓名',
   `gender` varchar(50) DEFAULT '' COMMENT '性别',
   `born_date` varchar(20) DEFAULT NULL COMMENT '出生年月',
@@ -426,18 +410,11 @@ CREATE TABLE `demo_character`(
   `systolic_pressure` float DEFAULT NULL COMMENT '收缩压',
   `diastolic_pressure` float DEFAULT NULL COMMENT '舒张压',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='人口学特征';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='人口学特征';
 
 -- ----------------------------
--- Records of subject
+-- Records of demo_character
 -- ----------------------------
-
-INSERT INTO `demo_character` VALUES ('1', '1', '张三', '男', '19991006', '12345678910', '5532445', '广西壮族自治区桂林市七星区育才路17号', '汉族', '1', '1', '3', '6', '1', '1', '教师', '1', '6', '1', '168', '100', '56', '98', '123');
-INSERT INTO `demo_character` VALUES ('2', '2', '李四', '女', '19980324', '98765432110', '9756766', '广西壮族自治区桂林市临桂区吾悦广场', '壮族', '2', '2', '1', '4', '2', '1', '4', '2', '3', '3', '156', '92', '48', '88', '109');
-
-INSERT INTO `subject` VALUES ('1', '张三', '男', '19991006', '12345678910', '5532445', '广西壮族自治区桂林市七星区育才路17号', '汉族', '1', '1', '3', '6', '1', '1', '教师', '1', '6', '1', '168', '100', '56', '98', '123');
-INSERT INTO `subject` VALUES ('2', '李四', '女', '19980324', '98765432110', '9756766', '广西壮族自治区桂林市临桂区吾悦广场', '壮族', '2', '2', '1', '4', '2', '1', '4', '2', '3', '3', '156', '92', '48', '88', '109');
-
 
 -- ----------------------------
 -- Table structure for `sys_log`
