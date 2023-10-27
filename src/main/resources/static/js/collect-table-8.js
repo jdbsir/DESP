@@ -100,12 +100,11 @@
         // 获取表单数据并计分
         const data = {};
         let ADLSCORE = 0;
-        const scoreMap = [0, 5, 10, 15];
         for (let i = 0; i < adlChildren.length; i++) {
             let obj = adlChildren[i];
             let value = obj.getValue();
             data[obj.getName()] = value;
-            ADLSCORE = ADLSCORE + scoreMap[value];
+            ADLSCORE = ADLSCORE + value + 1;
         }
         data['adlscore'] = ADLSCORE;
 
