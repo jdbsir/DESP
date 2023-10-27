@@ -6,23 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DementiaEldlyScreeningPlatform.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/DementiaEldlyScreeningPlatformApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/DementiaEldlyScreeningPlatformApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/common/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/common/SnowflakeIdWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/common/SnowflakeIdWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/mapper/DemoCharacterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/mapper/DemoCharacterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/mapper/SubjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/mapper/SubjectMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/pojo/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/pojo/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/DemoCharacterServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/DemoCharacterServiceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/SubjectServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/SubjectServiceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/imp/SubjectServiceInterfaceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/imp/SubjectServiceInterfaceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hung/DementiaEldlyScreeningPlatformApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hung/DementiaEldlyScreeningPlatformApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +129,7 @@
       <workItem from="1698113297439" duration="10257000" />
       <workItem from="1698237563719" duration="4238000" />
       <workItem from="1698241850900" duration="728000" />
-      <workItem from="1698287217443" duration="3043000" />
+      <workItem from="1698287217443" duration="10219000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />

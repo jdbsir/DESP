@@ -61,15 +61,15 @@ public class Moca {
     @TableField("LETTERS")
     private Integer letters;
     @TableField("SERIAL1")
-    private Integer sertal1;
+    private Integer serial1;
     @TableField("SERIAL2")
-    private Integer sertal2;
+    private Integer serial2;
     @TableField("SERIAL3")
-    private Integer sertal3;
+    private Integer serial3;
     @TableField("SERIAL4")
-    private Integer sertal4;
+    private Integer serial4;
     @TableField("SERIAL5")
-    private Integer sertal5;
+    private Integer serial5;
     @TableField("REPEAT1")
     private Integer repeat1;
     @TableField("REPEAT2")
