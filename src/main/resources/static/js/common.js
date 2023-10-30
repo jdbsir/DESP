@@ -56,15 +56,15 @@ function upperToLower(data) {
     }
     return newData;
 }
-// endregion
 
-// region 生成HTML组件的函数
 function htmlToNode(html) {
     const parent = document.createElement('div');
     parent.innerHTML = html;
     return parent.children[0];
 }
+// endregion
 
+// region 生成HTML组件的函数
 function LeftRightInput(type, title, name, options) {
     let html;
     let node;

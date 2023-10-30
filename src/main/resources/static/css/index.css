@@ -1,0 +1,52 @@
+#base-info {
+    padding: 16px 8px;
+}
+
+#record-list {
+    margin: 0;
+    padding: 0;
+}
+
+#record-list > .subject-item {
+    margin: 0;
+    list-style: none;
+}
+
+#record-list > .subject-item details {
+    margin: 0;
+    padding: 0;
+    border-color: #ccc;
+}
+
+#record-list > .subject-item:first-child details {
+    border-top: 1px solid #ccc;
+}
+
+#record-list > .subject-item:last-child details {
+    border-bottom-width: 0;
+}
+
+#record-list > .subject-item details summary {
+    margin: 0;
+    padding: 16px 8px;
+    background-color: #f0f3f6;
+}
+
+#record-list > .subject-item details .items {
+    margin: 0;
+    padding: 0;
+}
+
+#record-list > .subject-item details .items > .item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#record-list > .subject-item details .items > .item a {
+    display: block;
+    padding: 16px 8px;
+    border-top: 1px solid #5bcdf3;
+    background-color: #d2f4ff;
+    color: #08769b;
+}

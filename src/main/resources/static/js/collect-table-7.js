@@ -2,7 +2,7 @@
     'use strict';
 
     const npiqForm = document.querySelector('form[name="npiq"]');
-    const submitButton = npiqForm.querySelector('[type="submit"]');
+    const submitButton = npiqForm.querySelector('[type="submit"');
     const npiqChildren = [
         BinaryRadio(
             '老人家有什么你不知道是不真实的信念吗，如坚持认为有人要伤害自己或偷自己的东西？',
