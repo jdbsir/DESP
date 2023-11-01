@@ -1,0 +1,16 @@
+{
+    "vehicles": 0,
+    "walk": 1,
+    "cook": 0,
+    "housework": 0,
+    "medicine": 2,
+    "eat": 2,
+    "dress": 2,
+    "hair": 1,
+    "laundry": 0,
+    "shower": 0,
+    "shopping": 0,
+    "bathroom": 3,
+    "phone": 3,
+    "money": 0
+}

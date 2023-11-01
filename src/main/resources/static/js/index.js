@@ -92,7 +92,7 @@
         data[subjectId].forEach((record) => {
             items.push(`
                 <li class="item">
-                    <a href="/collect-table-1.html?id=${record['id']}&mode=readonly">记录时间：${record['time']}</a>
+                    <a href="/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
                 </li>
             `);
         });
