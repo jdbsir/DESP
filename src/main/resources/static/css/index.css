@@ -1,5 +1,46 @@
+#app {
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
 #base-info {
     padding: 16px 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#action-group {
+    margin-top: 10px;
+}
+
+#action-group .btn-group-parent {
+    text-align: center;
+}
+
+#action-group .btn-group {
+    display: inline-block;
+}
+
+#action-group .btn-group #unfold-all-record,
+#action-group .btn-group #fold-all-record,
+#action-group .btn-group #back-homepage {
+    display: block;
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+}
+
+#action-group .btn-group > button:nth-of-type(n + 2) {
+    margin-left: 20px;
+}
+
+#action-group form[name="search-record"] {
+    width: 100%;
+    margin: 5px 0 20px;
+    padding: 0 8px;
+}
+
+#action-group form[name="search-record"] input[name="search_name"] {
+    margin-bottom: 0;
 }
 
 #record-list {
@@ -8,13 +49,15 @@
 }
 
 #record-list > .subject-item {
-    margin: 0;
+    margin: 10px 0 0 0;
     list-style: none;
 }
 
 #record-list > .subject-item details {
     margin: 0;
     padding: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
     border-color: #ccc;
 }
 
@@ -23,7 +66,7 @@
 }
 
 #record-list > .subject-item:last-child details {
-    border-bottom-width: 0;
+    border-bottom-width: 1px;
 }
 
 #record-list > .subject-item details summary {
