@@ -3,6 +3,16 @@
     display: none!important;
 }
 
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
 /* 宏观布局 */
 #app {
     max-width: 510px;

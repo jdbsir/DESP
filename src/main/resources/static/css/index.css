@@ -1,0 +1,95 @@
+#app {
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+#base-info {
+    padding: 16px 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#action-group {
+    margin-top: 10px;
+}
+
+#action-group .btn-group-parent {
+    text-align: center;
+}
+
+#action-group .btn-group {
+    display: inline-block;
+}
+
+#action-group .btn-group #unfold-all-record,
+#action-group .btn-group #fold-all-record,
+#action-group .btn-group #back-homepage {
+    display: block;
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+}
+
+#action-group .btn-group > button:nth-of-type(n + 2) {
+    margin-left: 20px;
+}
+
+#action-group form[name="search-record"] {
+    width: 100%;
+    margin: 5px 0 20px;
+    padding: 0 8px;
+}
+
+#action-group form[name="search-record"] input[name="search_name"] {
+    margin-bottom: 0;
+}
+
+#record-list {
+    margin: 0;
+    padding: 0;
+}
+
+#record-list > .subject-item {
+    margin: 10px 0 0 0;
+    list-style: none;
+}
+
+#record-list > .subject-item details {
+    margin: 0;
+    padding: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #ccc;
+}
+
+#record-list > .subject-item:first-child details {
+    border-top: 1px solid #ccc;
+}
+
+#record-list > .subject-item:last-child details {
+    border-bottom-width: 1px;
+}
+
+#record-list > .subject-item details summary {
+    margin: 0;
+    padding: 16px 8px;
+    background-color: #f0f3f6;
+}
+
+#record-list > .subject-item details .items {
+    margin: 0;
+    padding: 0;
+}
+
+#record-list > .subject-item details .items > .item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#record-list > .subject-item details .items > .item a {
+    display: block;
+    padding: 16px 8px;
+    border-top: 1px solid #5bcdf3;
+    background-color: #d2f4ff;
+    color: #08769b;
+}

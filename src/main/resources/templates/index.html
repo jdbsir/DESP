@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+
+    <link rel="stylesheet" href="/css/pico.min.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+    <div id="app">
+        <div id="base-info">
+            <div class="subject-number">
+                <span>已记录的病人数：</span>
+                <span class="text">number</span>
+            </div>
+            <div class="record-number">
+                <span>纪录条目数：</span>
+                <span class="text">number</span>
+            </div>
+            <div class="search-subject-number hidden">
+                <span>搜索到的病人数：</span>
+                <span class="text">number</span>
+            </div>
+            <div class="search-record-number hidden">
+                <span>搜索到的条目数：</span>
+                <span class="text">number</span>
+            </div>
+        </div>
+        <div id="action-group">
+            <div class="btn-group-parent">
+                <div class="btn-group clearfix">
+                    <button type="button" id="unfold-all-record">全部展开</button>
+                    <button type="button" id="fold-all-record">全部收起</button>
+                    <button type="button" id="back-homepage" class="hidden">返回主页</button>
+                </div>
+            </div>
+            <form name="search-record" method="get" action="/">
+                <input type="search" id="search-name" name="search_name" placeholder="搜索名字" autocomplete="off" required />
+            </form>
+        </div>
+        <ul id="record-list"></ul>
+    </div>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
