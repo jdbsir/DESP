@@ -25,11 +25,10 @@
         data['adlscore'] = ADLSCORE;
 
         // 发送并处理请求
-        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
-        const postUrl = `${form.action}?subject_id=${subjectId}`;
+        const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = '/';
+                location.href = `/`;
             } else {
                 alert(response.msg);
             }

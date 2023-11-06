@@ -53,8 +53,7 @@
         data = upperToLower(data);
         
         // 发送并处理请求
-        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
-        const postUrl = `${form.action}?subject_id=${subjectId}`;
+        const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 0) {
                 alert(response.msg);
@@ -62,9 +61,9 @@
             }
 
             if (mocaScore < 26) {
-                location.href = `/collect-table-5.html?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-5.html${location.search}`;
             } else {
-                location.href = `/collect-table-6.html?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-6.html${location.search}`;
             }
         });
     }
