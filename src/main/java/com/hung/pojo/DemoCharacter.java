@@ -16,7 +16,7 @@ public class DemoCharacter {
     @TableId(type = IdType.AUTO)//id自增
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    private Long id_card;
     private String name;
     private String gender;
     private String born_date;
@@ -39,4 +39,6 @@ public class DemoCharacter {
     private Float waistline;
     private Float systolic_pressure;
     private Float diastolic_pressure;
+    private String time;
+    private Long unix_timestamp;
 }

@@ -17,8 +17,9 @@ public class MmseController {
 
     @RequestMapping("/collect_table_5")
     @ResponseBody
-    public Result insertMmse(@RequestBody Mmse mmse, @RequestParam Long subject_id){
+    public Result insertMmse(@RequestBody Mmse mmse, @RequestParam Long subject_id,@RequestParam Long unix_timestamp){
         mmse.setSubject_id(subject_id);
+        mmse.setUnix_timestamp(unix_timestamp);
         return mmseServiceInterface.insertMmse(mmse);
     }
 }

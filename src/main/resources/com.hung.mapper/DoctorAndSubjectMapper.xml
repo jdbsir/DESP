@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hung.mapper.DoctorAndSubjectMapper">
+    <select id="querySubject" resultType="com.hung.pojo.DoctorAndSubject">
+        select * from doctor_subject where doctor_id=(select weixin_id from doctor where weixin_id=#{doctor_id})
+    </select>
+
+    <select id="querySubjectByIdCard" resultType="com.hung.pojo.DoctorAndSubject">
+        select * from doctor_subject where id_card=#{id_card}
+    </select>
+
+    <select id="queryTotalSubjectByDoctorId" resultType="INT">
+        select count(id) from doctor_subject where doctor_id=#{doctor_id}
+    </select>
+
+    <select id="querySubjectTotalByIdCard" resultType="INT">
+        select count(id) from doctor_subject where id_card=#{idCard}
+    </select>
+</mapper>
