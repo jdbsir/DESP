@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,35 +55,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/JAVA/DESP/DESP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Project/JAVA/DESP/DESP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\JAVA\DESP\DESP" />
@@ -129,7 +123,9 @@
       <workItem from="1698113297439" duration="10257000" />
       <workItem from="1698237563719" duration="4238000" />
       <workItem from="1698241850900" duration="728000" />
-      <workItem from="1698287217443" duration="10219000" />
+      <workItem from="1698287217443" duration="11698000" />
+      <workItem from="1698629047237" duration="3234000" />
+      <workItem from="1698995284228" duration="277000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
