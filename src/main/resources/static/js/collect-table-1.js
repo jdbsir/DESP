@@ -5,6 +5,9 @@
     renderCollectTable();
     const form = document.querySelector('form[name="demo-character"]');
     form.addEventListener('submit', submitForm);
+    if (parseQueryParam()['subject_id'] !== undefined) {
+        form.querySelector('input[name="subject_id"]').value = parseQueryParam()['subject_id'];
+    }
 
     // readonly模式
     readonlyMode();

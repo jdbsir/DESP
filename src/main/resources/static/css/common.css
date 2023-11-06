@@ -142,3 +142,20 @@
     padding-left: .75rem;
     cursor: pointer;
 }
+
+.collect-table-back-homepage {
+    text-align: center;
+}
+
+.collect-table-back-homepage a {
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: #1095c1;
+    text-align: center;
+    color: #fff;
+}
+
+.collect-table-back-homepage a:hover {
+    background-color: #08769b;
+    text-decoration: none;
+}

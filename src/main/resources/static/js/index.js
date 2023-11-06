@@ -6,14 +6,15 @@
     // 按钮事件
     document.getElementById('unfold-all-record').addEventListener('click', unfoldAllRecord);
     document.getElementById('fold-all-record').addEventListener('click', foldAllRecord);
+    document.getElementById('add-new-subject').addEventListener('click', addNewSubject);
     document.getElementById('back-homepage').addEventListener('click', backHomepage);
 
     function requestDataAndRenderPage() {
-        const searchName = parseQueryParam()['search_name'];
+        const searchName = parseQueryParam()['search_subject_id'];
         let url = '/query_history_record';
         let searchResult = false;
         if (searchName !== undefined) {
-            url = `${url}?search_name=${searchName}`;
+            url = `${url}?search_subject_id=${searchName}`;
             searchResult = true;
         }
         ajaxGetJson(url).then((response) => {
@@ -67,7 +68,10 @@
             recordList.appendChild(htmlToNode(`
                 <li class="subject-item" data-subject-id="${subjectId}">
                     <details>
-                        <summary>${data[subjectId][0]['name']}（${data[subjectId][0]['subject_id']}）</summary>
+                        <summary>
+                            <span class="title">${data[subjectId][0]['name']}（${data[subjectId][0]['subject_id']}）</span>
+                            <a href="collect-table-1.html?subject_id=${data[subjectId][0]['subject_id']}" class="add-record">添加</a>
+                        </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>
                 </li>
@@ -89,6 +93,10 @@
                 details.querySelector('summary').click();
             }
         });
+    }
+
+    function addNewSubject(e) {
+        location.href = '/collect-table-1.html';
     }
 
     function backHomepage(e) {
