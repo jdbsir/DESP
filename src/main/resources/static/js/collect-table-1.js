@@ -5,6 +5,9 @@
     renderCollectTable();
     const form = document.querySelector('form[name="demo-character"]');
     form.addEventListener('submit', submitForm);
+    if (parseQueryParam()['subject_id'] !== undefined) {
+        form.querySelector('input[name="subject_id"]').value = parseQueryParam()['subject_id'];
+    }
 
     // readonly模式
     readonlyMode();
@@ -72,12 +75,17 @@
 
         // 发送并处理请求
         ajaxPostJson(form.action, data).then((response) => {
-            if (response.code === 1) {
-                const subjectId = encodeURIComponent(response.data.subject_id);
-                location.href = `/collect-table-2.html?${appendQueryParam({'subject_id': subjectId})}`;
-            } else {
+            if (response.code !== 1) {
                 alert(response.msg);
+                return undefined;
             }
+            const id = response.data.id;
+            const timestamp = response.data.unix_timestamp;
+            const qp = appendQueryParam({
+                'subject_id': response.data.id,
+                'unix_timestamp': timestamp
+            });
+            location.href = `/collect-table-2.html?${qp}`;
         });
     }
 })();

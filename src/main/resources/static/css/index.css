@@ -22,7 +22,8 @@
 
 #action-group .btn-group #unfold-all-record,
 #action-group .btn-group #fold-all-record,
-#action-group .btn-group #back-homepage {
+#action-group .btn-group #back-homepage,
+#action-group .btn-group #add-new-subject {
     display: block;
     float: left;
     width: auto;
@@ -39,7 +40,7 @@
     padding: 0 8px;
 }
 
-#action-group form[name="search-record"] input[name="search_name"] {
+#action-group form[name="search-record"] input[name="search_subject_id"] {
     margin-bottom: 0;
 }
 
@@ -70,9 +71,28 @@
 }
 
 #record-list > .subject-item details summary {
+    position: relative;
     margin: 0;
     padding: 16px 8px;
     background-color: #f0f3f6;
+}
+
+#record-list > .subject-item details summary .add-record {
+    position: absolute;
+    top: 8px;
+    right: 36px;
+    width: 56px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: #1095c1;
+    color: #fff;
+    text-align: center;
+    line-height: 33px;
+}
+
+#record-list > .subject-item details summary .add-record:hover {
+    background-color: #08769b;
+    text-decoration: none;
 }
 
 #record-list > .subject-item details .items {

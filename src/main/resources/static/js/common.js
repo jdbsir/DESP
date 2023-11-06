@@ -138,6 +138,7 @@ function readonlyMode() {
 }
 
 function renderCollectTable() {
+    // 生成表单组件
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     const c = window.collectTableComponent[tableIndex - 1];
     const form = document.querySelector(`form[name="${c.formName}"]`);
@@ -145,6 +146,14 @@ function renderCollectTable() {
     c.formChildren.forEach((obj) => {
         form.insertBefore(obj.getNode(), submitButton);
     });
+
+    // 添加“返回主页”按钮
+    const backHomepageButton = htmlToNode(`
+        <div class="collect-table-back-homepage">
+            <a href="/">返回主页</a>
+        </div>
+    `);
+    document.getElementById('app').insertBefore(backHomepageButton, form);
 }
 // endregion
 
@@ -686,6 +695,7 @@ window.collectTableComponent = [
     {
         formName: 'demo-character',
         formChildren: [
+            LeftRightInput('text', '身份证号', 'subject_id'),
             LeftRightInput('text', '姓名', 'name'),
             BinaryRadio('性别', '男', '女', 'gender', 'man', 'woman'),
             LeftRightInput('month', '出生年月', 'born_date'),

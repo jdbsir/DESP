@@ -28,11 +28,10 @@
         data = upperToLower(data);
 
         // 发送并处理请求
-        const subjectId = encodeURIComponent(parseQueryParam()['subject_id']);
-        const postUrl = `${form.action}?subject_id=${subjectId}`;
+        const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect-table-7.html?${appendQueryParam({'subject_id': subjectId})}`;
+                location.href = `/collect-table-7.html${location.search}`;
             } else {
                 alert(response.msg);
             }
