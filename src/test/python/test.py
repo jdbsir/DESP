@@ -198,7 +198,7 @@ def generate_food_extra():
 
 
 def generate_food_extra_other():
-    return random.choice(['' '海鲜'])
+    return random.choice(['', '海鲜'])
 
 
 def generate_fresh_food():
@@ -1015,6 +1015,7 @@ def generate_life_style():
         'alcohol_abuse': alcohol_abuse,
         'alcohol_abuse_rate': alcohol_abuse_rate,
         'alcohol_type': alcohol_type,
+        'alcohol_type_other': alcohol_type_other,
         'alcohol_day': alcohol_day,
         'drink_tea': drink_tea,
         'drink_tea_rate': drink_tea_rate,
@@ -1337,7 +1338,165 @@ def generate_json_main(doctor_number=4):
 # 生成SQL语句的函数 [start]=====================================================
 
 
-# TODO
+def sql_insert_doctor(doctor_id):
+    sql_template = 'INSERT INTO `doctor`(`id`, `weixin_id`) VALUES({}, {});'
+    return sql_template.format(doctor_id, doctor_id)
+
+
+def sql_insert_doctor_subject(doctor_id, id_card):
+    sql_template = """INSERT INTO `doctor_subject`(`doctor_id`, `subject_name`, `id_card`, `is_check`)
+VALUES({}, "", {}, 1);"""
+    return sql_template.format(doctor_id, id_card)
+
+
+def sql_insert_record_1(table_name, demo_character_id, data):
+    sql_template = 'INSERT INTO `{}`(`subject_id`, {})\nVALUES({}, {});'
+    cols = []
+    values = []
+    for col, value in data.items():
+        cols.append('`{}`'.format(col))
+        if isinstance(value, str):
+            values.append('"{}"'.format(value))
+        else:
+            values.append('{}'.format(value))
+
+    return sql_template.format(
+        table_name,
+        ', '.join(cols),
+        demo_character_id,
+        ', '.join(values)
+    )
+
+
+def sql_insert_record_2(table_name, demo_character_id, data):
+    sql_template = 'INSERT INTO `{}`(`subject_id`, {}, `time`, `unix_timestamp`)\nVALUES({}, {}, "{}", {});'
+    cols = []
+    values = []
+    for col, value in data.items():
+        cols.append('`{}`'.format(col))
+        values.append('{}'.format(value))
+
+    time, unix_timestamp = generate_time()
+
+    return sql_template.format(
+        table_name,
+        ', '.join(cols),
+        demo_character_id,
+        ', '.join(values),
+        time,
+        unix_timestamp
+    )
+
+
+
+def sql_insert_demo_character(demo_character_id, id_card, data):
+    sql_template = 'INSERT INTO `demo_character`(`id`, `id_card`, {}, `time`, `unix_timestamp`)\nVALUES({}, {}, {}, "{}", {});'
+    cols = []
+    values = []
+    for col, value in data.items():
+        cols.append('`{}`'.format(col))
+        if isinstance(value, str):
+            values.append('"{}"'.format(value))
+        else:
+            values.append('{}'.format(value))
+
+    time, unix_timestamp = generate_time()
+
+    return sql_template.format(
+        ', '.join(cols),
+        demo_character_id,
+        id_card,
+        ', '.join(values),
+        time,
+        unix_timestamp
+    )
+
+
+def sql_insert_life_style(demo_character_id, data):
+    return sql_insert_record_1('life_style', demo_character_id, data)
+
+
+def sql_insert_health_statu(demo_character_id, data):
+    return sql_insert_record_1('health_statu', demo_character_id, data)
+
+
+def sql_insert_moca(demo_character_id, data):
+    return sql_insert_record_2('moca', demo_character_id, data)
+
+
+def sql_insert_mmse(demo_character_id, data):
+    return sql_insert_record_2('mmse', demo_character_id, data)
+
+
+def sql_insert_gdscale(demo_character_id, data):
+    return sql_insert_record_2('gdscale', demo_character_id, data)
+
+
+def sql_insert_npiq(demo_character_id, data):
+    return sql_insert_record_2('npiq', demo_character_id, data)
+
+
+def sql_insert_adl(demo_character_id, data):
+    return sql_insert_record_2('adl', demo_character_id, data)
+
+
+def generate_sql_main(json_data):
+    # 初始化
+    sql_list = []
+
+    # 删除所有相关的表的记录
+    sql_list.append('-- 删除所有相关的表的记录')
+    table_name_list = [
+        'doctor',
+        'doctor_subject',
+        'demo_character',
+        'life_style',
+        'health_statu',
+        'moca',
+        'mmse',
+        'gdscale',
+        'npiq',
+        'adl'
+    ]
+    for table_name in table_name_list:
+        sql_list.append('DELETE FROM `{}`;'.format(table_name))
+    sql_list.append('\n')
+
+    # 生成SQL语句
+    demo_character_delta_id = 1
+    for doctor_id, doctor_data in json_data.items():
+        # 插入条目到doctor表
+        sql = sql_insert_doctor(doctor_id)
+        sql_list.append(sql)
+
+        # 遍历一个医生记录的所有病人
+        for subject_id_card, record_list in doctor_data.items():
+            # 插入条目到doctor_subject表
+            sql = sql_insert_doctor_subject(doctor_id, subject_id_card)
+            sql_list.append(sql)
+
+            # 遍历一个病人的所有历史记录
+            for record in record_list:
+                # 添加8个表的记录
+                sql_list.extend([
+                    sql_insert_demo_character(demo_character_delta_id, subject_id_card, record['demo_character']),
+                    sql_insert_life_style(demo_character_delta_id, record['life_style']),
+                    sql_insert_health_statu(demo_character_delta_id, record['health_statu']),
+                    sql_insert_moca(demo_character_delta_id, record['moca']),
+                    sql_insert_mmse(demo_character_delta_id, record['mmse']),
+                    sql_insert_gdscale(demo_character_delta_id, record['gdscale']),
+                    sql_insert_npiq(demo_character_delta_id, record['npiq']),
+                    sql_insert_adl(demo_character_delta_id, record['adl'])
+                ])
+
+                demo_character_delta_id = demo_character_delta_id + 1
+
+    # 保存SQL语句
+    sql_code = '\n'.join(sql_list)
+    save_path = os.path.abspath(os.path.join(result_save_path, 'result.sql'))
+    with open(save_path, 'w', encoding='UTF-8') as file:
+        file.write(sql_code)
+        file.close()
 
 
 # 生成SQL语句的函数 [end]=======================================================
@@ -1345,6 +1504,7 @@ def generate_json_main(doctor_number=4):
 
 def main():
     json_data = generate_json_main()
+    generate_sql_main(json_data)
 
 
 if __name__ == '__main__':
