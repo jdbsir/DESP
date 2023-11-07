@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
@@ -19,12 +21,9 @@ public class NpiqServiceInterfaceImp implements NpiqServiceInterface {
 
     @Override
     public Result insetNpiq(Npiq npiq) {
-        LocalDateTime ldt =LocalDateTime.now();
-        // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
-        String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
-        Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
+        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(npiq.getUnix_timestamp()), ZoneId.systemDefault()));
         npiq.setTime(formatDateTime);
-        npiq.setUnix_timestamp(timestamp);
         try {
             int resultValue = npiqMapper.insert(npiq);
             if (resultValue < 1) {

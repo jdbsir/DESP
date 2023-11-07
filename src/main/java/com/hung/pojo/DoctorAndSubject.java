@@ -14,6 +14,7 @@ public class DoctorAndSubject {
     private Integer id;
     private Integer doctor_id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    private Long id_card;
+    private String subject_name;
     private Integer is_check;
 }

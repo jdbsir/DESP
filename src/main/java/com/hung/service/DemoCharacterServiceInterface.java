@@ -12,6 +12,5 @@ public interface DemoCharacterServiceInterface {
      * @param demoCharacter:此参数表示人口学特征表的实体类
      * @return 返回的Result用于告诉用户数据插入的状态
      */
-    Result insertDemoCharacter(DemoCharacter demoCharacter);
-    Result insertDemoCharacterNoSubjectId(DemoCharacter demoCharacter);
+    Result insertNewDemoCharacter(DemoCharacter demoCharacter);
 }

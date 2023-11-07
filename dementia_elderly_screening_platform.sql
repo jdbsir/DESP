@@ -15,19 +15,6 @@ Date: 2023-10-06 12:11:53
 
 SET FOREIGN_KEY_CHECKS=0;
 
--- ----------------------------
--- Table structure for `doctor`
--- ----------------------------
-DROP TABLE IF EXISTS `subject`;
-CREATE TABLE `subject` (
-    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '受试者数据id',
-    `subject_id` bigint(32) DEFAULT NULL COMMENT '受试者id',
-    PRIMARY KEY (`id`,`subject_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of subject
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `adl`
@@ -82,7 +69,8 @@ DROP TABLE IF EXISTS `doctor_subject`;
 CREATE TABLE `doctor_subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `doctor_id` int(11) NOT NULL,
-  `subject_id` bigint(32) NOT NULL,
+  `subject_name` varchar(11) NOT NULL,
+  `id_card` bigint(18) NOT NULL,
   `is_check` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -392,7 +380,7 @@ CREATE TABLE `npiq` (
 DROP TABLE IF EXISTS `demo_character`;
 CREATE TABLE `demo_character` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '数据ID编号',
-  `subject_id` bigint(32) DEFAULT NULL COMMENT '受试者ID编号',
+  `id_card` bigint(18) DEFAULT NULL COMMENT '受试者身份证号',
   `name` varchar(50) DEFAULT NULL COMMENT '姓名',
   `gender` varchar(50) DEFAULT '' COMMENT '性别',
   `born_date` varchar(20) DEFAULT NULL COMMENT '出生年月',
@@ -415,6 +403,8 @@ CREATE TABLE `demo_character` (
   `waistline` float DEFAULT NULL COMMENT '腰围',
   `systolic_pressure` float DEFAULT NULL COMMENT '收缩压',
   `diastolic_pressure` float DEFAULT NULL COMMENT '舒张压',
+  `time` text COMMENT '记录时间',
+  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='人口学特征';
 
