@@ -1,6 +1,10 @@
 (() => {
     'use strict';
 
+    // 连接微信
+    connectWeiXin();
+
+    // 渲染页面
     requestDataAndRenderPage();
 
     // 按钮事件
@@ -100,6 +104,12 @@
     }
 
     function backHomepage(e) {
-        location.href = '/';
+        location.href = '/index.html';
+    }
+
+    function connectWeiXin() {
+        ajaxGetJson(location.href + '/weixin').then((response) => {
+            console.log(response);
+        });
     }
 })();
