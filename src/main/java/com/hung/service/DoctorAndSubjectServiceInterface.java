@@ -9,5 +9,7 @@ public interface DoctorAndSubjectServiceInterface {
     Result insertDoctorAndSubject(DoctorAndSubject doctorAndSubject);
     List<DoctorAndSubject> querySubjectByDoctorId(Integer doctor_id);
 
-    int querySubjectTotalByIdCard(Long idCard);
+    List<DoctorAndSubject> querySubjectByIdCard(Long id_card);
+
+    int queryTotalSubjectByDoctorId(Integer doctor_id);
 }

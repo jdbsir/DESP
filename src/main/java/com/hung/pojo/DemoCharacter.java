@@ -33,6 +33,7 @@ public class DemoCharacter {
     private String occupation;
     private String income;
     private Integer income_level;
+    private String income_other;
     private Integer medical_insurance;
     private Float height;
     private Float weight;

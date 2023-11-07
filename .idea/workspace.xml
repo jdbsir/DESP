@@ -5,53 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DoctorAndSubjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/DoctorAndSubjectServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DoctorAndSubjectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/hung/MapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_elderly_screening_platform.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/MmseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/MmseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/MocaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/MocaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DemoCharacterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DemoCharacterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DoctorAndSubjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DoctorAndSubjectMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/DemoCharacterServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/DemoCharacterServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/AdlServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/AdlServiceInterfaceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/DoctorAndSubjectServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/DoctorAndSubjectServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/GdscaleServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/GdscaleServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MmseServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MmseServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MocaServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MocaServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/NpiqServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/NpiqServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hung/DementiaEldlyScreeningPlatformApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hung/DementiaEldlyScreeningPlatformApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DoctorAndSubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DoctorAndSubjectMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/DemoCharacterServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/DemoCharacterServiceInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/mapper/DemoCharacterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/mapper/DemoCharacterMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/imp/SubjectServiceInterfaceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/collect-table-1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/collect-table-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/collect-table-3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/collect-table-4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/collect-table-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/collect-table-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hung/DementiaEldlyScreeningPlatformApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hung/DementiaEldlyScreeningPlatformApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +34,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -212,7 +180,8 @@
       <workItem from="1698629047237" duration="3234000" />
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
-      <workItem from="1699234475005" duration="14511000" />
+      <workItem from="1699234475005" duration="19435000" />
+      <workItem from="1699321623721" duration="5251000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />

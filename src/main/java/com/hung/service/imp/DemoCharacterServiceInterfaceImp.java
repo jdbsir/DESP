@@ -16,6 +16,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  * 人口学特征表接口的实现类
@@ -34,10 +35,8 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
         // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
         String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
         Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
-        long id_card=1313123;
         demoCharacter.setTime(formatDateTime);
         demoCharacter.setUnix_timestamp(timestamp);
-        demoCharacter.setId_card(id_card);
         try {
             int resultValue=demoCharacterMapper.insert(demoCharacter);
             if(resultValue<1){
@@ -49,5 +48,20 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
         }
         System.out.println(demoCharacter.getId());
         return Result.success(demoCharacter);
+    }
+
+    @Override
+    public List<DemoCharacter> queryDemoCharacterByIdCard(Long id_card) {
+        return demoCharacterMapper.queryDemoCharacterByIdCard(id_card);
+    }
+
+    @Override
+    public List<DemoCharacter> queryDemoCharacterById(Integer id) {
+        return demoCharacterMapper.queryDemoCharacterById(id);
+    }
+
+    @Override
+    public int queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
+        return demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
 }

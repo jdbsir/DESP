@@ -34,7 +34,12 @@ public class DoctorAndSubjectServiceInterfaceImp implements DoctorAndSubjectServ
     }
 
     @Override
-    public int querySubjectTotalByIdCard(Long idCard) {
-        return doctorAndSubjectMapper.querySubjectTotalByIdCard(idCard);
+    public List<DoctorAndSubject> querySubjectByIdCard(Long id_card) {
+        return doctorAndSubjectMapper.querySubjectByIdCard(id_card);
+    }
+
+    @Override
+    public int queryTotalSubjectByDoctorId(Integer doctor_id) {
+        return doctorAndSubjectMapper.queryTotalSubjectByDoctorId(doctor_id);
     }
 }

@@ -396,6 +396,7 @@ CREATE TABLE `demo_character` (
   `retire` int(11) DEFAULT NULL COMMENT '是否离退休',
   `occupation` text COMMENT '职业(在职/离退休前)',
   `income` text COMMENT '经济收入来源',
+  `income_other` text COMMENT '其他经济收入来源',
   `income_level` int(11) DEFAULT NULL COMMENT '收入情况',
   `medical_insurance` int(11) DEFAULT NULL COMMENT '医疗保险',
   `height` float DEFAULT NULL COMMENT '身高',
