@@ -150,7 +150,7 @@ function renderCollectTable() {
     // 添加“返回主页”按钮
     const backHomepageButton = htmlToNode(`
         <div class="collect-table-back-homepage">
-            <a href="/">返回主页</a>
+            <a href="/index.html">返回主页</a>
         </div>
     `);
     document.getElementById('app').insertBefore(backHomepageButton, form);
@@ -695,7 +695,7 @@ window.collectTableComponent = [
     {
         formName: 'demo-character',
         formChildren: [
-            LeftRightInput('text', '身份证号', 'subject_id'),
+            LeftRightInput('text', '身份证号', 'id_card'),
             LeftRightInput('text', '姓名', 'name'),
             BinaryRadio('性别', '男', '女', 'gender', 'man', 'woman'),
             LeftRightInput('month', '出生年月', 'born_date'),
