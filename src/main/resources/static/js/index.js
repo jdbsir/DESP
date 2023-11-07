@@ -108,9 +108,6 @@
     }
 
     function connectWeiXin() {
-        document.getElementById('record-list').appendChild(htmlToNode(`
-            <li>${location.href}</li>
-        `));
         ajaxGetJson(`/weixin${location.search}`).then((response) => {
             console.log(response);
         });
