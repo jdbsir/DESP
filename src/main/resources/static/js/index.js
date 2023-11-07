@@ -108,8 +108,5 @@
     }
 
     function connectWeiXin() {
-        ajaxGetJson(location.href + '/weixin').then((response) => {
-            console.log(response);
-        });
     }
 })();
