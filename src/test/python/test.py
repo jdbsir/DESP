@@ -60,7 +60,7 @@ def generate_name():
 
 
 def generate_gender():
-    random.choice(['man', 'woman'])
+    return random.choice(['man', 'woman'])
 
 
 def generate_born_date():
@@ -169,6 +169,10 @@ def generate_weight():
     return random.randint(50, 150)
 
 
+def generate_waistline():
+    return int(generate_height() / 2 - 11)
+
+
 def generate_systolic_pressure():
     return random.randint(90, 139)
 
@@ -255,12 +259,12 @@ def generate_oiltea():
     return oiltea, oiltea_rate, oiltea_day
 
 
-def generate_read():
-    read = random.randint(0, 1)
+def generate_read_book():
+    read_book = random.randint(0, 1)
     read_rate = 0
-    if read == 1:
+    if read_book == 1:
         read_rate = random.randint(0, 2)
-    return read, read_rate
+    return read_book, read_rate
 
 
 def generate_watch_tv():
@@ -935,6 +939,14 @@ def generate_money():
     return random.randint(0, 3)
 
 
+def generate_time():
+    current_timestamp = int(get_timestamp() * 1000)
+    min_timestamp = current_timestamp - 365 * 24 * 3600 * 1000
+    unix_timestamp = random.randint(min_timestamp, current_timestamp)
+    time = datetime.fromtimestamp(unix_timestamp / 1000).strftime('%Y-%m-%d %H:%M:%S')
+    return time, unix_timestamp
+
+
 # 生成字段的函数 [end]==========================================================
 
 
@@ -942,7 +954,333 @@ def generate_money():
 
 
 def generate_demo_character():
-    pass
+    race, race_other = generate_race()
+    live_type, live_type_other = generate_live_type()
+    income, income_other = generate_income()
+
+    return {
+        'name': generate_name(),
+        'gender': generate_gender(),
+        'born_date': generate_born_date(),
+        'phone': generate_demo_character_phone(),
+        'home_phone': generate_home_phone(),
+        'address': generate_address(),
+        'race': race,
+        'race_other': race_other,
+        'fluency': generate_fluency(),
+        'area_type': generate_area_type(),
+        'live_type': live_type,
+        'live_type_other': live_type_other,
+        'education': generate_education(),
+        'marital': generate_marital(),
+        'retire': generate_retire(),
+        'occupation': generate_occupation(),
+        'income': income,
+        'income_other': income_other,
+        'income_level': generate_income_level(),
+        'medical_insurance': generate_medical_insurance(),
+        'height': generate_height(),
+        'weight': generate_weight(),
+        'waistline': generate_waistline(),
+        'systolic_pressure': generate_systolic_pressure(),
+        'diastolic_pressure': generate_diastolic_pressure()
+    }
+
+
+def generate_life_style():
+    smoke, smoke_rate, smoke_year, smoke_day = generate_smoke()
+    alcohol_abuse, alcohol_abuse_rate, alcohol_type, alcohol_type_other, alcohol_day = generate_alcohol_abuse()
+    drink_tea, drink_tea_rate, drink_tea_day = generate_drink_tea()
+    oiltea, oiltea_rate, oiltea_day = generate_oiltea()
+    read_book, read_rate = generate_read_book()
+    watch_tv, watch_tv_rate = generate_watch_tv()
+    radio, radio_rate = generate_radio()
+    use_smartphone, use_smartphone_rate = generate_use_smartphone()
+    housework, housework_rate = generate_life_style_housework()
+    exercise, exercise_rate, exercise_type, exercise_type_other = generate_exercise()
+
+    return {
+        'sleep': generate_sleep(),
+        'sleep_time_day': generate_sleep_time_day(),
+        'diet': generate_diet(),
+        'food_extra': generate_food_extra(),
+        'food_extra_other': generate_food_extra_other(),
+        'fresh_food': generate_fresh_food(),
+        'preserved_food': generate_preserved_food(),
+        'nutrient': generate_nutrient(),
+        'smoke': smoke,
+        'smoke_rate': smoke_rate,
+        'smoke_year': smoke_year,
+        'smoke_day': smoke_day,
+        'alcohol_abuse': alcohol_abuse,
+        'alcohol_abuse_rate': alcohol_abuse_rate,
+        'alcohol_type': alcohol_type,
+        'alcohol_day': alcohol_day,
+        'drink_tea': drink_tea,
+        'drink_tea_rate': drink_tea_rate,
+        'drink_tea_day': drink_tea_day,
+        'oiltea': oiltea,
+        'oiltea_rate': oiltea_rate,
+        'oiltea_day': oiltea_day,
+        'read_book': read_book,
+        'read_rate': read_rate,
+        'watch_tv': watch_tv,
+        'watch_tv_rate': watch_tv_rate,
+        'radio': radio,
+        'radio_rate': radio_rate,
+        'watch_tv': watch_tv,
+        'watch_tv_rate': watch_tv_rate,
+        'use_smartphone': use_smartphone,
+        'use_smartphone_rate': use_smartphone_rate,
+        'housework': housework,
+        'housework_rate': housework_rate,
+        'exercise': exercise,
+        'exercise_rate': exercise_rate,
+        'exercise_type': exercise_type,
+        'exercise_type_other': exercise_type_other,
+        'hobby': generate_hobby(),
+        'hobby_other': generate_hobby_other(),
+        'recreational_activities': generate_recreational_activities(),
+        'recreational_activities_other': generate_recreational_activities_other(),
+        'social': generate_social(),
+        'social_other': generate_social_other(),
+        'personal_relationship': generate_personal_relationship()
+    }
+
+
+def generate_health_statu():
+    return {
+        'family_his': generate_family_his(),
+        'visual': generate_visual(),
+        'hearing': generate_hearing(),
+        'chronic_disease': generate_chronic_disease(),
+        'vascular_his': generate_vascular_his(),
+        'vascular_his_other': generate_vascular_his_other(),
+        'other_disease': generate_other_disease(),
+        'other_disease_other': generate_other_disease_other(),
+        'mental_performance': generate_mental_performance(),
+        'mental_performance_other': generate_mental_performance_other()
+    }
+
+
+def generate_moca():
+    moca_data = {
+        'TRAILS': generate_TRAILS(),
+        'CUBE': generate_CUBE(),
+        'CLOCKCON': generate_CLOCKCON(),
+        'CLOCKNO': generate_CLOCKNO(),
+        'CLOCKHAN': generate_CLOCKHAN(),
+        'LION': generate_LION(),
+        'RHINO': generate_RHINO(),
+        'CAMEL': generate_CAMEL(),
+        'IMMT1W1': generate_IMMT1W1(),
+        'IMMT1W2': generate_IMMT1W2(),
+        'IMMT1W3': generate_IMMT1W3(),
+        'IMMT1W4': generate_IMMT1W4(),
+        'IMMT1W5': generate_IMMT1W5(),
+        'IMMT2W1': generate_IMMT2W1(),
+        'IMMT2W2': generate_IMMT2W2(),
+        'IMMT2W3': generate_IMMT2W3(),
+        'IMMT2W4': generate_IMMT2W4(),
+        'IMMT2W5': generate_IMMT2W5(),
+        'DIGFOR': generate_DIGFOR(),
+        'DIGBACK': generate_DIGBACK(),
+        'LETTERS': generate_LETTERS(),
+        'SERIAL1': generate_SERIAL1(),
+        'SERIAL2': generate_SERIAL2(),
+        'SERIAL3': generate_SERIAL3(),
+        'SERIAL4': generate_SERIAL4(),
+        'SERIAL5': generate_SERIAL5(),
+        'REPEAT1': generate_REPEAT1(),
+        'REPEAT2': generate_REPEAT2(),
+        'FFLUENCY': generate_FFLUENCY(),
+        'ABSTRAN': generate_ABSTRAN(),
+        'ABSMEAS': generate_ABSMEAS(),
+        'DELW1': generate_DELW1(),
+        'DELW2': generate_DELW2(),
+        'DELW3': generate_DELW3(),
+        'DELW4': generate_DELW4(),
+        'DELW5': generate_DELW5(),
+        'DATE': generate_DATE(),
+        'MONTH': generate_MONTH(),
+        'YEAR': generate_YEAR(),
+        'DAY': generate_DAY(),
+        'PLACE': generate_PLACE(),
+        'CITY': generate_CITY()
+    }
+
+    # 计算MOCA分数
+    memory_list = ['IMMT1W1', 'IMMT1W2', 'IMMT1W3', 'IMMT1W4', 'IMMT1W5', 'IMMT2W1', 'IMMT2W2', 'IMMT2W3', 'IMMT2W4', 'IMMT2W5']
+    attention_list = ['SERIAL1', 'SERIAL2', 'SERIAL3', 'SERIAL4', 'SERIAL5']
+    moca_score = 0
+    for k, v in moca_data.items():
+        if k not in memory_list and k not in attention_list:
+            moca_score = moca_score + v
+    true_count = sum([moca_data[k] for k in attention_list])
+    if true_count >= 4:
+        moca_score = moca_score + 3
+    elif true_count >= 2:
+        moca_score = moca_score + 2
+    elif true_count >= 1:
+        moca_score = moca_score + 1
+    moca_data['MOCA'] = moca_score
+
+    return moca_data
+
+
+def generate_mmse():
+    mmse_data = {
+        'MMYEAR': generate_MMYEAR(),
+        'MMMONTH': generate_MMMONTH(),
+        'MMDATE': generate_MMDATE(),
+        'MMDAY': generate_MMDAY(),
+        'MMSEASON': generate_MMSEASON(),
+        'MMAREA': generate_MMAREA(),
+        'MMSTATE': generate_MMSTATE(),
+        'MMCITY': generate_MMCITY(),
+        'MMHOSPIT': generate_MMHOSPIT(),
+        'MMFLOOR': generate_MMFLOOR(),
+        'garden': generate_garden(),
+        'refrigerator': generate_refrigerator(),
+        'flag': generate_flag(),
+        'MMDLTR': generate_MMDLTR(),
+        'MMLLTR': generate_MMLLTR(),
+        'MMRLTR': generate_MMRLTR(),
+        'MMOLTR': generate_MMOLTR(),
+        'MMWLTR': generate_MMWLTR(),
+        'garden2': generate_garden2(),
+        'refrigerator2': generate_refrigerator2(),
+        'flag2': generate_flag2(),
+        'MMWATCH': generate_MMWATCH(),
+        'MMPENCIL': generate_MMPENCIL(),
+        'MMREPEAT': generate_MMREPEAT(),
+        'MMHAND': generate_MMHAND(),
+        'MMFOLD': generate_MMFOLD(),
+        'MMONFLR': generate_MMONFLR(),
+        'MMCLEYE': generate_MMCLEYE(),
+        'MMWRITE': generate_MMWRITE(),
+        'MMDRAW': generate_MMDRAW()
+    }
+
+    # 计算MMSE分数
+    mmse_data['MMSE'] = sum(mmse_data.values())
+
+    return mmse_data
+
+
+def generate_gdscale():
+    gdscale_data = {
+        'GDSATIS': generate_GDSATIS(),
+        'GDDROP': generate_GDDROP(),
+        'GDEMPTY': generate_GDEMPTY(),
+        'GDBORED': generate_GDBORED(),
+        'GDSPIRIT': generate_GDSPIRIT(),
+        'GDMIND': generate_GDMIND(),
+        'GDENERGY': generate_GDENERGY(),
+        'GDAFRAID': generate_GDAFRAID(),
+        'GDHAPPY': generate_GDHAPPY(),
+        'GDHELP': generate_GDHELP(),
+        'GDFIDGET': generate_GDFIDGET(),
+        'GDHOME': generate_GDHOME(),
+        'GDFUTURE': generate_GDFUTURE(),
+        'GDMEMORY': generate_GDMEMORY(),
+        'GDALIVE': generate_GDALIVE(),
+        'GDDEPRESSED': generate_GDDEPRESSED(),
+        'GDMEANINGLESS': generate_GDMEANINGLESS(),
+        'GDWORRY': generate_GDWORRY(),
+        'GDEXCITING': generate_GDEXCITING(),
+        'GDNEWJOB': generate_GDNEWJOB(),
+        'GDVITALITY': generate_GDVITALITY(),
+        'GDHOPE': generate_GDHOPE(),
+        'GDBETTER': generate_GDBETTER(),
+        'GDSAD': generate_GDSAD(),
+        'GDCRYING': generate_GDCRYING(),
+        'GDCONCENTRATE': generate_GDCONCENTRATE(),
+        'GDMORNING': generate_GDMORNING(),
+        'GDPARTY': generate_GDPARTY(),
+        'GDDECISION': generate_GDDECISION(),
+        'GDCLEAR': generate_GDCLEAR()
+    }
+
+    # 计算GD分数
+    gdscale_data['GDTOTAL'] = sum(gdscale_data.values())
+
+    return gdscale_data
+
+
+def generate_npiq():
+    NPIA, NPIASEV = generate_NPIA()
+    NPIB, NPIBSEV = generate_NPIB()
+    NPIC, NPICSEV = generate_NPIC()
+    NPID, NPIDSEV = generate_NPID()
+    NPIE, NPIESEV = generate_NPIE()
+    NPIF, NPIFSEV = generate_NPIF()
+    NPIG, NPIGSEV = generate_NPIG()
+    NPIH, NPIHSEV = generate_NPIH()
+    NPII, NPIISEV = generate_NPII()
+    NPIJ, NPIJSEV = generate_NPIJ()
+    NPIK, NPIKSEV = generate_NPIK()
+    NPIL, NPILSEV = generate_NPIL()
+
+    npiq_data = {
+        'NPIA': NPIA,
+        'NPIASEV': NPIASEV,
+        'NPIB': NPIB,
+        'NPIBSEV': NPIBSEV,
+        'NPIC': NPIC,
+        'NPICSEV': NPICSEV,
+        'NPID': NPID,
+        'NPIDSEV': NPIDSEV,
+        'NPIE': NPIE,
+        'NPIESEV': NPIESEV,
+        'NPIF': NPIF,
+        'NPIFSEV': NPIFSEV,
+        'NPIG': NPIG,
+        'NPIGSEV': NPIGSEV,
+        'NPIH': NPIH,
+        'NPIHSEV': NPIHSEV,
+        'NPII': NPII,
+        'NPIISEV': NPIISEV,
+        'NPIJ': NPIJ,
+        'NPIJSEV': NPIJSEV,
+        'NPIK': NPIK,
+        'NPIKSEV': NPIKSEV,
+        'NPIL': NPIL,
+        'NPILSEV': NPILSEV
+    }
+
+    # 计算NPI分数
+    npi_score = 0
+    for k, v in npiq_data.items():
+        if k.endswith('SEV') and npiq_data[k[:-3]] == 1:
+            npi_score = npi_score + v + 1
+    npiq_data['NPISCORE'] = npi_score
+
+    return npiq_data
+
+
+def generate_adl():
+    adl_data = {
+        'vehicles': generate_vehicles(),
+        'walk': generate_walk(),
+        'cook': generate_cook(),
+        'housework': generate_adl_housework(),
+        'medicine': generate_medicine(),
+        'eat': generate_eat(),
+        'dress': generate_dress(),
+        'hair': generate_hair(),
+        'laundry': generate_laundry(),
+        'shower': generate_shower(),
+        'shopping': generate_shopping(),
+        'bathroom': generate_bathroom(),
+        'phone': generate_adl_phone(),
+        'money': generate_money()
+    }
+
+    # 计算ADL分数
+    adl_data['ADLSCORE'] = sum([v + 1 for v in adl_data.values()])
+
+    return adl_data
 
 
 def generate_json_main(doctor_number=4):
@@ -973,14 +1311,14 @@ def generate_json_main(doctor_number=4):
             # 生成每一条记录
             for record_index in range(record_number):
                 record_list.append({
-                    'demo_character': {},
-                    'life_style': {},
-                    'health_statu': {},
-                    'moca': {},
-                    'mmse': {},
-                    'gdscale': {},
-                    'npiq': {},
-                    'adl': {}
+                    'demo_character': generate_demo_character(),
+                    'life_style': generate_life_style(),
+                    'health_statu': generate_health_statu(),
+                    'moca': generate_moca(),
+                    'mmse': generate_mmse(),
+                    'gdscale': generate_gdscale(),
+                    'npiq': generate_npiq(),
+                    'adl': generate_adl()
                 })
 
     # 保存生成的json数据
@@ -996,18 +1334,18 @@ def generate_json_main(doctor_number=4):
 # 生成表json的函数 [end]========================================================
 
 
+# 生成SQL语句的函数 [start]=====================================================
+# 生成SQL语句的函数 [end]=======================================================
+
+
+def main():
+    json_data = generate_json_main()
+
+
 if __name__ == '__main__':
     """
-    doctor
-    doctor_subject
-    demo_character
-    life_style
-    health_statu
-    moca
-    mmse
-    gdscale
-    npiq
-    adl
+    生成顺序：
+    doctor --> doctor_subject --> demo_character --> life_style --> health_statu --> moca --> mmse --> gdscale --> npiq --> adl
     """
 
     # 检查是否有函数名冲突
@@ -1023,4 +1361,4 @@ if __name__ == '__main__':
             raise Exception('函数定义名称冲突：{}。定义次数：{}'.format(funcname, count))
 
     # 测试
-    generate_json_main()
+    main()
