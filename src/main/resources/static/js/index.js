@@ -108,5 +108,8 @@
     }
 
     function connectWeiXin() {
+        ajaxGetJson(`/weixin${location.search}`).then((response) => {
+            console.log(response);
+        });
     }
 })();

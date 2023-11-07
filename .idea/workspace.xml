@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DemoCharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/LifeStyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/LifeStyleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/MmseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/MmseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/MocaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/MocaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/AdlServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/AdlServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/GdscaleServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/GdscaleServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/HealthStatusServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/HealthStatusServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/LifeStyleServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/LifeStyleServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MmseServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MmseServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MocaServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/MocaServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/NpiqServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/NpiqServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/WeiXin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WeiXin.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/controller/DemoCharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/pojo/DemoCharacter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hung/service/imp/DemoCharacterServiceInterfaceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +167,7 @@
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
       <workItem from="1699234475005" duration="19435000" />
-      <workItem from="1699321623721" duration="15550000" />
+      <workItem from="1699321623721" duration="16148000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
