@@ -21,7 +21,7 @@ public class MocaServiceInterfaceImp implements MocaServiceInterface {
     @Override
     public Result insertMoca(Moca moca) {
         DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(moca.getUnix_timestamp()), ZoneId.systemDefault()));
+        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(moca.getUnixTimestamp()), ZoneId.systemDefault()));
         moca.setTime(formatDateTime);
         try {
             int resultValue = mocaMapper.insert(moca);
@@ -32,6 +32,6 @@ public class MocaServiceInterfaceImp implements MocaServiceInterface {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
             return Result.error("数据保存失败，请重新提交保存");
         }
-        return Result.success(moca.getSubject_id());
+        return Result.success(moca.getSubjectId());
     }
 }

@@ -18,8 +18,8 @@ public class GdscaleController {
     @RequestMapping("/collect_table_6")
     @ResponseBody
     public Result insertGdscale(@RequestBody Gdscale gdscale, @RequestParam Long subject_id,@RequestParam Long unix_timestamp){
-        gdscale.setSubject_id(subject_id);
-        gdscale.setUnix_timestamp(unix_timestamp);
+        gdscale.setSubjectId(subject_id);
+        gdscale.setUnixTimestamp(unix_timestamp);
         return gdscaleServiceInterface.insertGdscale(gdscale);
     }
 }

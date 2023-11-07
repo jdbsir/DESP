@@ -36,7 +36,7 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
         String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
         Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
         demoCharacter.setTime(formatDateTime);
-        demoCharacter.setUnix_timestamp(timestamp);
+        demoCharacter.setUnixTimestamp(timestamp);
         try {
             int resultValue=demoCharacterMapper.insert(demoCharacter);
             if(resultValue<1){

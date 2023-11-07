@@ -12,9 +12,13 @@ import lombok.Data;
 public class DoctorAndSubject {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
-    private Integer doctor_id;
+    @TableField("doctor_id")
+    private Integer doctorId;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id_card;
-    private String subject_name;
-    private Integer is_check;
+    @TableField("id_card")
+    private Long idCard;
+    @TableField("subject_name")
+    private String subjectName;
+    @TableField("is_check")
+    private Integer isCheck;
 }

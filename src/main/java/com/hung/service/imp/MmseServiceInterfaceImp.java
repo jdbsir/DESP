@@ -21,7 +21,7 @@ public class MmseServiceInterfaceImp implements MmseServiceInterface {
     @Override
     public Result insertMmse(Mmse mmse) {
         DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(mmse.getUnix_timestamp()), ZoneId.systemDefault()));
+        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(mmse.getUnixTimestamp()), ZoneId.systemDefault()));
         mmse.setTime(formatDateTime);
         try {
             int resultValue = mmseMapper.insert(mmse);
@@ -32,6 +32,6 @@ public class MmseServiceInterfaceImp implements MmseServiceInterface {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
             return Result.error("数据保存失败，请重新提交保存");
         }
-        return Result.success(mmse.getSubject_id());
+        return Result.success(mmse.getSubjectId());
     }
 }

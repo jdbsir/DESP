@@ -21,7 +21,7 @@ public class GdscaleServiceInterfaceImp implements GdscaleServiceInterface {
     @Override
     public Result insertGdscale(Gdscale gdscale) {
         DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(gdscale.getUnix_timestamp()), ZoneId.systemDefault()));
+        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(gdscale.getUnixTimestamp()), ZoneId.systemDefault()));
         gdscale.setTime(formatDateTime);
         try {
             int resultValue = gdscaleMapper.insert(gdscale);
@@ -32,6 +32,6 @@ public class GdscaleServiceInterfaceImp implements GdscaleServiceInterface {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
             return Result.error("数据保存失败，请重新提交保存");
         }
-        return Result.success(gdscale.getSubject_id());
+        return Result.success(gdscale.getSubjectId());
     }
 }

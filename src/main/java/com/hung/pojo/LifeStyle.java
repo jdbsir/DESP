@@ -13,55 +13,86 @@ public class LifeStyle {
     @TableId(type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     private Integer sleep;
-    private Integer sleep_time_day;
+    @TableField("sleep_time_day")
+    private Integer sleepTimeDay;
     private String diet;
-    private String food_extra;
-    private String food_extra_other;
-    private Integer fresh_food;
-    private Integer preserved_food;
+    @TableField("food_extra")
+    private String foodExtra;
+    @TableField("food_extra_other")
+    private String foodExtraOther;
+    @TableField("fresh_food")
+    private Integer freshFood;
+    @TableField("preserved_food")
+    private Integer preservedFood;
     private Integer nutrient;
     private Integer smoke;
-    private Integer smoke_rate;
-    private Integer smoke_year;
-    private Integer smoke_day;
-    private Integer alcohol_abuse;
-    private Integer alcohol_abuse_rate;
-    private String alcohol_type;
-    private String alcohol_type_other;
-    private Integer alcohol_day;
-    private Integer drink_tea;
-    private Integer drink_tea_rate;
-    private Integer drink_tea_day;
+    @TableField("smoke_rate")
+    private Integer smokeRate;
+    @TableField("smoke_year")
+    private Integer smokeYear;
+    @TableField("smoke_day")
+    private Integer smokeDay;
+    @TableField("alcohol_abuse")
+    private Integer alcoholAbuse;
+    @TableField("alcohol_abuse_rate")
+    private Integer alcoholAbuseRate;
+    @TableField("alcohol_type")
+    private String alcoholType;
+    @TableField("alcohol_type_other")
+    private String alcoholTypeOther;
+    @TableField("alcohol_day")
+    private Integer alcoholDay;
+    @TableField("drink_tea")
+    private Integer drinkTea;
+    @TableField("drink_tea_rate")
+    private Integer drinkTeaRate;
+    @TableField("drink_tea_day")
+    private Integer drinkTeaDay;
     private Integer oiltea;
-    private Integer oiltea_rate;
-    private Integer oiltea_day;
+    @TableField("oiltea_rate")
+    private Integer oilteaRate;
+    @TableField("oiltea_day")
+    private Integer oilteaDay;
     @TableField("read_book")
     private Integer read;
-    private Integer read_rate;
-    private Integer watch_tv;
-    private Integer watch_tv_rate;
+    @TableField("read_rate")
+    private Integer readRate;
+    @TableField("watch_tv")
+    private Integer watchTv;
+    @TableField("watch_tv_rate")
+    private Integer watchTvRate;
     private Integer radio;
-    private Integer radio_rate;
-    private Integer use_smartphone;
-    private Integer use_smartphone_rate;
+    @TableField("radio_rate")
+    private Integer radioRate;
+    @TableField("use_smartphone")
+    private Integer useSmartphone;
+    @TableField("use_smartphone_rate")
+    private Integer useSmartphoneRate;
     private Integer housework;
-    private Integer housework_rate;
+    @TableField("housework_rate")
+    private Integer houseworkRate;
     private Integer exercise;
-    private Integer exercise_rate;
-    private String exercise_type;
-    private String exercise_type_other;
+    @TableField("exercise_rate")
+    private Integer exerciseRate;
+    @TableField("exercise_type")
+    private String exerciseType;
+    @TableField("exercise_type_other")
+    private String exerciseTypeOther;
     private String hobby;
-    @TableField("hobby_type")
-    private String hobby_other;
-    private String recreational_activities;
-    @TableField("recreational_activities_type")
-    private String recreational_activities_other;
+    @TableField("hobby_other")
+    private String hobbyOther;
+    @TableField("recreational_activities")
+    private String recreationalActivities;
+    @TableField("recreational_activities_other")
+    private String recreationalActivitiesOther;
     private String social;
-    @TableField("social_type")
+    @TableField("social_other")
     private String social_other;
-    private Integer personal_relationship;
+    @TableField("personal_relationship")
+    private Integer personalRelationship;
 
 
 }
