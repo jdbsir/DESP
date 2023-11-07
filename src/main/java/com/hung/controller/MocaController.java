@@ -18,8 +18,8 @@ public class MocaController {
     @RequestMapping("/collect_table_4")
     @ResponseBody
     public Result insertMoca(@RequestBody Moca moca, @RequestParam Long subject_id,@RequestParam Long unix_timestamp){
-        moca.setSubject_id(subject_id);
-        moca.setUnix_timestamp(unix_timestamp);
+        moca.setSubjectId(subject_id);
+        moca.setUnixTimestamp(unix_timestamp);
         return mocaServiceInterface.insertMoca(moca);
     }
 }

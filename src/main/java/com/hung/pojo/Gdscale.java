@@ -14,7 +14,8 @@ public class Gdscale {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     @TableField("GDSATIS")
     private Integer gdsatis;
     @TableField("GDDROP")
@@ -78,5 +79,6 @@ public class Gdscale {
     @TableField("GDTOTAL")
     private Integer gdtotal;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 }

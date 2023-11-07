@@ -15,7 +15,8 @@ public class Adl {
     @TableId(type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     private Integer vehicles;
     private Integer walk;
     private Integer cook;
@@ -33,6 +34,7 @@ public class Adl {
     @TableField("ADLSCORE")
     private Integer adlscore;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 
 }

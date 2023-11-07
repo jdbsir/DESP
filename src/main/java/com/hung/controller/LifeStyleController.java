@@ -18,7 +18,7 @@ public class LifeStyleController {
     @RequestMapping("/collect_table_2")
     @ResponseBody
     public Result insertLifeStyle(@RequestBody LifeStyle lifeStyle,@RequestParam Long subject_id){
-        lifeStyle.setSubject_id(subject_id);
+        lifeStyle.setSubjectId(subject_id);
         return lifeStyleServiceInterface.insertLifeStyle(lifeStyle);
     }
 }

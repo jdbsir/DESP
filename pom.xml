@@ -107,6 +107,7 @@
                     <include>**/*.css</include>
                     <include>**/*.yml</include>
                     <include>**/*.xml</include>
+                    <include>**/*.properties</include>
                 </includes>
             </resource>
             <resource>

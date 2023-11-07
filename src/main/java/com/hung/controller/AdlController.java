@@ -18,8 +18,8 @@ public class AdlController {
     @RequestMapping("/collect_table_8")
     @ResponseBody
     public Result insertAdl(@RequestBody Adl adl,@RequestParam Long subject_id,@RequestParam Long unix_timestamp){
-        adl.setSubject_id(subject_id);
-        adl.setUnix_timestamp(unix_timestamp);
+        adl.setSubjectId(subject_id);
+        adl.setUnixTimestamp(unix_timestamp);
         System.out.print(adl);
         return adlServiceInterface.insertAdl(adl);
     }

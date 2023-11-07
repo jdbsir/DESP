@@ -22,7 +22,7 @@ public class NpiqServiceInterfaceImp implements NpiqServiceInterface {
     @Override
     public Result insetNpiq(Npiq npiq) {
         DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(npiq.getUnix_timestamp()), ZoneId.systemDefault()));
+        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(npiq.getUnixTimestamp()), ZoneId.systemDefault()));
         npiq.setTime(formatDateTime);
         try {
             int resultValue = npiqMapper.insert(npiq);
@@ -33,6 +33,6 @@ public class NpiqServiceInterfaceImp implements NpiqServiceInterface {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
             return Result.error("数据保存失败，请重新提交保存");
         }
-        return Result.success(npiq.getSubject_id());
+        return Result.success(npiq.getSubjectId());
     }
 }

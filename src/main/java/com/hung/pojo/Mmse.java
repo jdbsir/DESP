@@ -15,7 +15,8 @@ public class Mmse {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     @TableField("MMYEAR")
     private Integer mmyear;
     @TableField("MMMONTH")
@@ -79,7 +80,8 @@ public class Mmse {
     @TableField("MMSE")
     private Integer mmse;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 
 
 }

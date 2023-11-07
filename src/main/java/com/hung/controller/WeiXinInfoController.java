@@ -19,13 +19,13 @@ public class WeiXinInfoController {
     @RequestMapping("/weixin")
     @ResponseBody
     public JSONObject insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state) {
-        System.out.println(code);
-        System.out.println(state);
+
         GetWeiXinUserInfo info = new GetWeiXinUserInfo();
         JSONObject json = info.getJson(code);
         if (json.getString("openid") == null) {
             return null;
         } else {
+            System.out.println(json);
             return json;
         }
     }

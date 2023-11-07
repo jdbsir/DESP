@@ -1,5 +1,6 @@
 package com.hung.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -16,30 +17,45 @@ public class DemoCharacter {
     @TableId(type = IdType.AUTO)//id自增
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id_card;
+    @TableField("id_card")
+    private Long idCard;
     private String name;
     private String gender;
-    private String born_date;
+    @TableField("born_date")
+    private String bornDate;
     private String phone;
-    private String home_phone;
+    @TableField("home_phone")
+    private String homePhone;
     private String address;
     private String race;
+    @TableField("race_other")
+    private String raceOther;
     private Integer fluency;
-    private Integer area_type;
-    private String live_type;
+    @TableField("area_type")
+    private Integer areaType;
+    @TableField("live_type")
+    private String liveType;
+    @TableField("live_type_other")
+    private String liveTypeOther;
     private Integer education;
     private Integer marital;
     private Integer retire;
     private String occupation;
     private String income;
-    private Integer income_level;
-    private String income_other;
-    private Integer medical_insurance;
+    @TableField("income_other")
+    private String incomeOther;
+    @TableField("income_level")
+    private Integer incomeLevel;
+    @TableField("medical_insurance")
+    private Integer medicalInsurance;
     private Float height;
     private Float weight;
     private Float waistline;
-    private Float systolic_pressure;
-    private Float diastolic_pressure;
+    @TableField("systolic_pressure")
+    private Float systolicPressure;
+    @TableField("diastolic_pressure")
+    private Float diastolicPressure;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 }

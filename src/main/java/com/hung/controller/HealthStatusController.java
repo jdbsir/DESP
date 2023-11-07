@@ -18,7 +18,7 @@ public class HealthStatusController {
     @RequestMapping("/collect_table_3")
     @ResponseBody
     public Result insertHealthStatus(@RequestBody HealthStatu healthStatus, @RequestParam Long subject_id){
-        healthStatus.setSubject_id(subject_id);
+        healthStatus.setSubjectId(subject_id);
         return healthStatusServiceInterface.insertHealthStatus(healthStatus);
     }
 }

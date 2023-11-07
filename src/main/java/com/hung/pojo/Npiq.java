@@ -15,7 +15,8 @@ public class Npiq {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     @TableField("NPIA")
     private Integer npia;
     @TableField("NPIASEV")
@@ -67,7 +68,8 @@ public class Npiq {
     @TableField("NPISCORE")
     private Integer npiscore;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 
 
 }

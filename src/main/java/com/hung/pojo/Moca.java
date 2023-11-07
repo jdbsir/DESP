@@ -15,7 +15,8 @@ public class Moca {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long subject_id;
+    @TableField("subject_id")
+    private Long subjectId;
     @TableField("MOCA")
     private Integer moca;
     @TableField("TRAILS")
@@ -103,7 +104,8 @@ public class Moca {
     @TableField("CITY")
     private Integer city;
     private String time;
-    private Long unix_timestamp;
+    @TableField("unix_timestamp")
+    private Long unixTimestamp;
 
 
 }
