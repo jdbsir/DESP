@@ -138,11 +138,11 @@ CREATE TABLE `health_statu` (
   `hearing` int(11) DEFAULT NULL COMMENT '听力情况',
   `chronic_disease` int(11) DEFAULT NULL COMMENT '慢性疾病',
   `vascular_his` text DEFAULT NULL COMMENT '心脑血管病史',
-  `vascular_his_box` text DEFAULT NULL COMMENT '其他心脑血管病史',
+  `vascular_his_other` text DEFAULT NULL COMMENT '其他心脑血管病史',
   `other_disease` text DEFAULT NULL COMMENT '是否以下疾病',
-  `other_disease_box` text DEFAULT NULL COMMENT '其他疾病',
+  `other_disease_other` text DEFAULT NULL COMMENT '其他疾病',
   `mental_performance` text DEFAULT NULL COMMENT '精神系统疾病表现',
-  `mental_performance_box` text DEFAULT NULL COMMENT '其他精神系统疾病表现',
+  `mental_performance_other` text DEFAULT NULL COMMENT '其他精神系统疾病表现',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='健康状况';
 
@@ -195,11 +195,11 @@ CREATE TABLE `life_style` (
   `exercise_type` text COMMENT '体育锻炼项目',
   `exercise_type_other` text COMMENT '其他体育锻炼项目',
   `hobby` text DEFAULT NULL COMMENT '兴趣爱好',
-  `hobby_type` text DEFAULT NULL COMMENT '兴趣爱好项目',
+  `hobby_other` text DEFAULT NULL COMMENT '其他兴趣爱好',
   `recreational_activities` text DEFAULT NULL COMMENT '文娱活动',
-  `recreational_activities_type` text DEFAULT NULL COMMENT '文娱活动项目',
+  `recreational_activities_other` text DEFAULT NULL COMMENT '其他文娱活动',
   `social` text DEFAULT NULL COMMENT '社交活动',
-  `social_type` text DEFAULT NULL COMMENT '社交活动项目',
+  `social_other` text DEFAULT NULL COMMENT '其他社交活动',
   `personal_relationship` int(11) DEFAULT NULL COMMENT '与子女的关系',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='生活方式';
@@ -388,9 +388,11 @@ CREATE TABLE `demo_character` (
   `home_phone` varchar(11) DEFAULT NULL COMMENT '家属电话',
   `address` varchar(50) DEFAULT NULL COMMENT '住址',
   `race` varchar(50) DEFAULT NULL COMMENT '民族',
+  `race_other` varchar(50) DEFAULT NULL COMMENT '其他民族',
   `fluency` int(11) DEFAULT NULL COMMENT '汉语交流',
   `area_type` int(11) DEFAULT NULL COMMENT '居住地',
   `live_type` text COMMENT '居住方式',
+  `live_type_other` text COMMENT '其他居住方式',
   `education` int(11) DEFAULT NULL COMMENT '文化程度',
   `marital` int(11) DEFAULT NULL COMMENT '婚姻状况',
   `retire` int(11) DEFAULT NULL COMMENT '是否离退休',

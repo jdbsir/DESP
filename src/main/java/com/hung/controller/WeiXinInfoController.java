@@ -8,16 +8,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class WeiXinInfoController {
     @RequestMapping("/weixin")
     @ResponseBody
-    public String insertWeiXinInfoFromURL(String url) {
-        if (url.isEmpty()) {
-            return null;
-        }
-        String code = getUrlPramNameAndValue(url).get("code");
+    public JSONObject insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state) {
+        System.out.println(code);
+        System.out.println(state);
         GetWeiXinUserInfo info = new GetWeiXinUserInfo();
         JSONObject json = info.getJson(code);
         if (json.getString("openid") == null) {
