@@ -28,7 +28,7 @@ public class DemoCharacterController {
     }
 
     /**
-     * 数据插入
+     * 受试者调查数据插入
      * */
     @RequestMapping(value = "/collect_table_1")
     @ResponseBody

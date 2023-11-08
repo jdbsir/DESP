@@ -39,7 +39,7 @@ CREATE TABLE `adl` (
   `money` int(11) DEFAULT NULL COMMENT '14.处理自己钱物',
   `ADLSCORE` int(11) DEFAULT NULL COMMENT 'ADL总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -118,7 +118,7 @@ CREATE TABLE `gdscale` (
   `GDCLEAR` int(11) DEFAULT NULL COMMENT '30.你的头脑象往常一样清晰吗？',
   `GDTOTAL` int(11) DEFAULT NULL COMMENT 'GDSCALE总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -134,8 +134,8 @@ CREATE TABLE `health_statu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `family_his` int(11) DEFAULT NULL COMMENT '父母或兄弟姐妹中，是否有人患老年痴呆',
-  `visual` int(11) DEFAULT NULL COMMENT '视力情况',
-  `hearing` int(11) DEFAULT NULL COMMENT '听力情况',
+  `visual` varchar(4) DEFAULT NULL COMMENT '视力情况',
+  `hearing` varchar(4) DEFAULT NULL COMMENT '听力情况',
   `chronic_disease` int(11) DEFAULT NULL COMMENT '慢性疾病',
   `vascular_his` text DEFAULT NULL COMMENT '心脑血管病史',
   `vascular_his_other` text DEFAULT NULL COMMENT '其他心脑血管病史',
@@ -159,7 +159,7 @@ CREATE TABLE `life_style` (
   `subject_id` bigint(32) NOT NULL COMMENT '受试者id',
   `sleep` int(11) DEFAULT NULL COMMENT '睡眠情况',
   `sleep_time_day` int(11) DEFAULT NULL COMMENT '每天的睡眠（午间和夜间）时间',
-  `diet` int(11) DEFAULT NULL COMMENT '饮食口味',
+  `diet` varchar(5) DEFAULT NULL COMMENT '饮食口味',
   `food_extra` text COMMENT '除主食（米饭、面等）外，还经常吃下面哪些食物',
   `food_extra_other` text COMMENT '其他食物',
   `fresh_food` int(11) DEFAULT NULL COMMENT '新鲜的肉类、蔬菜、水果',
@@ -266,7 +266,7 @@ CREATE TABLE `mmse` (
   `MMDRAW` int(11) DEFAULT NULL COMMENT '语言及时空间能力-照样子画图',
   `MMSE` int(11) DEFAULT NULL COMMENT 'MMSE总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '记录时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '记录时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -325,7 +325,7 @@ CREATE TABLE `moca` (
   `PLACE` int(11) DEFAULT NULL COMMENT '定向-地点',
   `CITY` int(11) DEFAULT NULL COMMENT '定向-城市',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '记录时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '记录时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -366,7 +366,7 @@ CREATE TABLE `npiq` (
   `NPILSEV` int(11) DEFAULT NULL COMMENT '食欲/进食严重程度',
   `NPISCORE` int(11) DEFAULT NULL COMMENT 'NPIQ总分',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -400,14 +400,14 @@ CREATE TABLE `demo_character` (
   `income` text COMMENT '经济收入来源',
   `income_other` text COMMENT '其他经济收入来源',
   `income_level` int(11) DEFAULT NULL COMMENT '收入情况',
-  `medical_insurance` int(11) DEFAULT NULL COMMENT '医疗保险',
+  `medical_insurance` varchar(6) DEFAULT NULL COMMENT '医疗保险',
   `height` float DEFAULT NULL COMMENT '身高',
   `weight` float DEFAULT NULL COMMENT '体重',
   `waistline` float DEFAULT NULL COMMENT '腰围',
   `systolic_pressure` float DEFAULT NULL COMMENT '收缩压',
   `diastolic_pressure` float DEFAULT NULL COMMENT '舒张压',
   `time` text COMMENT '记录时间',
-  `unix_timestamp` int(11) DEFAULT NULL COMMENT '时间戳',
+  `unix_timestamp` bigint(13) DEFAULT NULL COMMENT '时间戳',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='人口学特征';
 

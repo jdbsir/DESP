@@ -22,7 +22,7 @@
             let sev = answer === 0 ? 0 : npiqChildren[i + 1].getValue();
             data[name] = answer;
             data[`${name}SEV`] = sev;
-            NPISCORE = NPISCORE + answer + sev;
+            NPISCORE = NPISCORE + Number(answer === 0 ? 0 : sev + 1);
         }
         data['NPISCORE'] = NPISCORE;
 
