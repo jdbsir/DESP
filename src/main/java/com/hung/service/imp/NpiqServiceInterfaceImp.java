@@ -21,9 +21,12 @@ public class NpiqServiceInterfaceImp implements NpiqServiceInterface {
 
     @Override
     public Result insetNpiq(Npiq npiq) {
-        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(npiq.getUnixTimestamp()), ZoneId.systemDefault()));
+        LocalDateTime ldt =LocalDateTime.now();
+        // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
+        String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
+        Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
         npiq.setTime(formatDateTime);
+        npiq.setUnixTimestamp(timestamp);
         try {
             int resultValue = npiqMapper.insert(npiq);
             if (resultValue < 1) {

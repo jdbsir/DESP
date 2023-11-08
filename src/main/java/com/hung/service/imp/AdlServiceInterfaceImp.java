@@ -22,9 +22,12 @@ public class AdlServiceInterfaceImp implements AdlServiceInterface {
 
     @Override
     public Result insertAdl(Adl adl) {
-        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(adl.getUnixTimestamp()), ZoneId.systemDefault()));
+        LocalDateTime ldt =LocalDateTime.now();
+        // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
+        String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
+        Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
         adl.setTime(formatDateTime);
+        adl.setUnixTimestamp(timestamp);
         try {
             int resultValue = adlMapper.insert(adl);
             if (resultValue < 1) {
