@@ -108,7 +108,7 @@
     }
 
     function connectWeiXin() {
-        ajaxGetJson(`/weixin${location.search}`).then((response) => {
+        ajaxGetJson(location.href + '/weixin').then((response) => {
             console.log(response);
         });
     }

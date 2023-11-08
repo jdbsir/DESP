@@ -9,11 +9,25 @@
     // readonly模式
     readonlyMode();
 
-    function submitForm(e) {
-        e.preventDefault();
+    // 当勾选、取消勾选一个选项时，实时计算分数
+    const showScoreBox = htmlToNode(`
+        <div class="show-score-box">
+            <span class="title">MMSE分数：</span>
+            <span class="text">0</span>
+        </div>
+    `);
+    form.insertBefore(showScoreBox, document.getElementById('collect-submit-btn'));
+    form.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+        input.addEventListener('change', (e) => {
+            const data = getFormData();
+            const mmseScore = computeMMSEScore(data);
+            showScoreBox.querySelector('.text').innerHTML = mmseScore;
+        });
+    });
 
+    function getFormData() {
         // 获取表单值
-        let data = {};
+        const data = {};
         const MMSEChildren = window.collectTableComponent[4].formChildren;
         for (let i = 0; i < MMSEChildren.length; i++) {
             let obj = MMSEChildren[i];
@@ -24,13 +38,24 @@
             }
         }
 
+        return data;
+    }
+
+    function computeMMSEScore(data) {
         // 计分
         let mmseScore = 0;
         for (let k in data) {
             mmseScore = mmseScore + data[k];
         }
-        data['MMSE'] = mmseScore;
+        return mmseScore;
+    }
 
+    function submitForm(e) {
+        e.preventDefault();
+
+        // 整理表单数据
+        let data = getFormData();
+        data['MMSE'] = computeMMSEScore(data);
         data = upperToLower(data);
 
         // 发送并处理请求
