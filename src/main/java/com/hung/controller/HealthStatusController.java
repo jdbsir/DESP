@@ -21,4 +21,10 @@ public class HealthStatusController {
         healthStatus.setSubjectId(subject_id);
         return healthStatusServiceInterface.insertHealthStatus(healthStatus);
     }
+
+    @RequestMapping("queryhealth")
+    @ResponseBody
+    public Result queryHealth(@RequestParam Long subject_id){
+        return healthStatusServiceInterface.queryHealth(subject_id);
+    }
 }

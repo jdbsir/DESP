@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hung.mapper.HealthStatusMapperInterface">
+    <select id="querySubjectId" resultType="com.hung.pojo.HealthStatu">
+        select * from health_statu where subject_id=#{subjectId}
+
+    </select>
+</mapper>

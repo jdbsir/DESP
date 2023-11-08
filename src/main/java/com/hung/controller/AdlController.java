@@ -23,4 +23,11 @@ public class AdlController {
         System.out.print(adl);
         return adlServiceInterface.insertAdl(adl);
     }
+
+    @RequestMapping("/queryadl")
+    @ResponseBody
+    public  Result queryAdl(@RequestParam Long subject_id){
+       return adlServiceInterface.queryAdl(subject_id);
+
+    }
 }

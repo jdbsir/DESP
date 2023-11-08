@@ -5,4 +5,6 @@ import com.hung.pojo.HealthStatu;
 
 public interface HealthStatusServiceInterface {
     Result insertHealthStatus(HealthStatu healthStatus);
+
+    Result queryHealth(Long subjectId);
 }

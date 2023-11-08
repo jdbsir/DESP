@@ -22,4 +22,10 @@ public class NpiqController {
         npiq.setUnixTimestamp(unix_timestamp);
         return npiqServiceInterface.insetNpiq(npiq);
     }
+
+    @RequestMapping("/querynpiq")
+    @ResponseBody
+    public Result queryNpiq(@RequestParam Long subject_id){
+        return npiqServiceInterface.queryNpiq(subject_id);
+    }
 }

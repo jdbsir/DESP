@@ -34,4 +34,10 @@ public class MmseServiceInterfaceImp implements MmseServiceInterface {
         }
         return Result.success(mmse.getSubjectId());
     }
+
+    @Override
+    public Result queryMmse(Long subjectId) {
+        Mmse mmse=mmseMapper.querySubjectId(subjectId);
+        return Result.success(mmse);
+    }
 }

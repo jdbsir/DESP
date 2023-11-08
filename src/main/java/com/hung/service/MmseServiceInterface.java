@@ -5,4 +5,6 @@ import com.hung.pojo.Mmse;
 
 public interface MmseServiceInterface {
     Result insertMmse(Mmse mmse);
+
+    Result queryMmse(Long subjectId);
 }

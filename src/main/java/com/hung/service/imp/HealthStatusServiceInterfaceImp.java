@@ -25,4 +25,10 @@ public class HealthStatusServiceInterfaceImp implements HealthStatusServiceInter
         }
         return Result.success(healthStatus.getSubjectId());
     }
+
+    @Override
+    public Result queryHealth(Long subjectId) {
+        HealthStatu healthStatu =healthStatusMapperInterface.querySubjectId(subjectId);
+        return Result.success(healthStatu);
+    }
 }

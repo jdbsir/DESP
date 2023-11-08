@@ -35,4 +35,12 @@ public class NpiqServiceInterfaceImp implements NpiqServiceInterface {
         }
         return Result.success(npiq.getSubjectId());
     }
+
+    @Override
+    public Result queryNpiq(Long subjectId) {
+        Npiq npiq =npiqMapper.querySubjectId(subjectId);
+        return Result.success(npiq);
+    }
+
+
 }

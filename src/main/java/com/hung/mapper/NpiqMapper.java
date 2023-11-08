@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface NpiqMapper extends BaseMapper<Npiq> {
+    Npiq querySubjectId(Long subjectId);
 }

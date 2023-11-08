@@ -5,4 +5,7 @@ import com.hung.pojo.Adl;
 
 public interface AdlServiceInterface {
     Result insertAdl(Adl adl);
+
+
+    Result queryAdl(Long subjectId);
 }
