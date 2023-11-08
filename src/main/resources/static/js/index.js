@@ -108,8 +108,18 @@
     }
 
     function connectWeiXin() {
-        ajaxGetJson(`/weixin${location.search}`).then((response) => {
-            console.log(response);
+        const qp = parseQueryParam();
+        if (qp['code'] === undefined || qp['state'] !== 'STATE') {
+            alert('微信授权失败');
+            return undefined;
+        }
+
+        ajaxGetJson(location.href + '/weixin').then((response) => {
+            if (response.code === 0) {
+                alert(response.msg);
+            } else {
+                location.assign('/index.html');
+            }
         });
     }
 })();
