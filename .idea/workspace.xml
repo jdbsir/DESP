@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/python/generate_result/result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/python/generate_result/result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/python/generate_result/result.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/python/generate_result/result.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/python/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/python/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/collect-table-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/collect-table-4.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +173,7 @@
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
       <workItem from="1699234475005" duration="19435000" />
-      <workItem from="1699321623721" duration="23018000" />
+      <workItem from="1699321623721" duration="24227000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />

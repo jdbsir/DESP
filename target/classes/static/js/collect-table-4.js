@@ -9,11 +9,25 @@
     // readonly模式
     readonlyMode();
 
-    function submitForm(e) {
-        e.preventDefault();
+    // 当勾选、取消勾选一个选项时，实时计算分数
+    const showScoreBox = htmlToNode(`
+        <div class="show-score-box">
+            <span class="title">MOCA分数：</span>
+            <span class="text">0</span>
+        </div>
+    `);
+    form.insertBefore(showScoreBox, document.getElementById('collect-submit-btn'));
+    form.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+        input.addEventListener('change', (e) => {
+            const data = getFormData();
+            const mocaScore = computeMOCAScore(data);
+            showScoreBox.querySelector('.text').innerHTML = mocaScore;
+        });
+    });
 
+    function getFormData() {
         // 获取表单值
-        let data = {};
+        const data = {};
         const MoCAChildren = window.collectTableComponent[3].formChildren;
         for (let i = 0; i < MoCAChildren.length; i++) {
             let obj = MoCAChildren[i];
@@ -23,7 +37,11 @@
                 data[v] = Number(document.getElementById(`${obj.getName()}_${v}`).checked);
             }
         }
-        
+
+        return data;
+    }
+
+    function computeMOCAScore(data) {
         // 初步计分
         const memoryArray = ['IMMT1W1', 'IMMT1W2', 'IMMT1W3', 'IMMT1W4', 'IMMT1W5', 'IMMT2W1', 'IMMT2W2', 'IMMT2W3', 'IMMT2W4', 'IMMT2W5'];
         const attentionArray = ['SERIAL1', 'SERIAL2', 'SERIAL3', 'SERIAL4', 'SERIAL5'];
@@ -48,10 +66,19 @@
         } else if (trueCount >= 1) {
             mocaScore = mocaScore + 1;
         }
-        data['MOCA'] = mocaScore;
-
-        data = upperToLower(data);
         
+
+        return mocaScore;
+    }
+
+    function submitForm(e) {
+        e.preventDefault();
+
+        // 整理表单数据
+        let data = getFormData();
+        data['MOCA'] = computeMOCAScore(data);
+        data = upperToLower(data);
+
         // 发送并处理请求
         const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
@@ -60,7 +87,7 @@
                 return undefined;
             }
 
-            if (mocaScore < 26) {
+            if (data['MOCA'] < 26) {
                 location.href = `/collect-table-5.html${location.search}`;
             } else {
                 location.href = `/collect-table-6.html${location.search}`;

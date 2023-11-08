@@ -1516,7 +1516,7 @@ if __name__ == '__main__':
     # 检查是否有函数名冲突
     import re
     from collections import Counter
-    with open('./test.py', 'r', encoding='UTF-8') as file:
+    with open(os.path.join(root_path, 'test.py'), 'r', encoding='UTF-8') as file:
         file_content = file.read()
         file.close()
     funcname_list = re.findall('\ndef (.+?)\(', file_content)
