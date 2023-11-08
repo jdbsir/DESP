@@ -20,9 +20,12 @@ public class MocaServiceInterfaceImp implements MocaServiceInterface {
     private MocaMapper mocaMapper;
     @Override
     public Result insertMoca(Moca moca) {
-        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(moca.getUnixTimestamp()), ZoneId.systemDefault()));
+        LocalDateTime ldt =LocalDateTime.now();
+        // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
+        String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
+        Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
         moca.setTime(formatDateTime);
+        moca.setUnixTimestamp(timestamp);
         try {
             int resultValue = mocaMapper.insert(moca);
             if (resultValue < 1) {

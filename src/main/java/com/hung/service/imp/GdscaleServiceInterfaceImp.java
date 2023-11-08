@@ -20,9 +20,12 @@ public class GdscaleServiceInterfaceImp implements GdscaleServiceInterface {
     private GdscaleMapper gdscaleMapper;
     @Override
     public Result insertGdscale(Gdscale gdscale) {
-        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formatDateTime = ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(gdscale.getUnixTimestamp()), ZoneId.systemDefault()));
+        LocalDateTime ldt =LocalDateTime.now();
+        // DateTimeFormatter.ofPattern方法根据指定的格式输出时间
+        String formatDateTime = ldt.format(DateTimeFormatter.ofPattern("YYYY-MM-dd HH:mm:ss"));
+        Long timestamp = ldt.toInstant(ZoneOffset.of("+0")).toEpochMilli();
         gdscale.setTime(formatDateTime);
+        gdscale.setUnixTimestamp(timestamp);
         try {
             int resultValue = gdscaleMapper.insert(gdscale);
             if (resultValue < 1) {
