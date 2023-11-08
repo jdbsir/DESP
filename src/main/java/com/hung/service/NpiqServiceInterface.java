@@ -5,4 +5,6 @@ import com.hung.pojo.Npiq;
 
 public interface NpiqServiceInterface {
     Result insetNpiq(Npiq npiq);
+
+    Result queryNpiq(Long subjectId);
 }

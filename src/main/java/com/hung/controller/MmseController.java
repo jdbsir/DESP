@@ -22,4 +22,10 @@ public class MmseController {
         mmse.setUnixTimestamp(unix_timestamp);
         return mmseServiceInterface.insertMmse(mmse);
     }
+
+    @RequestMapping("/querymmse")
+    @ResponseBody
+    public Result queryMmse(@RequestParam Long subject_id){
+        return mmseServiceInterface.queryMmse(subject_id);
+    }
 }

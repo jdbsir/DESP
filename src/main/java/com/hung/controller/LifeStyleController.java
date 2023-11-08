@@ -21,4 +21,10 @@ public class LifeStyleController {
         lifeStyle.setSubjectId(subject_id);
         return lifeStyleServiceInterface.insertLifeStyle(lifeStyle);
     }
+
+    @RequestMapping("/querylifestyle")
+    @ResponseBody
+    public Result queryLifeStyle(@RequestParam Long subject_id){
+        return lifeStyleServiceInterface.queryLife(subject_id);
+    }
 }

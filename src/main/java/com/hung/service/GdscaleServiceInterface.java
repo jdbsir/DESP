@@ -5,4 +5,6 @@ import com.hung.pojo.Gdscale;
 
 public interface GdscaleServiceInterface {
     Result insertGdscale(Gdscale gdscale);
+
+    Result queryGdscale(Long subjectId);
 }

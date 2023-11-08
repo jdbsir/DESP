@@ -37,4 +37,10 @@ public class MocaServiceInterfaceImp implements MocaServiceInterface {
         }
         return Result.success(moca.getSubjectId());
     }
+
+    @Override
+    public Result queryMoca(Long subjectId) {
+        Moca moca = mocaMapper.querySubjectId(subjectId);
+        return Result.success(moca);
+    }
 }

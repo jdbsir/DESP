@@ -22,4 +22,10 @@ public class GdscaleController {
         gdscale.setUnixTimestamp(unix_timestamp);
         return gdscaleServiceInterface.insertGdscale(gdscale);
     }
+
+   @RequestMapping("/querygdscale")
+   @ResponseBody
+    public Result queryGdscale(@RequestParam Long subject_id){
+        return gdscaleServiceInterface.queryGdscale(subject_id);
+    }
 }

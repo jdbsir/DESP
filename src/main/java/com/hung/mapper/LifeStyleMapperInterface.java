@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface LifeStyleMapperInterface extends BaseMapper<LifeStyle> {
+    LifeStyle querySubjectId(Long subjectId);
 }

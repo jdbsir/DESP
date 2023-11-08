@@ -22,4 +22,10 @@ public class MocaController {
         moca.setUnixTimestamp(unix_timestamp);
         return mocaServiceInterface.insertMoca(moca);
     }
+
+    @RequestMapping("/querymoca")
+    @ResponseBody
+    public Result queryMoca(@RequestParam Long subject_id){
+        return mocaServiceInterface.queryMoca(subject_id);
+    }
 }

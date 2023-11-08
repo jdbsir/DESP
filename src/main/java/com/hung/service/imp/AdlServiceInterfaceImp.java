@@ -39,4 +39,10 @@ public class AdlServiceInterfaceImp implements AdlServiceInterface {
         }
         return Result.success(adl.getSubjectId());
     }
+
+    @Override
+    public Result queryAdl(Long subjectId) {
+       Adl adl=adlMapper.querySubjectId(subjectId);
+        return Result.success(adl);
+    }
 }

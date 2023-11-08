@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface MocaMapper extends BaseMapper<Moca> {
+    Moca querySubjectId(Long subjectId);
 }

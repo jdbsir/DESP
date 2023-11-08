@@ -25,4 +25,11 @@ public class LifeStyleServiceInterfaceImp implements LifeStyleServiceInterface {
         }
         return Result.success(lifeStyle.getSubjectId());
     }
+
+    @Override
+    public Result queryLife(Long subjectId) {
+        LifeStyle lifeStyle =lifeStyleMapperInterface.querySubjectId(subjectId);
+
+        return Result.success(lifeStyle);
+    }
 }

@@ -37,4 +37,11 @@ public class GdscaleServiceInterfaceImp implements GdscaleServiceInterface {
         }
         return Result.success(gdscale.getSubjectId());
     }
+
+    @Override
+    public Result queryGdscale(Long subjectId) {
+
+        Gdscale gdscale =gdscaleMapper.querysubjectId(subjectId);
+        return Result.success(gdscale);
+    }
 }

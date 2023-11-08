@@ -7,4 +7,6 @@ import java.util.ResourceBundle;
 
 public interface MocaServiceInterface {
     Result insertMoca(Moca moca);
+
+    Result queryMoca(Long subjectId);
 }

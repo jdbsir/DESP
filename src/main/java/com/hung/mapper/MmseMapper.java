@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface MmseMapper extends BaseMapper<Mmse> {
+    Mmse querySubjectId(Long subjectId);
 }
