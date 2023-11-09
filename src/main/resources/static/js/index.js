@@ -114,7 +114,7 @@
             return undefined;
         }
 
-        ajaxGetJson(location.href + '/weixin').then((response) => {
+        ajaxGetJson('/weixin' + location.search).then((response) => {
             if (response.code === 0) {
                 alert(response.msg);
             } else {
