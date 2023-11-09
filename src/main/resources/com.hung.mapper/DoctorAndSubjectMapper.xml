@@ -3,6 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hung.mapper.DoctorAndSubjectMapper">
+    <resultMap id="doctorSubjectWithDemoCharacter" type="com.hung.pojo.DoctorAndSubject">
+        <id property="id" column="id" />
+        <result property="doctorId" column="doctor_id"/>
+        <result property="idCard" column="id_card"/>
+        <result property="isCheck" column="is_check"/>
+        <collection property="demCharacterForIndexList" ofType="com.hung.pojo.DemCharacterForIndex">
+            <id property="id" column="dcid"/>
+            <result property="name" column="name"/>
+            <result property="time" column="time"/>
+            <result property="unixTimestamp" column="unix_timestamp"/>
+        </collection>
+    </resultMap>
+
     <select id="querySubjectByDoctorId" resultType="com.hung.pojo.DoctorAndSubject">
         select * from doctor_subject where doctor_id=#{doctor_id}
     </select>
@@ -15,4 +28,11 @@
         select count(id) from doctor_subject where doctor_id=#{doctor_id}
     </select>
 
+    <select id="queryAllRecordOfDoctor" resultMap="doctorSubjectWithDemoCharacter">
+        SELECT ds.*,dc.id as dcid,dc.name,dc.time,dc.unix_timestamp
+        from doctor_subject ds
+        LEFT JOIN demo_character dc
+        on ds.id_card=dc.id_card
+        WHERE ds.doctor_id=#{doctorId}
+    </select>
 </mapper>
