@@ -59,3 +59,22 @@ class TestCase(unittest.TestCase):
             cursor.execute('DELETE FROM `{}`;'.format(table_name))
         self.db.commit()
         cursor.close()
+
+    def add_new_doctor(self, exists_openid=None):
+        """添加一个新医生"""
+        if exists_openid is None:
+            exists_openid = []
+
+        # 生成openid
+        optional_chars = ascii_letters + digits
+        openid = ''
+        while True:
+            openid = ''.join([random.choice(optional_chars) for i in range(28)])
+            if openid not in exists_openid:
+                break
+
+        # 插入一条新医生记录
+        cursor = self.db.cursor()
+        cursor.execute('INSERT INTO `doctor`(`weixin_id`) VALUES(?);', (openid, ))
+        self.db.commit()
+        cursor.close()

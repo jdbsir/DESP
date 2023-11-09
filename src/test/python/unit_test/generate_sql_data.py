@@ -1284,7 +1284,7 @@ def generate_adl():
     return adl_data
 
 
-def generate_json_main(doctor_number=4):
+def generate_json_main(doctor_number=4, save_path=None):
     data = {}
     exists_id_card = []
     for doctor_id in range(doctor_number):
@@ -1323,11 +1323,11 @@ def generate_json_main(doctor_number=4):
                 })
 
     # 保存生成的json数据
-    json_data = json.dumps(data, indent=4, ensure_ascii=False)
-    save_path = os.path.abspath(os.path.join(result_save_path, 'result.json'))
-    with open(save_path, 'w', encoding='UTF-8') as file:
-        file.write(json_data)
-        file.close()
+    if save_path is not None:
+        json_data = json.dumps(data, indent=4, ensure_ascii=False)
+        with open(save_path, 'w', encoding='UTF-8') as file:
+            file.write(json_data)
+            file.close()
 
     return data
 
@@ -1388,7 +1388,6 @@ def sql_insert_record_2(table_name, demo_character_id, data):
     )
 
 
-
 def sql_insert_demo_character(demo_character_id, id_card, data):
     sql_template = 'INSERT INTO `demo_character`(`id`, `id_card`, {}, `time`, `unix_timestamp`)\nVALUES({}, {}, {}, "{}", {});'
     cols = []
@@ -1440,7 +1439,7 @@ def sql_insert_adl(demo_character_id, data):
     return sql_insert_record_2('adl', demo_character_id, data)
 
 
-def generate_sql_main(json_data):
+def generate_sql_main(json_data, save_path=None):
     # 初始化
     sql_list = []
 
@@ -1492,31 +1491,29 @@ def generate_sql_main(json_data):
                 demo_character_delta_id = demo_character_delta_id + 1
 
     # 保存SQL语句
-    sql_code = '\n'.join(sql_list)
-    save_path = os.path.abspath(os.path.join(result_save_path, 'result.sql'))
-    with open(save_path, 'w', encoding='UTF-8') as file:
-        file.write(sql_code)
-        file.close()
+    if save_path is not None:
+        sql_code = '\n'.join(sql_list)
+        save_path = os.path.abspath(os.path.join(result_save_path, 'result.sql'))
+        with open(save_path, 'w', encoding='UTF-8') as file:
+            file.write(sql_code)
+            file.close()
+
+    return sql_list
 
 
 # 生成SQL语句的函数 [end]=======================================================
 
 
 def main():
-    json_data = generate_json_main()
-    generate_sql_main(json_data)
+    json_data = generate_json_main(save_path=os.path.join(result_save_path, 'result.json'))
+    generate_sql_main(json_data, save_path=os.path.join(result_save_path, 'result.sql'))
 
 
 if __name__ == '__main__':
-    """
-    生成顺序：
-    doctor --> doctor_subject --> demo_character --> life_style --> health_statu --> moca --> mmse --> gdscale --> npiq --> adl
-    """
-
     # 检查是否有函数名冲突
     import re
     from collections import Counter
-    with open(os.path.join(root_path, 'test.py'), 'r', encoding='UTF-8') as file:
+    with open(__file__, 'r', encoding='UTF-8') as file:
         file_content = file.read()
         file.close()
     funcname_list = re.findall('\ndef (.+?)\(', file_content)
