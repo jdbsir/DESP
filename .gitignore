@@ -2,3 +2,5 @@ __pycache__/
 .idea/
 target/
 tmp.py
+src/test/python/unit_test/venv
+src/test/python/unit_test/start.ps1
