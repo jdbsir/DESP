@@ -52,7 +52,7 @@ public class DemoCharacterController {
      * */
     @RequestMapping("/queryDemoCharacterByIdCard")
     @ResponseBody
-    public List<DemoCharacter> queryDemoCharacterByIdCard(@RequestParam Long id_card){
+    public Result queryDemoCharacterByIdCard(@RequestParam Long id_card){
         return demoCharacterServiceInterface.queryDemoCharacterByIdCard(id_card);
     }
 
@@ -61,7 +61,7 @@ public class DemoCharacterController {
      * */
     @RequestMapping("/queryDemoCharacterById")
     @ResponseBody
-    public List<DemoCharacter> queryDemoCharacterById(@RequestParam Integer id){
+    public Result queryDemoCharacterById(@RequestParam Integer id){
         return demoCharacterServiceInterface.queryDemoCharacterById(id);
     }
 
@@ -70,7 +70,7 @@ public class DemoCharacterController {
      * */
     @RequestMapping("/queryDemoCharacterTotalByDoctorId")
     @ResponseBody
-    public int queryDemoCharacterTotalByDoctorId(@RequestParam Integer doctor_id){
+    public Result queryDemoCharacterTotalByDoctorId(@RequestParam Integer doctor_id){
         return demoCharacterServiceInterface.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
 }

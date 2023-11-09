@@ -16,25 +16,25 @@ public class Adl {
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("subject_id")
-    private Long subjectId;
-    private Integer vehicles;
-    private Integer walk;
-    private Integer cook;
-    private Integer housework;
-    private Integer medicine;
-    private Integer eat;
-    private Integer dress;
-    private Integer hair;
-    private Integer laundry;
-    private Integer shower;
-    private Integer shopping;
-    private Integer bathroom;
-    private Integer phone;
-    private Integer money;
+    private Long subjectId;//数据ID编号
+    private Integer vehicles;//使用公共车辆
+    private Integer walk;//行走
+    private Integer cook;//做饭菜
+    private Integer housework;//做家务
+    private Integer medicine;//吃药
+    private Integer eat;//吃饭
+    private Integer dress;//穿衣
+    private Integer hair;//梳头、刷牙等
+    private Integer laundry;//洗衣
+    private Integer shower;//洗澡
+    private Integer shopping;//购物
+    private Integer bathroom;//定时上厕所
+    private Integer phone;//打电话
+    private Integer money;//处理自己的钱物
     @TableField("ADLSCORE")
-    private Integer adlscore;
-    private String time;
+    private Integer adlscore;//ADL总分
+    private String time;//记录时间
     @TableField("unix_timestamp")
-    private Long unixTimestamp;
+    private Long unixTimestamp;//时间戳
 
 }

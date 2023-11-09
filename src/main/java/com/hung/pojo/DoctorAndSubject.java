@@ -7,18 +7,21 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @TableName("doctor_subject")
 public class DoctorAndSubject {
     @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    private Integer id;//医生——受试者记录ID
     @TableField("doctor_id")
-    private Integer doctorId;
+    private Integer doctorId;//医生ID（微信ID）
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("id_card")
-    private Long idCard;
+    private Long idCard;//受试者身份证号
     @TableField("subject_name")
-    private String subjectName;
+    private String subjectName;//受试者姓名
     @TableField("is_check")
-    private Integer isCheck;
+    private Integer isCheck;//是否做调查
+    private List<DemoCharacter> demoCharacterList;
 }

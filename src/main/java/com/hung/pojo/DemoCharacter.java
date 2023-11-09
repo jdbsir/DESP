@@ -14,48 +14,48 @@ import lombok.Data;
 @Data
 @TableName("demo_character")
 public class DemoCharacter {
-    @TableId(type = IdType.AUTO)//id自增
-    private Integer id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;//数据ID编号
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("id_card")
-    private Long idCard;
-    private String name;
-    private String gender;
+    private Long idCard;//受试者身份证号
+    private String name;//姓名
+    private String gender;//性别
     @TableField("born_date")
-    private String bornDate;
-    private String phone;
+    private String bornDate;//出生年月
+    private String phone;//电话
     @TableField("home_phone")
-    private String homePhone;
-    private String address;
-    private String race;
+    private String homePhone;//家属电话
+    private String address;//住址
+    private String race;//民族
     @TableField("race_other")
-    private String raceOther;
-    private Integer fluency;
+    private String raceOther;//其他民族
+    private Integer fluency;//汉语交流
     @TableField("area_type")
-    private Integer areaType;
+    private Integer areaType;//居住地
     @TableField("live_type")
-    private String liveType;
+    private String liveType;//居住方式
     @TableField("live_type_other")
-    private String liveTypeOther;
-    private Integer education;
-    private Integer marital;
-    private Integer retire;
-    private String occupation;
-    private String income;
+    private String liveTypeOther;//其他居住方式
+    private Integer education;//文化程度
+    private Integer marital;//婚姻状况
+    private Integer retire;//是否离退休
+    private String occupation;//职业(在职/离退休前)
+    private String income;//经济收入来源
     @TableField("income_other")
-    private String incomeOther;
+    private String incomeOther;//其他经济收入来源
     @TableField("income_level")
-    private Integer incomeLevel;
+    private Integer incomeLevel;//收入情况
     @TableField("medical_insurance")
-    private Integer medicalInsurance;
-    private Float height;
-    private Float weight;
-    private Float waistline;
+    private String medicalInsurance;//医疗保险
+    private Float height;//身高
+    private Float weight;//体重
+    private Float waistline;//腰围
     @TableField("systolic_pressure")
-    private Float systolicPressure;
+    private Float systolicPressure;//收缩压
     @TableField("diastolic_pressure")
-    private Float diastolicPressure;
-    private String time;
+    private Float diastolicPressure;//舒张压
+    private String time;//记录时间
     @TableField("unix_timestamp")
-    private Long unixTimestamp;
+    private Long unixTimestamp;//时间戳
 }

@@ -11,7 +11,6 @@ DELETE FROM `npiq`;
 DELETE FROM `adl`;
 
 
-INSERT INTO `doctor`(`id`, `weixin_id`) VALUES(0, 0);
 INSERT INTO `doctor`(`id`, `weixin_id`) VALUES(1, 1);
 INSERT INTO `doctor_subject`(`doctor_id`, `subject_name`, `id_card`, `is_check`)
 VALUES(1, "", 453917201809112740, 1);
