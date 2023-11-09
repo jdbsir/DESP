@@ -1,14 +1,11 @@
 package com.hung.service.imp;
 
 import com.hung.common.Result;
-import com.hung.common.SnowflakeIdWorker;
 import com.hung.mapper.DemoCharacterMapper;
 import com.hung.pojo.DemoCharacter;
-import com.hung.pojo.DoctorAndSubject;
-import com.hung.pojo.Subject;
 import com.hung.service.DemoCharacterServiceInterface;
 import com.hung.service.DoctorAndSubjectServiceInterface;
-import com.hung.service.SubjectServiceInterface;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -22,6 +19,7 @@ import java.util.List;
  * 人口学特征表接口的实现类
  */
 @Service
+@Slf4j
 public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInterface {
     @Autowired
     private DemoCharacterMapper demoCharacterMapper;
@@ -51,17 +49,35 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
     }
 
     @Override
-    public List<DemoCharacter> queryDemoCharacterByIdCard(Long id_card) {
-        return demoCharacterMapper.queryDemoCharacterByIdCard(id_card);
+    public Result queryDemoCharacterByIdCard(Long id_card) {
+        try {
+            List<DemoCharacter> demoCharacterList=demoCharacterMapper.queryDemoCharacterByIdCard(id_card);
+            return Result.success(demoCharacterList);
+        }catch (Exception e){
+            log.error("查询受试者记录数据出错:"+e.getMessage(),e);
+            return Result.error("查询受试者记录数据出错,请联系开发人员");
+        }
     }
 
     @Override
-    public List<DemoCharacter> queryDemoCharacterById(Integer id) {
-        return demoCharacterMapper.queryDemoCharacterById(id);
+    public Result queryDemoCharacterById(Integer id) {
+        try {
+            List<DemoCharacter> demoCharacterList=demoCharacterMapper.queryDemoCharacterById(id);
+            return Result.success(demoCharacterList);
+        }catch (Exception e){
+            log.error("查询受试者记录数据出错:"+e.getMessage(),e);
+            return Result.error("查询受试者记录数据出错,请联系开发人员");
+        }
     }
 
     @Override
-    public int queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
-        return demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
+    public Result queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
+        try {
+            int rs=demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
+            return Result.success(rs);
+        }catch (Exception e){
+            log.error("查询受试者记录数据数出错:"+e.getMessage(),e);
+            return Result.error("查询受试者记录数据数出错,请联系开发人员");
+        }
     }
 }

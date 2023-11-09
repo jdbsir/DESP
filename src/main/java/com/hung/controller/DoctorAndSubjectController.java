@@ -22,7 +22,7 @@ public class DoctorAndSubjectController {
     /**
      * 该接口根据医生的ID（也是医生通过微信登录后的微信ID）查询一个医生做了几个受试者记录
      * */
-    @RequestMapping("/querySubjectByDoctorId")
+    @RequestMapping("/uerySubqjectByDoctorId")
     @ResponseBody
     public List<DoctorAndSubject> querySubjectByDoctorId(@RequestParam Integer doctor_id){
         return doctorAndSubjectServiceInterface.querySubjectByDoctorId(doctor_id);

@@ -16,72 +16,72 @@ public class Mmse {
     private Integer id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("subject_id")
-    private Long subjectId;
+    private Long subjectId;//数据ID编号
     @TableField("MMYEAR")
-    private Integer mmyear;
+    private Integer mmyear;//时间定向力-年
     @TableField("MMMONTH")
-    private Integer mmmonth;
+    private Integer mmmonth;//时间定向力-月
     @TableField("MMDATE")
-    private Integer mmdate;
+    private Integer mmdate;//时间定向力-日
     @TableField("MMDAY")
-    private Integer mmday;
+    private Integer mmday;//时间定向力-星期
     @TableField("MMSEASON")
-    private Integer mmseason;
+    private Integer mmseason;//时间定向力-季节
     @TableField("MMAREA")
-    private Integer mmarea;
+    private Integer mmarea;//场所定向力-国家
     @TableField("MMSTATE")
-    private Integer mmstate;
+    private Integer mmstate;//场所定向力-省市
     @TableField("MMCITY")
-    private Integer mmcity;
+    private Integer mmcity;//场所定向力-街道地址
     @TableField("MMHOSPIT")
-    private Integer mmhospit;
+    private Integer mmhospit;//场所定向力-什么地方（福利院）
     @TableField("MMFLOOR")
-    private Integer mmfloor;
+    private Integer mmfloor;//场所定向力-几楼
     @TableField("garden")
-    private Integer garden;
+    private Integer garden;//记忆力-花园
     @TableField("refrigerator")
-    private Integer refrigerator;
+    private Integer refrigerator;//记忆力-冰箱
     @TableField("flag")
-    private Integer flag;
+    private Integer flag;//记忆力-国旗
     @TableField("MMDLTR")
-    private Integer mmdltr;
+    private Integer mmdltr;//注意力计算力-93
     @TableField("MMLLTR")
-    private Integer mmlltr;
+    private Integer mmlltr;//注意力计算力-86
     @TableField("MMRLTR")
-    private Integer mmrltr;
+    private Integer mmrltr;//注意力计算力-79
     @TableField("MMOLTR")
-    private Integer mmoltr;
+    private Integer mmoltr;//注意力计算力-72
     @TableField("MMWLTR")
-    private Integer mmwltr;
+    private Integer mmwltr;//注意力计算力-65
     @TableField("garden2")
-    private Integer garden2;
+    private Integer garden2;//回忆力-花园
     @TableField("refrigerator2")
-    private Integer refrigerator2;
+    private Integer refrigerator2;//回忆力-冰箱
     @TableField("flag2")
-    private Integer flag2;
+    private Integer flag2;//回忆力-国旗
     @TableField("MMWATCH")
-    private Integer mmwatch;
+    private Integer mmwatch;//语言及时空间能力-手表
     @TableField("MMPENCIL")
-    private Integer mmpencil;
+    private Integer mmpencil;//语言及时空间能力-铅笔
     @TableField("MMREPEAT")
-    private Integer mmrepeat;
+    private Integer mmrepeat;//	语言及时空间能力-重复一句话
     @TableField("MMHAND")
-    private Integer mmhand;
+    private Integer mmhand;//语言及时空间能力-右手拿纸
     @TableField("MMFOLD")
-    private Integer mmfold;
+    private Integer mmfold;//语言及时空间能力-两手将纸对折
     @TableField("MMONFLR")
-    private Integer mmonflr;
+    private Integer mmonflr;//语言及时空间能力-将纸放在左腿
     @TableField("MMCLEYE")
-    private Integer mmcleye;
+    private Integer mmcleye;//语言及时空间能力-念并闭上眼睛
     @TableField("MMWRITE")
-    private Integer mmwrite;
+    private Integer mmwrite;//语言及时空间能力-写句子
     @TableField("MMDRAW")
-    private Integer mmdraw;
+    private Integer mmdraw;//语言及时空间能力-照样子画图
     @TableField("MMSE")
-    private Integer mmse;
-    private String time;
+    private Integer mmse;//	MMSE总分
+    private String time;//记录时间
     @TableField("unix_timestamp")
-    private Long unixTimestamp;
+    private Long unixTimestamp;//时间戳
 
 
 }

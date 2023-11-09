@@ -16,9 +16,9 @@ public interface DemoCharacterServiceInterface {
      */
     Result insertNewDemoCharacter(DemoCharacter demoCharacter);
 
-    List<DemoCharacter> queryDemoCharacterByIdCard(Long id_ard);
+    Result queryDemoCharacterByIdCard(Long id_ard);
 
-    List<DemoCharacter> queryDemoCharacterById(Integer id);
+    Result queryDemoCharacterById(Integer id);
 
-    int queryDemoCharacterTotalByDoctorId(Integer doctor_id);
+    Result queryDemoCharacterTotalByDoctorId(Integer doctor_id);
 }

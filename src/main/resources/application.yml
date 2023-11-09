@@ -27,13 +27,18 @@ spring:
       test-on-borrow: false
       test-on-return: false
 
-
-
-
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
   mapper-locations: classpath:com.hung.mapper/*.xml
   type-aliases-package: com.hung.pojo
+
+logging:
+  level:
+    root: info
+    com.hung.service: debug
+  file:
+    name: dementia_eld_screening_platform.log
+
 
