@@ -19,9 +19,7 @@ public class DoctorAndSubject {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("id_card")
     private Long idCard;//受试者身份证号
-    @TableField("subject_name")
-    private String subjectName;//受试者姓名
     @TableField("is_check")
     private Integer isCheck;//是否做调查
-    private List<DemoCharacter> demoCharacterList;
+    private List<DemCharacterForIndex> demCharacterForIndexList;
 }

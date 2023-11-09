@@ -40,7 +40,6 @@ public class DemoCharacterController {
         DoctorAndSubject doctorAndSubject=new DoctorAndSubject();
         doctorAndSubject.setDoctorId(doctor_id);
         doctorAndSubject.setIdCard(demoCharacter.getIdCard());
-        doctorAndSubject.setSubjectName(demoCharacter.getName());
         doctorAndSubject.setIsCheck(1);
         doctorAndSubjectServiceInterface.insertDoctorAndSubject(doctorAndSubject);
         System.out.print(demoCharacter);
