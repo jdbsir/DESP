@@ -54,7 +54,7 @@ DROP TABLE IF EXISTS `doctor`;
 CREATE TABLE `doctor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) DEFAULT NULL,
-  `weixin_id` int(11) DEFAULT NULL,
+  `weixin_id` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
