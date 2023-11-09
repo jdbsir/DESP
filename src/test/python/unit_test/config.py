@@ -2,6 +2,7 @@ import os
 import unittest
 import pymysql
 import requests
+from generate_sql_data import generate_json_main, generate_sql_main
 
 
 class Config(object):
@@ -15,7 +16,9 @@ class Config(object):
     TABLE_NAME_LIST = ['doctor', 'doctor_subject', 'demo_character', 'life_style',
                        'health_statu', 'moca', 'mmse', 'gdscale', 'npiq', 'adl']
     ROUTE_MAPPING = {
-        'index': '/index.html'
+        'index': '/index.html',
+        'login': '/weixin',
+        'query_history_record': '/query_history_record'
     }
 
     @staticmethod
@@ -60,21 +63,24 @@ class TestCase(unittest.TestCase):
         self.db.commit()
         cursor.close()
 
-    def add_new_doctor(self, exists_openid=None):
-        """添加一个新医生"""
-        if exists_openid is None:
-            exists_openid = []
-
-        # 生成openid
-        optional_chars = ascii_letters + digits
-        openid = ''
-        while True:
-            openid = ''.join([random.choice(optional_chars) for i in range(28)])
-            if openid not in exists_openid:
-                break
-
-        # 插入一条新医生记录
+    def generate_test_data(self, doctor_number=4):
+        json_data = generate_json_main(doctor_number)
+        sql_list = generate_sql_main(json_data)
         cursor = self.db.cursor()
-        cursor.execute('INSERT INTO `doctor`(`weixin_id`) VALUES(?);', (openid, ))
+        for sql in sql_list:
+            cursor.execute(sql)
         self.db.commit()
         cursor.close()
+        return json_data
+    
+    def login(self):
+        url = Config.get_route('login') + '?code=123456&state=STATE'
+        response = self.client_session.get(url)
+        self.assertTrue(response.status_code == 200)
+        self.assertTrue(response.json.get('code', 0) == 1)
+
+    def is_login(self):
+        url = Config.get_route('query_history_record')
+        response = self.client_session.get(url)
+        self.assertTrue(response.status_code == 200)
+        return response.json.get('code', 0) == 1

@@ -1344,8 +1344,8 @@ def sql_insert_doctor(doctor_id):
 
 
 def sql_insert_doctor_subject(doctor_id, id_card):
-    sql_template = """INSERT INTO `doctor_subject`(`doctor_id`, `subject_name`, `id_card`, `is_check`)
-VALUES({}, "", {}, 1);"""
+    sql_template = """INSERT INTO `doctor_subject`(`doctor_id`, `id_card`, `is_check`)
+VALUES({}, {}, 1);"""
     return sql_template.format(doctor_id, id_card)
 
 
