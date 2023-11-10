@@ -1,9 +1,6 @@
 (() => {
     'use strict';
 
-    // 连接微信
-    connectWeiXin();
-
     // 渲染页面
     requestDataAndRenderPage();
 
@@ -14,6 +11,9 @@
     document.getElementById('back-homepage').addEventListener('click', backHomepage);
 
     function requestDataAndRenderPage() {
+        // 连接微信
+        connectWeiXin();
+
         const searchName = parseQueryParam()['search_subject_id'];
         let url = '/query_history_record';
         let searchResult = false;
@@ -110,7 +110,6 @@
     function connectWeiXin() {
         const qp = parseQueryParam();
         if (qp['code'] === undefined || qp['state'] !== 'STATE') {
-            alert('微信授权失败');
             return undefined;
         }
 
