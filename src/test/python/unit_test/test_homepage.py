@@ -63,4 +63,13 @@ class TestHomepage(TestCase):
         response = self.client_session.get(url)
         self.assertTrue(response.status_code == 200)
         self.assertTrue(response.json.get('code', 0) == 1)
-        # TODO
+        client_data = response.json.get('data')
+        self.assertTrue(client_data is not None)
+        self.assertTrue(client_data.get('subject_number') == len(filter_id_card))
+        self.assertTrue(client_data.get('record_number') == sum([len(data[k]) for k in filter_id_card]))
+        client_history_record = client_data.get('history_record')
+        self.assertTrue(client_history_record is not None)
+        self.assertTrue(client_data.get('subject_number') == len(client_history_record))
+        self.assertTrue(client_data.get('record_number') == len([len(v) for v in client_history_record.values()]))
+        for client_id_card, id_card in zip(client_history_record.keys(), data.keys()):
+            self.assertTrue(client_id_card, id_card)

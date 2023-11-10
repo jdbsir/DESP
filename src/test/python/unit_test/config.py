@@ -18,7 +18,23 @@ class Config(object):
     ROUTE_MAPPING = {
         'index': '/index.html',
         'login': '/weixin',
-        'query_history_record': '/query_history_record'
+        'query_history_record': '/query_history_record',
+        'query_demo_character': '/query_demo_character',
+        'query_life_style': '/query_life_style',
+        'query_health_statu': '/query_health_statu',
+        'query_moca': '/query_moca',
+        'query_mmse': '/query_mmse',
+        'query_gdscale': '/query_gdscale',
+        'query_npiq': '/query_npiq',
+        'query_adl': '/query_adl',
+        'insert_1': '/collect_table_1',
+        'insert_2': '/collect_table_2',
+        'insert_3': '/collect_table_3',
+        'insert_4': '/collect_table_4',
+        'insert_5': '/collect_table_5',
+        'insert_6': '/collect_table_6',
+        'insert_7': '/collect_table_7',
+        'insert_8': '/collect_table_8'
     }
 
     @staticmethod
