@@ -30,7 +30,7 @@ public class WeiXinInfoController {
 
     @RequestMapping("/weixin")
     @ResponseBody
-    public Result insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state) {
+    public Result insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state,HttpServletRequest request) {
 
         GetWeiXinUserInfo info = new GetWeiXinUserInfo();
         JSONObject json = info.getJson(code);
@@ -52,6 +52,8 @@ public class WeiXinInfoController {
                     return Result.error("医生注册出现异常，请联系开发人员");
                 }
             }
+            HttpSession session=request.getSession();
+            session.setAttribute("weixin_id",weixin_id);
             return Result.success();
         }
     }
