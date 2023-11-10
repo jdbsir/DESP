@@ -1,17 +1,20 @@
 package com.hung.controller;
 
 import com.hung.common.Result;
+import com.hung.pojo.Doctor;
 import com.hung.service.DoctorServiceInterface;
 import com.hung.utils.GetWeiXinUserInfo;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,14 +39,18 @@ public class WeiXinInfoController {
             return Result.error("微信授权失败");
         } else {
             // TODO 把openid存进session，把新医生存入doctor
-            try {
-                int resultForInsertDoctor=doctorServiceInterface.insertDoctor(weixin_id);
-                if(resultForInsertDoctor<1){
-                    return Result.error("医生信息保存未成功");
+            List<Doctor> doctors=doctorServiceInterface.queryDoctor(weixin_id);
+            if(doctors==null){
+                try {
+                    int resultForInsertDoctor=doctorServiceInterface.insertDoctor(weixin_id);
+                    if(resultForInsertDoctor<1){
+                        return Result.error("医生数据保持未成功，请重新进入");
+                    }
+                }catch (Exception e){
+                    log.error("插入异常信息如下:"+e.getMessage(),e);
+                    TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
+                    return Result.error("医生注册出现异常，请联系开发人员");
                 }
-            }catch (Exception e){
-                log.error("医生信息插入出异常，异常信息如下:"+e.getMessage(),e);
-                return Result.error("医生信息保存出异常，请联系开发人员");
             }
             return Result.success();
         }
