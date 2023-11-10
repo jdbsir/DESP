@@ -41,8 +41,9 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
                 return Result.error("数据保存失败，请重新提交保存");
             }
         }catch (Exception e){
+            log.error("插入异常信息如下:"+e.getMessage(),e);
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
-            return Result.error("数据保存失败，请重新提交保存");
+            return Result.error("数据保存出现异常,请联系开发人员");
         }
         System.out.println(demoCharacter.getId());
         return Result.success(demoCharacter);
@@ -60,24 +61,12 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
     }
 
     @Override
-    public Result queryDemoCharacterById(Integer id) {
-        try {
-            List<DemoCharacter> demoCharacterList=demoCharacterMapper.queryDemoCharacterById(id);
-            return Result.success(demoCharacterList);
-        }catch (Exception e){
-            log.error("查询受试者记录数据出错:"+e.getMessage(),e);
-            return Result.error("查询受试者记录数据出错,请联系开发人员");
-        }
+    public List<DemoCharacter> queryDemoCharacterById(Integer id) {
+        return demoCharacterMapper.queryDemoCharacterById(id);
     }
 
     @Override
-    public Result queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
-        try {
-            int rs=demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
-            return Result.success(rs);
-        }catch (Exception e){
-            log.error("查询受试者记录数据数出错:"+e.getMessage(),e);
-            return Result.error("查询受试者记录数据数出错,请联系开发人员");
-        }
+    public int queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
+        return demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
 }

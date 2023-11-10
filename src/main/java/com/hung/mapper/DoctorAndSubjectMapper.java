@@ -23,5 +23,7 @@ public interface DoctorAndSubjectMapper extends BaseMapper<DoctorAndSubject> {
      * */
     int queryTotalSubjectByDoctorId(Integer doctor_id);
 
+    List<DoctorAndSubject> queryAllRecordOfDoctor(Integer doctorId);
+
 
 }
