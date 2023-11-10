@@ -40,7 +40,7 @@ public class WeiXinInfoController {
         } else {
             // TODO 把openid存进session，把新医生存入doctor
             List<Doctor> doctors=doctorServiceInterface.queryDoctor(weixin_id);
-            if(doctors==null){
+            if(doctors.isEmpty()){
                 try {
                     int resultForInsertDoctor=doctorServiceInterface.insertDoctor(weixin_id);
                     if(resultForInsertDoctor<1){

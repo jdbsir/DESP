@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_eld_screening_platform.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/DementiaEldlyScreeningPlatformApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/DementiaEldlyScreeningPlatformApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +23,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -185,7 +187,7 @@
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
       <workItem from="1699234475005" duration="19435000" />
-      <workItem from="1699321623721" duration="53533000" />
+      <workItem from="1699321623721" duration="57245000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
@@ -239,6 +241,17 @@
     <MESSAGE value="收集表1第一部分-数据保存1" />
     <MESSAGE value="收集表1第一部分-插入代码修改" />
     <option name="LAST_COMMIT_MESSAGE" value="收集表1第一部分-插入代码修改" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
