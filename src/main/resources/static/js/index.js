@@ -10,15 +10,18 @@
     document.getElementById('add-new-subject').addEventListener('click', addNewSubject);
     document.getElementById('back-homepage').addEventListener('click', backHomepage);
 
+    // 展示搜索结果
+    document.querySelector('form[name="search-record"]').addEventListener('submit', getSearchResult);
+
     function requestDataAndRenderPage() {
         // 连接微信
         connectWeiXin();
 
-        const searchName = parseQueryParam()['search_subject_id'];
+        const searchIdCard = parseQueryParam()['id_card'];
         let url = '/query_history_record';
         let searchResult = false;
-        if (searchName !== undefined) {
-            url = `${url}?search_subject_id=${searchName}`;
+        if (searchIdCard !== undefined) {
+            url = `/queryAllRecordOfDoctorByObscure?id_card=${searchIdCard}`;
             searchResult = true;
         }
         ajaxGetJson(url).then((response) => {
@@ -27,7 +30,6 @@
                 return undefined;
             }
 
-            console.log(response.data);
             renderHTML(response.data, searchResult);
         });
     }
@@ -63,7 +65,8 @@
         for (let i = 0; i < data.length; i++) {
             let subjectData = data[i];
             let items = [];
-            subjectData.forEach((record) => {
+            let records = subjectData['dem_character_for_index_list'];
+            records.forEach((record) => {
                 items.push(`
                     <li class="item">
                         <a href="/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
@@ -75,8 +78,8 @@
                 <li class="subject-item" data-subject-id="${subjectData['id_card']}">
                     <details>
                         <summary>
-                            <span class="title">${subjectData[0]['name']}（${subjectData[0]['id_card']}）</span>
-                            <a href="collect-table-1.html?id_card=${subjectData[0]['id_card']}" class="add-record">添加</a>
+                            <span class="title">${records[0]['name']}（${subjectData['id_card']}）</span>
+                            <a href="collect-table-1.html?id_card=${records[0]['id_card']}" class="add-record">添加</a>
                         </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>
@@ -122,5 +125,12 @@
                 location.assign('/index.html');
             }
         });
+    }
+
+    function getSearchResult(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        location.href = `/index.html?id_card=${form['id_card'].value}`;
     }
 })();

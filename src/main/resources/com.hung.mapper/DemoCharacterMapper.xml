@@ -14,4 +14,8 @@
     <select id="queryDemoCharacterTotalByDoctorId" resultType="INT">
         select count(*) from demo_character,doctor_subject where demo_character.id_card=doctor_subject.id_card and doctor_subject.doctor_id=#{doctor_id}
     </select>
+
+    <select id="queryDemoCharacterTotalByIdCardObscure" resultType="INT">
+        select count(*) from demo_character,doctor_subject where doctor_subject.doctor_id=#{doctorId} and demo_character.id_card=doctor_subject.id_card and demo_character.id_card like concat('%',#{idCard},'%')
+    </select>
 </mapper>

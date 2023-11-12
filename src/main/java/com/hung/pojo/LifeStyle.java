@@ -60,7 +60,7 @@ public class LifeStyle {
     @TableField("oiltea_day")
     private Integer oilteaDay;//平均碗/天
     @TableField("read_book")
-    private Integer read;//阅读
+    private Integer readBook;//阅读
     @TableField("read_rate")
     private Integer readRate;//阅读频率
     @TableField("watch_tv")

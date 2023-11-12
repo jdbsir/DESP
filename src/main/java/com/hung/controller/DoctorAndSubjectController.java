@@ -46,6 +46,27 @@ public class DoctorAndSubjectController {
         }
     }
 
+    @RequestMapping("/queryAllRecordOfDoctorByObscure")
+    @ResponseBody
+    public Result queryAllRecordOfDoctorByObscure(@RequestParam Long id_card,HttpServletRequest request){
+        HttpSession session=request.getSession();
+        String doctor_id=(String) session.getAttribute("weixin_id");
+        System.out.println(id_card);
+        try {
+            Map<String,Object> map=new HashMap<>();
+            int subjectNumber=doctorAndSubjectServiceInterface.queryTotalSubjectByIdCardObscure(doctor_id,id_card);
+            int recordNumber=demoCharacterServiceInterface.queryDemoCharacterTotalByIdCardObscure(doctor_id,id_card);
+            List<DoctorAndSubject> doctorAndSubjects=doctorAndSubjectServiceInterface.queryAllRecordOfDoctorByObscure(doctor_id,id_card);
+            map.put("subject-number",subjectNumber);
+            map.put("record-number",recordNumber);
+            map.put("doctorAndSubjects",doctorAndSubjects);
+            return Result.success(map);
+        }catch (Exception e){
+            log.error("查询数据出错:"+e.getMessage(),e);
+            return Result.error("查询出错，请联系开发人员");
+        }
+    }
+
 
 
     //以下接口用于备用

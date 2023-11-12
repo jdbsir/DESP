@@ -25,5 +25,8 @@ public interface DoctorAndSubjectMapper extends BaseMapper<DoctorAndSubject> {
 
     List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId);
 
+    List<DoctorAndSubject> queryAllRecordOfDoctorByObscure(String doctorId,Long id_card);
 
+
+    int queryTotalSubjectByIdCardObscure(String doctorId,Long idCard);
 }

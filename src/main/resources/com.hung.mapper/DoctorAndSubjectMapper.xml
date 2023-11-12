@@ -35,4 +35,16 @@
         on ds.id_card=dc.id_card
         WHERE ds.doctor_id=#{doctorId}
     </select>
+
+    <select id="queryAllRecordOfDoctorByObscure" resultMap="doctorSubjectWithDemoCharacter">
+        SELECT ds.*,dc.id as dcid,dc.name,dc.time,dc.unix_timestamp
+        from doctor_subject ds
+        LEFT JOIN demo_character dc
+        on ds.id_card=dc.id_card
+        WHERE ds.doctor_id=#{doctorId} and ds.id_card like concat('%',#{id_card},'%')
+    </select>
+
+    <select id="queryTotalSubjectByIdCardObscure" resultType="INT">
+        select count(*) from doctor_subject where doctor_id=#{doctorId} and id_card like concat('%',#{idCard},'%')
+    </select>
 </mapper>

@@ -38,4 +38,14 @@ public class DoctorAndSubjectServiceInterfaceImp implements DoctorAndSubjectServ
     public List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId) {
         return doctorAndSubjectMapper.queryAllRecordOfDoctor(doctorId);
     }
+
+    @Override
+    public List<DoctorAndSubject> queryAllRecordOfDoctorByObscure(String doctorId,Long id_card) {
+        return doctorAndSubjectMapper.queryAllRecordOfDoctorByObscure(doctorId,id_card);
+    }
+
+    @Override
+    public int queryTotalSubjectByIdCardObscure(String doctorId,Long idCard) {
+        return doctorAndSubjectMapper.queryTotalSubjectByIdCardObscure(doctorId,idCard);
+    }
 }

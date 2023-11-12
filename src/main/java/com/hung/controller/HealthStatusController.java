@@ -22,7 +22,7 @@ public class HealthStatusController {
         return healthStatusServiceInterface.insertHealthStatus(healthStatus);
     }
 
-    @RequestMapping("queryhealth")
+    @RequestMapping("/queryhealth")
     @ResponseBody
     public Result queryHealth(@RequestParam Long subject_id){
         return healthStatusServiceInterface.queryHealth(subject_id);

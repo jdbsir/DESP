@@ -69,4 +69,9 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
     public int queryDemoCharacterTotalByDoctorId(String doctor_id) {
         return demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
+
+    @Override
+    public int queryDemoCharacterTotalByIdCardObscure(String doctorId,Long idCard) {
+        return demoCharacterMapper.queryDemoCharacterTotalByIdCardObscure(doctorId,idCard);
+    }
 }

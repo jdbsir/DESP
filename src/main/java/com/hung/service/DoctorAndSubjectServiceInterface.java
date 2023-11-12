@@ -14,4 +14,8 @@ public interface DoctorAndSubjectServiceInterface {
     int queryTotalSubjectByDoctorId(String doctor_id);
 
     List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId);
+
+    List<DoctorAndSubject> queryAllRecordOfDoctorByObscure(String doctorId,Long id_card);
+
+    int queryTotalSubjectByIdCardObscure(String doctorId,Long idCard);
 }

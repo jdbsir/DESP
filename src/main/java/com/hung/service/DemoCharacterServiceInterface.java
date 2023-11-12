@@ -21,4 +21,6 @@ public interface DemoCharacterServiceInterface {
     List<DemoCharacter> queryDemoCharacterById(Integer id);
 
     int queryDemoCharacterTotalByDoctorId(String doctor_id);
+
+    int queryDemoCharacterTotalByIdCardObscure(String doctorId,Long idCard);
 }

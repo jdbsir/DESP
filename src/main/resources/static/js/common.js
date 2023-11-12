@@ -57,6 +57,14 @@ function upperToLower(data) {
     return newData;
 }
 
+function lowerToUpper(data) {
+    const newData = {};
+    for (let k in data) {
+        newData[k.toUpperCase()] = data[k];
+    }
+    return newData;
+}
+
 function htmlToNode(html) {
     const parent = document.createElement('div');
     parent.innerHTML = html;
@@ -64,11 +72,20 @@ function htmlToNode(html) {
 }
 
 function fullCollectTable1(data) {
+    const filterArray = ['id', 'subject_id', 'time', 'unix_timestamp', 'gdtotal', 'npiscore', 'adlscore'];
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     const c = window.collectTableComponent[tableIndex - 1];
     const form = document.querySelector(`form[name="${c.formName}"]`);
     for (let name in data) {
+        if (inArray(filterArray, name.toLowerCase())) {
+            continue;
+        }
         let node = form.querySelector(`[name="${name}"]`);
+        try {
+            node.parentElement;
+        } catch (err) {
+            debugger;
+        }
         while (node.parentElement.self === undefined) {
             node = node.parentElement;
         }
@@ -114,6 +131,10 @@ function setReadonlyForm() {
         const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
         if (tableIndex === 8) {
             location.href = '/';
+        } else if (tableIndex === 4) {
+            const mocaScore = parseInt(document.querySelector('form .show-score-box .text').innerHTML);
+            const nextTableIndex = mocaScore < 26 ? 5 : 6;
+            location.href = `collect-table-${nextTableIndex}.html${location.search}`;
         } else {
             location.href = `collect-table-${tableIndex + 1}.html${location.search}`;
         }
@@ -121,17 +142,38 @@ function setReadonlyForm() {
 }
 
 function readonlyMode() {
+    const scoreKeyMapping = {
+        4: 'MOCA',
+        5: 'MMSE',
+        6: 'GDTOTAL',
+        7: 'NPISCORE',
+        8: 'adlscore'
+    };
+
     if (parseQueryParam()['readonly'] !== '1') {
         return undefined;
     }
 
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     return queryCollectTable().then((data) => {
+        // 把后端响应的字段转换为大写
+        if (tableIndex >= 4 && tableIndex <= 7) {
+            data = lowerToUpper(data);
+        }
+
+        // 渲染表单组件
         if (tableIndex === 4 || tableIndex === 5) {
             fullCollectTable2(data);
         } else {
             fullCollectTable1(data);
         }
+
+        // 渲染第4-8张表的分数
+        if (tableIndex >= 4) {
+            document.querySelector('form .show-score-box .text').innerHTML = data[scoreKeyMapping[tableIndex]];
+        }
+
+        // 使组件不可编辑
         setReadonlyForm();
         return new Promise((resolve, reject) => { resolve(data); });
     });
@@ -676,12 +718,23 @@ function ajaxGetJson(url) {
 }
 
 function queryCollectTable() {
+    const routeMapping = [
+        'queryDemoCharacterById',
+        'querylifestyle',
+        'queryhealth',
+        'querymoca',
+        'querymmse',
+        'querygdscale',
+        'querynpiq',
+        'queryadl'
+    ];
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
-    const url = `/query_collect_table_${tableIndex}?id=${parseQueryParam()['id']}`;
+    const subjectId = tableIndex === 1 ? 'id' : 'subject_id';
+    const url = `/${routeMapping[tableIndex - 1]}?${subjectId}=${parseQueryParam()['id']}`;
     return ajaxGetJson(url).then((response) => {
         let data = {};
         if (response.code === 1) {
-            data = response.data;
+            data = tableIndex === 1 ? response.data[0] : response.data;
         } else {
             alert(response.msg);
         }
@@ -855,7 +908,7 @@ window.collectTableComponent = [
                 {id: 'oiltea_rate_box', hidden: true}
             ),
             LeftRightInput('text', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
-            BinaryRadio('您是否有阅读（读书/看报）习惯', '是', '否', 'read', '1', '0', {controlComponent: '#read_rate_box'}),
+            BinaryRadio('您是否有阅读（读书/看报）习惯', '是', '否', 'read_book', '1', '0', {controlComponent: '#read_rate_box'}),
             DropdownSelect(
                 '阅读频率',
                 'read_rate',
