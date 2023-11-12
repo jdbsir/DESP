@@ -7,17 +7,7 @@
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_eld_screening_platform.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Adl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemCharacterForIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemCharacterForIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DemoCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/DoctorAndSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Gdscale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/HealthStatu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Mmse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Moca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/Npiq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/WeiXinInfoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +186,7 @@
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
       <workItem from="1699234475005" duration="19435000" />
-      <workItem from="1699321623721" duration="65399000" />
+      <workItem from="1699321623721" duration="67125000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
