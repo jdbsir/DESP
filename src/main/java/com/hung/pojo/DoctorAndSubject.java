@@ -5,12 +5,15 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 @TableName("doctor_subject")
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class DoctorAndSubject {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;//医生——受试者记录ID

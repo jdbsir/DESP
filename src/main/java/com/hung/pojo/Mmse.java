@@ -5,11 +5,14 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 //简易智力状态检查表
 @Data
 @TableName("mmse")
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Mmse {
 
     @TableId(value = "id",type = IdType.AUTO)

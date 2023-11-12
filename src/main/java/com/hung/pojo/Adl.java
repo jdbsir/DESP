@@ -5,12 +5,15 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 
 //日常生活能力量表
 @Data
 @TableName("adl")
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Adl {
     @TableId(type = IdType.AUTO)
     private Integer id;

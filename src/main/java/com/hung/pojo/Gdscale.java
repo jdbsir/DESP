@@ -5,11 +5,14 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 //老年抑郁量表
 @Data
 @TableName("gdscale")
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Gdscale {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;

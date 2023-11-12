@@ -5,11 +5,14 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 //蒙特利尔认知评估量表
 @Data
 @TableName("moca")
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Moca {
 
     @TableId(value = "id",type = IdType.AUTO)
