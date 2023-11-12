@@ -26,5 +26,5 @@ public interface DemoCharacterMapper extends BaseMapper<DemoCharacter> {
     /**
      * 该方法根据医生ID查询某医生给受试者所做的调查记录的总数
      * */
-    int queryDemoCharacterTotalByDoctorId(Integer doctor_id);
+    int queryDemoCharacterTotalByDoctorId(String doctor_id);
 }

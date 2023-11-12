@@ -1,5 +1,7 @@
 package com.hung;
 
+import com.hung.common.Result;
+import com.hung.controller.DoctorAndSubjectController;
 import com.hung.mapper.DoctorAndSubjectMapper;
 import com.hung.pojo.DoctorAndSubject;
 import org.junit.Test;
@@ -16,9 +18,12 @@ import java.util.List;
 public class MapperTest {
     @Autowired
     private DoctorAndSubjectMapper doctorAndSubjectMapper;
+    @Autowired
+    private DoctorAndSubjectController doctorAndSubjectController;
     @Test
     public void testDASQuery(){
-        int i=doctorAndSubjectMapper.queryTotalSubjectByDoctorId(123);
-        System.out.println(i);
+        List<DoctorAndSubject> doctorAndSubjects=doctorAndSubjectMapper.queryAllRecordOfDoctor("123");
+        System.out.println(doctorAndSubjects);
     }
+
 }

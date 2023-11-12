@@ -6,10 +6,12 @@ import com.hung.pojo.DoctorAndSubject;
 import java.util.List;
 
 public interface DoctorAndSubjectServiceInterface {
-    Result insertDoctorAndSubject(DoctorAndSubject doctorAndSubject);
+    int insertDoctorAndSubject(DoctorAndSubject doctorAndSubject);
     List<DoctorAndSubject> querySubjectByDoctorId(Integer doctor_id);
 
     List<DoctorAndSubject> querySubjectByIdCard(Long id_card);
 
-    int queryTotalSubjectByDoctorId(Integer doctor_id);
+    int queryTotalSubjectByDoctorId(String doctor_id);
+
+    List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId);
 }

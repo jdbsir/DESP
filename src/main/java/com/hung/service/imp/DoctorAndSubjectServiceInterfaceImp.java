@@ -15,17 +15,8 @@ public class DoctorAndSubjectServiceInterfaceImp implements DoctorAndSubjectServ
     @Autowired
     private DoctorAndSubjectMapper doctorAndSubjectMapper;
     @Override
-    public Result insertDoctorAndSubject(DoctorAndSubject doctorAndSubject) {
-        try {
-            int resultValue=doctorAndSubjectMapper.insert(doctorAndSubject);
-            if(resultValue<1){
-                return Result.error("数据保存失败，请重新提交保存");
-            }
-        }catch (Exception e){
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚
-            return Result.error("数据保存失败，请重新提交保存");
-        }
-        return Result.success(doctorAndSubject.getIdCard());
+    public int insertDoctorAndSubject(DoctorAndSubject doctorAndSubject) {
+        return doctorAndSubjectMapper.insert(doctorAndSubject);
     }
 
     @Override
@@ -39,7 +30,12 @@ public class DoctorAndSubjectServiceInterfaceImp implements DoctorAndSubjectServ
     }
 
     @Override
-    public int queryTotalSubjectByDoctorId(Integer doctor_id) {
+    public int queryTotalSubjectByDoctorId(String doctor_id) {
         return doctorAndSubjectMapper.queryTotalSubjectByDoctorId(doctor_id);
+    }
+
+    @Override
+    public List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId) {
+        return doctorAndSubjectMapper.queryAllRecordOfDoctor(doctorId);
     }
 }
