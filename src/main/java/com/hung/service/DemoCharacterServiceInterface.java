@@ -20,5 +20,5 @@ public interface DemoCharacterServiceInterface {
 
     List<DemoCharacter> queryDemoCharacterById(Integer id);
 
-    int queryDemoCharacterTotalByDoctorId(Integer doctor_id);
+    int queryDemoCharacterTotalByDoctorId(String doctor_id);
 }

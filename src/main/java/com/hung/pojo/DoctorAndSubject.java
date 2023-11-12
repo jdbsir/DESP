@@ -15,7 +15,7 @@ public class DoctorAndSubject {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;//医生——受试者记录ID
     @TableField("doctor_id")
-    private Integer doctorId;//医生ID（微信ID）
+    private String doctorId;//医生ID（微信ID）
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableField("id_card")
     private Long idCard;//受试者身份证号

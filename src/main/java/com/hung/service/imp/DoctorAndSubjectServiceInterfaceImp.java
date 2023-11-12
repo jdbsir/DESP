@@ -30,12 +30,12 @@ public class DoctorAndSubjectServiceInterfaceImp implements DoctorAndSubjectServ
     }
 
     @Override
-    public int queryTotalSubjectByDoctorId(Integer doctor_id) {
+    public int queryTotalSubjectByDoctorId(String doctor_id) {
         return doctorAndSubjectMapper.queryTotalSubjectByDoctorId(doctor_id);
     }
 
     @Override
-    public List<DoctorAndSubject> queryAllRecordOfDoctor(Integer doctorId) {
+    public List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId) {
         return doctorAndSubjectMapper.queryAllRecordOfDoctor(doctorId);
     }
 }

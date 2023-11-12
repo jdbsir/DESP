@@ -22,13 +22,8 @@ public class MapperTest {
     private DoctorAndSubjectController doctorAndSubjectController;
     @Test
     public void testDASQuery(){
-        List<DoctorAndSubject> doctorAndSubjects=doctorAndSubjectMapper.queryAllRecordOfDoctor(2);
+        List<DoctorAndSubject> doctorAndSubjects=doctorAndSubjectMapper.queryAllRecordOfDoctor("123");
         System.out.println(doctorAndSubjects);
     }
 
-    @Test
-    public void testDoctorAndSubjectController(){
-        Result rs=doctorAndSubjectController.queryAllRecordOfDoctor(2);
-        System.out.println(rs);
-    }
 }

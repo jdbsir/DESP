@@ -11,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -31,9 +33,10 @@ public class DemoCharacterController {
      * */
     @RequestMapping(value = "/collect_table_1")
     @ResponseBody
-    public Result insertDemoCharacter(@RequestBody DemoCharacter demoCharacter,@RequestParam Integer doctor_id){
-
-        if(doctorAndSubjectServiceInterface.querySubjectByIdCard(demoCharacter.getIdCard())!=null){
+    public Result insertDemoCharacter(@RequestBody DemoCharacter demoCharacter, HttpServletRequest request){
+        HttpSession session=request.getSession();
+        String doctor_id=(String) session.getAttribute("weixin_id");
+        if(!doctorAndSubjectServiceInterface.querySubjectByIdCard(demoCharacter.getIdCard()).isEmpty()){
             return demoCharacterServiceInterface.insertNewDemoCharacter(demoCharacter);
         }
         DoctorAndSubject doctorAndSubject=new DoctorAndSubject();
@@ -87,7 +90,7 @@ public class DemoCharacterController {
      * */
     @RequestMapping("/queryDemoCharacterTotalByDoctorId")
     @ResponseBody
-    public int queryDemoCharacterTotalByDoctorId(@RequestParam Integer doctor_id){
+    public int queryDemoCharacterTotalByDoctorId(@RequestParam String doctor_id){
         return demoCharacterServiceInterface.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
 

@@ -1,780 +1,224 @@
-2023-11-10 15:40:42.516  INFO 6304 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
-2023-11-10 15:40:42.710  INFO 6304 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 15:40:42.720  INFO 6304 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-10 15:40:42.927  INFO 6304 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 15:40:42.974  INFO 6304 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 15:40:43.436  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 6304 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:40:43.436  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:40:44.426  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:40:44.427  INFO 6304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:40:44.427  INFO 6304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:40:44.447  INFO 6304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:40:44.447  INFO 6304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
-2023-11-10 15:40:44.468  INFO 6304 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:40:44.506  INFO 6304 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2023-11-10 15:40:44.826  INFO 6304 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:40:44.869  INFO 6304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:40:44.880  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:40:44.884  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.507 seconds (JVM running for 80042.615)
-2023-11-10 15:40:44.885  INFO 6304 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 15:40:47.717  INFO 6304 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
-2023-11-10 15:40:47.742  INFO 6304 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 15:40:47.748  INFO 6304 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
-2023-11-10 15:40:47.749  INFO 6304 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
-2023-11-10 15:40:47.787  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 6304 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:40:47.787  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:40:47.900  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:40:47.900  INFO 6304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:40:47.900  INFO 6304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:40:47.908  INFO 6304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:40:47.909  INFO 6304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 121 ms
-2023-11-10 15:40:47.920  INFO 6304 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:40:47.938  INFO 6304 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
-2023-11-10 15:40:48.060  INFO 6304 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:40:48.079  INFO 6304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:40:48.086  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:40:48.088  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.315 seconds (JVM running for 80045.819)
-2023-11-10 15:40:48.089  INFO 6304 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 15:42:21.400  INFO 6304 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
-2023-11-10 15:42:21.425  INFO 6304 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 15:42:21.430  INFO 6304 --- [Thread-11] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
-2023-11-10 15:42:21.432  INFO 6304 --- [Thread-11] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
-2023-11-10 15:42:21.617  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 6304 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:42:21.617  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:42:21.878  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:42:21.878  INFO 6304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:42:21.878  INFO 6304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:42:21.885  INFO 6304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:42:21.885  INFO 6304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 267 ms
-2023-11-10 15:42:21.897  INFO 6304 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:42:21.918  INFO 6304 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
-2023-11-10 15:42:22.041  INFO 6304 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:42:22.063  INFO 6304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:42:22.074  INFO 6304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:42:22.077  INFO 6304 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.509 seconds (JVM running for 80139.808)
-2023-11-10 15:42:22.077  INFO 6304 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 15:42:43.949  INFO 6304 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closing ...
-2023-11-10 15:42:43.952  INFO 6304 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
-2023-11-10 15:42:48.906  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 17540 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:42:48.907  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:42:49.017  INFO 17540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 15:42:49.017  INFO 17540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 15:42:50.114  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:42:50.157  INFO 17540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:42:50.157  INFO 17540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:42:50.198  INFO 17540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:42:50.198  INFO 17540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1181 ms
-2023-11-10 15:42:50.315  INFO 17540 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:42:50.449  INFO 17540 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 15:42:50.901  INFO 17540 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:42:51.030  INFO 17540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:42:51.052  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:42:51.059  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 2.546 seconds (JVM running for 3.378)
-2023-11-10 15:43:02.259  INFO 17540 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 15:43:02.260  INFO 17540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 15:43:02.260  INFO 17540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 15:46:10.180  INFO 17540 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-11-10 15:46:10.206  INFO 17540 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 15:46:10.218  INFO 17540 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-10 15:46:10.237  INFO 17540 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 15:46:10.244  INFO 17540 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 15:46:10.299  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 17540 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:46:10.299  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:46:10.498  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:46:10.498  INFO 17540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:46:10.498  INFO 17540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:46:10.504  INFO 17540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:46:10.504  INFO 17540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 204 ms
-2023-11-10 15:46:10.514  INFO 17540 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:46:10.531  INFO 17540 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2023-11-10 15:46:10.675  INFO 17540 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:46:10.695  INFO 17540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:46:10.702  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:46:10.704  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.421 seconds (JVM running for 203.023)
-2023-11-10 15:46:10.705  INFO 17540 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 15:46:17.634  INFO 17540 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
-2023-11-10 15:46:17.636  INFO 17540 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
-2023-11-10 15:46:19.476  INFO 15244 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 15244 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:46:19.476  INFO 15244 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:46:19.512  INFO 15244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 15:46:19.512  INFO 15244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 15:46:20.072  INFO 15244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:46:20.077  INFO 15244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:46:20.077  INFO 15244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:46:20.115  INFO 15244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:46:20.116  INFO 15244 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 604 ms
-2023-11-10 15:46:20.173  INFO 15244 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:46:20.254  INFO 15244 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 15:46:20.598  INFO 15244 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:46:20.690  INFO 15244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:46:20.709  INFO 15244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:46:20.715  INFO 15244 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.51 seconds (JVM running for 2.097)
-2023-11-10 15:46:41.027  INFO 15244 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 15:46:41.027  INFO 15244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 15:46:41.028  INFO 15244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 15:48:57.273  WARN 15244 --- [http-nio-8080-exec-6] o.m.jdbc.message.server.ErrorPacket      : Error: 1242-21000: Subquery returns more than 1 row
-2023-11-10 15:48:57.348 ERROR 15244 --- [http-nio-8080-exec-6] c.h.c.DoctorAndSubjectController         : 查询数据出错:
-### Error querying database.  Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-### The error may exist in file [D:\Project\JAVA\DESP\DESP\target\classes\com.hung.mapper\DemoCharacterMapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: select count(id) from demo_character where id_card=(select id_card from doctor_subject where doctor_id=?)
-### Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-; (conn=2016) Subquery returns more than 1 row; nested exception is java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-
-org.springframework.dao.DataIntegrityViolationException: 
-### Error querying database.  Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-### The error may exist in file [D:\Project\JAVA\DESP\DESP\target\classes\com.hung.mapper\DemoCharacterMapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: select count(id) from demo_character where id_card=(select id_card from doctor_subject where doctor_id=?)
-### Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-; (conn=2016) Subquery returns more than 1 row; nested exception is java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87) ~[spring-jdbc-5.3.25.jar:5.3.25]
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70) ~[spring-jdbc-5.3.25.jar:5.3.25]
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79) ~[spring-jdbc-5.3.25.jar:5.3.25]
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73) ~[mybatis-spring-1.3.2.jar:1.3.2]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446) ~[mybatis-spring-1.3.2.jar:1.3.2]
-	at com.sun.proxy.$Proxy69.selectOne(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166) ~[mybatis-spring-1.3.2.jar:1.3.2]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:83) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.6.jar:3.4.6]
-	at com.sun.proxy.$Proxy71.queryDemoCharacterTotalByDoctorId(Unknown Source) ~[na:na]
-	at com.hung.service.imp.DemoCharacterServiceInterfaceImp.queryDemoCharacterTotalByDoctorId(DemoCharacterServiceInterfaceImp.java:75) ~[classes/:na]
-	at com.hung.controller.DoctorAndSubjectController.queryAllRecordOfDoctor(DoctorAndSubjectController.java:33) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: java.sql.SQLIntegrityConstraintViolationException: (conn=2016) Subquery returns more than 1 row
-	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:290) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:370) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.result.Result.readNext(Result.java:161) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.result.CompleteResult.<init>(CompleteResult.java:69) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:265) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:840) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:779) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:698) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:641) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:95) ~[mariadb-java-client-3.0.10.jar:na]
-	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:268) ~[mariadb-java-client-3.0.10.jar:na]
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483) ~[druid-1.2.16.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.4.6.jar:3.4.6]
-	at com.sun.proxy.$Proxy88.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.6.jar:3.4.6]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77) ~[mybatis-3.4.6.jar:3.4.6]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) ~[mybatis-spring-1.3.2.jar:1.3.2]
-	... 57 common frames omitted
-
-2023-11-10 15:54:22.088  INFO 15244 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 15:54:22.091  INFO 15244 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 15:54:24.260  INFO 4988 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 4988 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:54:24.261  INFO 4988 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:54:24.288  INFO 4988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 15:54:24.288  INFO 4988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 15:54:24.788  INFO 4988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 15:54:24.794  INFO 4988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 15:54:24.794  INFO 4988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 15:54:24.826  INFO 4988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 15:54:24.826  INFO 4988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
-2023-11-10 15:54:24.880  INFO 4988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 15:54:24.955  INFO 4988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 15:54:25.236  INFO 4988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 15:54:25.328  INFO 4988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 15:54:25.347  INFO 4988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 15:54:25.352  INFO 4988 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.312 seconds (JVM running for 1.693)
-2023-11-10 15:54:32.118  INFO 4988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 15:54:32.119  INFO 4988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 15:54:32.119  INFO 4988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 15:57:18.423  INFO 4988 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
-2023-11-10 15:57:18.455  INFO 4988 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 15:57:18.456  INFO 4988 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-10 15:57:18.464  INFO 4988 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 15:57:18.467  INFO 4988 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 15:57:18.506  INFO 4988 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 4988 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 15:57:18.506  INFO 4988 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 15:57:18.516  WARN 4988 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.hung.DementiaEldlyScreeningPlatformApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/hung/service/DemoCharacterServiceInterface.class] cannot be opened because it does not exist
-2023-11-10 15:57:18.552 ERROR 4988 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.hung.DementiaEldlyScreeningPlatformApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/hung/service/DemoCharacterServiceInterface.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.hung.DementiaEldlyScreeningPlatformApplication.main(DementiaEldlyScreeningPlatformApplication.java:18) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/hung/service/DemoCharacterServiceInterface.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-11-10 16:12:07.662  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 12392 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 16:12:07.663  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 16:12:07.688  INFO 12392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 16:12:07.688  INFO 12392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 16:12:08.218  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 16:12:08.222  INFO 12392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 16:12:08.223  INFO 12392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 16:12:08.250  INFO 12392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 16:12:08.250  INFO 12392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 562 ms
-2023-11-10 16:12:08.303  INFO 12392 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 16:12:08.386  INFO 12392 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 16:12:08.668  INFO 12392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 16:12:08.760  INFO 12392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 16:12:08.780  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 16:12:08.785  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.343 seconds (JVM running for 1.734)
-2023-11-10 16:14:05.085  INFO 12392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 16:14:05.086  INFO 12392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 16:14:05.087  INFO 12392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 16:21:11.989  INFO 12392 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-11-10 16:21:12.015  INFO 12392 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 16:21:12.016  INFO 12392 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-10 16:21:12.024  INFO 12392 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 16:21:12.026  INFO 12392 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 16:21:12.063  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 12392 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 16:21:12.063  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 16:21:12.175  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 16:21:12.175  INFO 12392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 16:21:12.175  INFO 12392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 16:21:12.182  INFO 12392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 16:21:12.183  INFO 12392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
-2023-11-10 16:21:12.194  INFO 12392 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 16:21:12.213  INFO 12392 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2023-11-10 16:21:12.341  INFO 12392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 16:21:12.364  INFO 12392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 16:21:12.371  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 16:21:12.372  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.323 seconds (JVM running for 545.322)
-2023-11-10 16:21:12.373  INFO 12392 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 16:50:44.977  INFO 12392 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (3 additions, 0 deletions, 1 modification)
-2023-11-10 16:50:45.034  INFO 12392 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 16:50:45.047  INFO 12392 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
-2023-11-10 16:50:45.050  INFO 12392 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
-2023-11-10 16:50:45.119  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 12392 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 16:50:45.120  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 16:50:45.346  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 16:50:45.347  INFO 12392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 16:50:45.347  INFO 12392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 16:50:45.356  INFO 12392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 16:50:45.356  INFO 12392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
-2023-11-10 16:50:45.372  INFO 12392 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 16:50:45.392  INFO 12392 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
-2023-11-10 16:50:45.539  INFO 12392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 16:50:45.561  INFO 12392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 16:50:45.569  INFO 12392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 16:50:45.572  INFO 12392 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.468 seconds (JVM running for 2318.521)
-2023-11-10 16:50:45.573  INFO 12392 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-10 17:10:09.089  INFO 12392 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
-2023-11-10 17:10:09.090  INFO 12392 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
-2023-11-10 17:13:22.336  INFO 3216 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3216 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 17:13:22.346  INFO 3216 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 17:13:22.399  INFO 3216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 17:13:22.399  INFO 3216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 17:13:23.826  INFO 3216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 17:13:23.839  INFO 3216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 17:13:23.839  INFO 3216 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 17:13:23.890  INFO 3216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 17:13:23.890  INFO 3216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
-2023-11-10 17:13:24.030  INFO 3216 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 17:13:24.315  INFO 3216 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 17:13:25.336  INFO 3216 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 17:13:25.635  INFO 3216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 17:13:25.683  INFO 3216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 17:13:25.718  INFO 3216 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 3.755 seconds (JVM running for 6.587)
-2023-11-10 20:14:38.773  INFO 3216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 20:14:38.774  INFO 3216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 20:14:38.775  INFO 3216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 20:53:02.317  INFO 3216 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (1 addition, 2 deletions, 0 modifications)
-2023-11-10 20:53:02.664  INFO 3216 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 20:53:02.690  INFO 3216 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-10 20:53:02.752  INFO 3216 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 20:53:02.772  INFO 3216 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 20:53:02.869  INFO 3216 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3216 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 20:53:02.869  INFO 3216 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 20:53:03.162  INFO 3216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 20:53:03.163  INFO 3216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 20:53:03.163  INFO 3216 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 20:53:03.170  INFO 3216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 20:53:03.170  INFO 3216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 300 ms
-2023-11-10 20:53:03.184  INFO 3216 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 20:53:03.212  INFO 3216 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2023-11-10 20:53:03.374  WARN 3216 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'doctorServiceInterfaceImp' defined in file [D:\Project\JAVA\DESP\DESP\target\classes\com\hung\service\imp\DoctorServiceInterfaceImp.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hung.service.imp.DoctorServiceInterfaceImp] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4f4a0467]
-2023-11-10 20:53:03.376  INFO 3216 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
-2023-11-10 20:53:03.377  INFO 3216 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
-2023-11-10 20:53:03.377  INFO 3216 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-10 20:53:03.381  INFO 3216 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-11-10 20:53:03.436 ERROR 3216 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'doctorServiceInterfaceImp' defined in file [D:\Project\JAVA\DESP\DESP\target\classes\com\hung\service\imp\DoctorServiceInterfaceImp.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.hung.service.imp.DoctorServiceInterfaceImp] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4f4a0467]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.hung.DementiaEldlyScreeningPlatformApplication.main(DementiaEldlyScreeningPlatformApplication.java:18) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hung.service.imp.DoctorServiceInterfaceImp] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4f4a0467]
-	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 20 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: Lcom/hung/mapper/DoctorMapper;
-	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738) ~[spring-core-5.3.25.jar:5.3.25]
-	... 26 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.hung.mapper.DoctorMapper
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
-	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
-	... 30 common frames omitted
-
-2023-11-10 21:45:16.160  INFO 3232 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3232 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:45:16.172  INFO 3232 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:45:16.287  INFO 3232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:45:16.287  INFO 3232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:45:17.541  INFO 3232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:45:17.556  INFO 3232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:45:17.556  INFO 3232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:45:17.592  INFO 3232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:45:17.592  INFO 3232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
-2023-11-10 21:45:17.686  INFO 3232 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:45:17.841  INFO 3232 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:45:18.315  INFO 3232 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:45:18.421  INFO 3232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:45:18.440  INFO 3232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:45:18.446  INFO 3232 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 2.615 seconds (JVM running for 3.436)
-2023-11-10 21:45:28.077  INFO 3232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:45:28.078  INFO 3232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:45:28.079  INFO 3232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 21:46:40.213  INFO 3232 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:46:40.221  INFO 3232 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 21:46:42.469  INFO 2940 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 2940 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:46:42.470  INFO 2940 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:46:42.496  INFO 2940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:46:42.497  INFO 2940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:46:43.018  INFO 2940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:46:43.023  INFO 2940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:46:43.023  INFO 2940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:46:43.059  INFO 2940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:46:43.059  INFO 2940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 562 ms
-2023-11-10 21:46:43.125  INFO 2940 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:46:43.205  INFO 2940 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:46:43.509  INFO 2940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:46:43.599  INFO 2940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:46:43.619  INFO 2940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:46:43.624  INFO 2940 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.372 seconds (JVM running for 1.764)
-2023-11-10 21:46:47.071  INFO 2940 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:46:47.072  INFO 2940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:46:47.073  INFO 2940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 21:52:03.652  INFO 2940 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:52:03.654  INFO 2940 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 21:52:06.036  INFO 6296 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 6296 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:52:06.037  INFO 6296 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:52:06.065  INFO 6296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:52:06.065  INFO 6296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:52:06.585  INFO 6296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:52:06.590  INFO 6296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:52:06.590  INFO 6296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:52:06.623  INFO 6296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:52:06.623  INFO 6296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
-2023-11-10 21:52:06.695  INFO 6296 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:52:06.769  INFO 6296 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:52:07.061  INFO 6296 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:52:07.150  INFO 6296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:52:07.169  INFO 6296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:52:07.175  INFO 6296 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.369 seconds (JVM running for 1.756)
-2023-11-10 21:52:17.220  INFO 6296 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:52:17.221  INFO 6296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:52:17.221  INFO 6296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 21:54:12.345  INFO 6296 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:54:12.347  INFO 6296 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 21:54:14.657  INFO 14704 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 14704 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:54:14.658  INFO 14704 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:54:14.685  INFO 14704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:54:14.685  INFO 14704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:54:15.181  INFO 14704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:54:15.185  INFO 14704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:54:15.185  INFO 14704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:54:15.213  INFO 14704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:54:15.213  INFO 14704 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 527 ms
-2023-11-10 21:54:15.288  INFO 14704 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:54:15.365  INFO 14704 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:54:15.665  INFO 14704 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:54:15.762  INFO 14704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:54:15.781  INFO 14704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:54:15.788  INFO 14704 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.345 seconds (JVM running for 1.728)
-2023-11-10 21:54:19.707  INFO 14704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:54:19.708  INFO 14704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:54:19.708  INFO 14704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 21:55:37.985  INFO 14704 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:55:37.988  INFO 14704 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 21:57:07.096  INFO 3984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3984 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:57:07.096  INFO 3984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:57:07.119  INFO 3984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:57:07.119  INFO 3984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:57:07.630  INFO 3984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:57:07.636  INFO 3984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:57:07.636  INFO 3984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:57:07.671  INFO 3984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:57:07.672  INFO 3984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
-2023-11-10 21:57:07.749  INFO 3984 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:57:07.825  INFO 3984 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:57:08.131  INFO 3984 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:57:08.222  INFO 3984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:57:08.245  INFO 3984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:57:08.252  INFO 3984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.404 seconds (JVM running for 1.812)
-2023-11-10 21:57:14.178  INFO 3984 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:57:14.179  INFO 3984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:57:14.180  INFO 3984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 21:58:51.946  INFO 3984 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:58:51.949  INFO 3984 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 21:59:21.115  INFO 10840 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 10840 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 21:59:21.116  INFO 10840 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 21:59:21.145  INFO 10840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 21:59:21.145  INFO 10840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 21:59:21.646  INFO 10840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 21:59:21.651  INFO 10840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 21:59:21.651  INFO 10840 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 21:59:21.680  INFO 10840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 21:59:21.680  INFO 10840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
-2023-11-10 21:59:21.739  INFO 10840 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 21:59:21.825  INFO 10840 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 21:59:22.121  INFO 10840 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 21:59:22.216  INFO 10840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 21:59:22.235  INFO 10840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 21:59:22.241  INFO 10840 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.335 seconds (JVM running for 1.728)
-2023-11-10 21:59:27.611  INFO 10840 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 21:59:27.612  INFO 10840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 21:59:27.613  INFO 10840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 21:59:59.905  INFO 10840 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 21:59:59.908  INFO 10840 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:00:53.352  INFO 17240 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 17240 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:00:53.353  INFO 17240 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:00:53.379  INFO 17240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:00:53.379  INFO 17240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:00:53.924  INFO 17240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:00:53.929  INFO 17240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:00:53.930  INFO 17240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:00:53.961  INFO 17240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:00:53.961  INFO 17240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 582 ms
-2023-11-10 22:00:54.034  INFO 17240 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:00:54.114  INFO 17240 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:00:54.461  INFO 17240 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:00:54.557  INFO 17240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:00:54.580  INFO 17240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:00:54.587  INFO 17240 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.464 seconds (JVM running for 2.121)
-2023-11-10 22:00:59.926  INFO 17240 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:00:59.927  INFO 17240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:00:59.927  INFO 17240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 22:03:04.815  INFO 17240 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:03:04.818  INFO 17240 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:03:06.432  INFO 13820 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 13820 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:03:06.433  INFO 13820 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:03:06.464  INFO 13820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:03:06.464  INFO 13820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:03:07.057  INFO 13820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:03:07.062  INFO 13820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:03:07.063  INFO 13820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:03:07.094  INFO 13820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:03:07.095  INFO 13820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
-2023-11-10 22:03:07.179  INFO 13820 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:03:07.260  INFO 13820 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:03:07.597  INFO 13820 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:03:07.693  INFO 13820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:03:07.723  INFO 13820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:03:07.731  INFO 13820 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.576 seconds (JVM running for 2.066)
-2023-11-10 22:03:12.589  INFO 13820 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:03:12.590  INFO 13820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:03:12.591  INFO 13820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 22:03:50.696  INFO 13820 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:03:50.699  INFO 13820 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:04:11.462  INFO 1300 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 1300 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:04:11.462  INFO 1300 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:04:11.488  INFO 1300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:04:11.488  INFO 1300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:04:12.056  INFO 1300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:04:12.061  INFO 1300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:04:12.061  INFO 1300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:04:12.090  INFO 1300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:04:12.091  INFO 1300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 602 ms
-2023-11-10 22:04:12.176  INFO 1300 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:04:12.255  INFO 1300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:04:12.593  INFO 1300 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:04:12.704  INFO 1300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:04:12.727  INFO 1300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:04:12.734  INFO 1300 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.528 seconds (JVM running for 1.972)
-2023-11-10 22:04:20.836  INFO 1300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:04:20.836  INFO 1300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:04:20.837  INFO 1300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-10 22:05:18.480  INFO 1300 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:05:18.483  INFO 1300 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:06:04.245  INFO 3524 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3524 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:06:04.245  INFO 3524 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:06:04.271  INFO 3524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:06:04.271  INFO 3524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:06:04.843  INFO 3524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:06:04.848  INFO 3524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:06:04.848  INFO 3524 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:06:04.880  INFO 3524 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:06:04.880  INFO 3524 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 609 ms
-2023-11-10 22:06:04.964  INFO 3524 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:06:05.044  INFO 3524 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:06:05.372  INFO 3524 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:06:05.463  INFO 3524 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:06:05.486  INFO 3524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:06:05.494  INFO 3524 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.491 seconds (JVM running for 1.948)
-2023-11-10 22:06:12.370  INFO 3524 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:06:12.371  INFO 3524 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:06:12.373  INFO 3524 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-11-10 22:06:56.220  INFO 3524 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:06:56.223  INFO 3524 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:07:46.404  INFO 4728 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 4728 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:07:46.405  INFO 4728 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:07:46.432  INFO 4728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:07:46.432  INFO 4728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:07:46.942  INFO 4728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:07:46.946  INFO 4728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:07:46.946  INFO 4728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:07:46.972  INFO 4728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:07:46.972  INFO 4728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 539 ms
-2023-11-10 22:07:47.039  INFO 4728 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:07:47.115  INFO 4728 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:07:47.406  INFO 4728 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:07:47.500  INFO 4728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:07:47.519  INFO 4728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:07:47.525  INFO 4728 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.335 seconds (JVM running for 1.73)
-2023-11-10 22:07:52.806  INFO 4728 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:07:52.807  INFO 4728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:07:52.808  INFO 4728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 22:10:07.595  INFO 4728 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:10:07.598  INFO 4728 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:10:09.970  INFO 7000 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 7000 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:10:09.971  INFO 7000 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:10:10.001  INFO 7000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:10:10.001  INFO 7000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:10:10.519  INFO 7000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:10:10.524  INFO 7000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:10:10.524  INFO 7000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:10:10.552  INFO 7000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:10:10.552  INFO 7000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
-2023-11-10 22:10:10.618  INFO 7000 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:10:10.697  INFO 7000 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:10:10.986  INFO 7000 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:10:11.084  INFO 7000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:10:11.103  INFO 7000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:10:11.109  INFO 7000 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.342 seconds (JVM running for 1.727)
-2023-11-10 22:10:17.904  INFO 7000 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:10:17.904  INFO 7000 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:10:17.905  INFO 7000 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 22:10:49.816  INFO 7000 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:10:49.818  INFO 7000 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:13:11.068  INFO 12636 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 12636 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:13:11.069  INFO 12636 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:13:11.102  INFO 12636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:13:11.102  INFO 12636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:13:11.620  INFO 12636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:13:11.624  INFO 12636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:13:11.624  INFO 12636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:13:11.653  INFO 12636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:13:11.653  INFO 12636 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
-2023-11-10 22:13:11.726  INFO 12636 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:13:11.805  INFO 12636 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:13:12.096  INFO 12636 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:13:12.191  INFO 12636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:13:12.213  INFO 12636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:13:12.220  INFO 12636 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.367 seconds (JVM running for 1.757)
-2023-11-10 22:13:40.038  INFO 12636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:13:40.039  INFO 12636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:13:40.040  INFO 12636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 22:13:44.336 ERROR 12636 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.hung.controller.WeiXinInfoController.insertWeiXinInfoFromURL(WeiXinInfoController.java:37) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.25.jar:5.3.25]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.71.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.25.jar:5.3.25]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-2023-11-10 22:15:43.111  INFO 12636 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:15:43.117  INFO 12636 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-11-10 22:15:46.974  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 17540 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
-2023-11-10 22:15:46.975  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
-2023-11-10 22:15:47.002  INFO 17540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-10 22:15:47.003  INFO 17540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-10 22:15:47.690  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-11-10 22:15:47.694  INFO 17540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-10 22:15:47.695  INFO 17540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-11-10 22:15:47.730  INFO 17540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-10 22:15:47.730  INFO 17540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 727 ms
-2023-11-10 22:15:47.799  INFO 17540 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-11-10 22:15:47.878  INFO 17540 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-11-10 22:15:48.241  INFO 17540 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
-2023-11-10 22:15:48.325  INFO 17540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-11-10 22:15:48.345  INFO 17540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-11-10 22:15:48.352  INFO 17540 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.626 seconds (JVM running for 2.254)
-2023-11-10 22:15:55.572  INFO 17540 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-10 22:15:55.573  INFO 17540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-10 22:15:55.574  INFO 17540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-10 22:21:51.490  INFO 17540 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-11-10 22:21:51.496  INFO 17540 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 09:44:58.568  INFO 17424 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 09:44:58.608  INFO 17424 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 09:46:49.111  INFO 3080 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3080 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 09:46:49.111  INFO 3080 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 09:46:49.141  INFO 3080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 09:46:49.141  INFO 3080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 09:46:50.635  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 09:46:50.683  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 09:46:50.683  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 09:46:50.738  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 09:46:50.739  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1598 ms
+2023-11-12 09:46:50.934  INFO 3080 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 09:46:51.050  INFO 3080 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 09:46:51.540  INFO 3080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 09:46:51.638  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 09:46:51.657  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 09:46:51.663  INFO 3080 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 2.906 seconds (JVM running for 5.417)
+2023-11-12 09:47:16.376  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 09:47:16.377  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 09:47:16.378  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 09:51:27.260  INFO 3080 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 09:51:27.267  INFO 3080 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 09:51:30.070  INFO 18496 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 18496 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 09:51:30.071  INFO 18496 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 09:51:30.096  INFO 18496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 09:51:30.097  INFO 18496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 09:51:30.604  INFO 18496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 09:51:30.609  INFO 18496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 09:51:30.609  INFO 18496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 09:51:30.639  INFO 18496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 09:51:30.640  INFO 18496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 543 ms
+2023-11-12 09:51:30.712  INFO 18496 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 09:51:30.791  INFO 18496 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 09:51:31.087  INFO 18496 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 09:51:31.183  INFO 18496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 09:51:31.205  INFO 18496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 09:51:31.212  INFO 18496 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.372 seconds (JVM running for 1.753)
+2023-11-12 09:51:38.435  INFO 18496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 09:51:38.436  INFO 18496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 09:51:38.437  INFO 18496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 09:52:47.580  INFO 18496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 09:52:47.582  INFO 18496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 09:52:50.495  INFO 3096 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 3096 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 09:52:50.496  INFO 3096 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 09:52:50.523  INFO 3096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 09:52:50.523  INFO 3096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 09:52:51.033  INFO 3096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 09:52:51.037  INFO 3096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 09:52:51.037  INFO 3096 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 09:52:51.066  INFO 3096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 09:52:51.066  INFO 3096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 543 ms
+2023-11-12 09:52:51.135  INFO 3096 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 09:52:51.216  INFO 3096 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 09:52:51.525  INFO 3096 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 09:52:51.619  INFO 3096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 09:52:51.638  INFO 3096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 09:52:51.644  INFO 3096 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.367 seconds (JVM running for 1.763)
+2023-11-12 09:53:05.551  INFO 3096 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 09:53:05.553  INFO 3096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 09:53:05.554  INFO 3096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 10:06:39.741  INFO 3096 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 10:06:39.744  INFO 3096 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 10:06:47.047  INFO 18160 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 18160 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 10:06:47.063  INFO 18160 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 10:06:47.183  INFO 18160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 10:06:47.183  INFO 18160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 10:06:48.602  INFO 18160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 10:06:48.624  INFO 18160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 10:06:48.624  INFO 18160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 10:06:48.677  INFO 18160 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 10:06:48.677  INFO 18160 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1494 ms
+2023-11-12 10:06:48.821  INFO 18160 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 10:06:48.963  INFO 18160 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 10:06:49.382  INFO 18160 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 10:06:49.493  INFO 18160 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 10:06:49.521  INFO 18160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 10:06:49.544  INFO 18160 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 3.235 seconds (JVM running for 5.843)
+2023-11-12 10:07:03.000  INFO 18160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 10:07:03.000  INFO 18160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 10:07:03.001  INFO 18160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 10:48:31.874  INFO 18160 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 10:48:31.914  INFO 18160 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 10:48:50.613  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 14248 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 10:48:50.614  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 10:48:50.655  INFO 14248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 10:48:50.656  INFO 14248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 10:48:51.814  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 10:48:51.833  INFO 14248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 10:48:51.834  INFO 14248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 10:48:51.868  INFO 14248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 10:48:51.868  INFO 14248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+2023-11-12 10:48:51.946  INFO 14248 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 10:48:52.068  INFO 14248 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 10:48:52.530  INFO 14248 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 10:48:52.653  INFO 14248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 10:48:52.675  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 10:48:52.683  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 2.387 seconds (JVM running for 3.119)
+2023-11-12 10:49:04.095  INFO 14248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 10:49:04.096  INFO 14248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 10:49:04.097  INFO 14248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 10:56:39.306  INFO 14248 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-11-12 10:56:39.345  INFO 14248 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-12 10:56:39.347  INFO 14248 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-12 10:56:39.360  INFO 14248 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 10:56:39.365  INFO 14248 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 10:56:39.450  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 14248 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 10:56:39.451  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 10:56:39.644  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 10:56:39.644  INFO 14248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 10:56:39.644  INFO 14248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 10:56:39.652  INFO 14248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 10:56:39.652  INFO 14248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 199 ms
+2023-11-12 10:56:39.672  INFO 14248 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 10:56:39.692  INFO 14248 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-11-12 10:56:39.858  INFO 14248 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 10:56:39.887  INFO 14248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 10:56:39.895  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 10:56:39.898  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.471 seconds (JVM running for 470.335)
+2023-11-12 10:56:39.901  INFO 14248 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-12 10:56:41.331  INFO 14248 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-11-12 10:56:41.355  INFO 14248 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-12 10:56:41.361  INFO 14248 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-11-12 10:56:41.364  INFO 14248 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-11-12 10:56:41.403  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 14248 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 10:56:41.403  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 10:56:41.497  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 10:56:41.497  INFO 14248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 10:56:41.497  INFO 14248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 10:56:41.504  INFO 14248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 10:56:41.504  INFO 14248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2023-11-12 10:56:41.516  INFO 14248 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 10:56:41.533  INFO 14248 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-11-12 10:56:41.660  INFO 14248 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 10:56:41.680  INFO 14248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 10:56:41.687  INFO 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 10:56:41.690  INFO 14248 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 0.299 seconds (JVM running for 472.126)
+2023-11-12 10:56:41.690  INFO 14248 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-11-12 10:59:35.291  INFO 14248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 10:59:35.292  INFO 14248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 10:59:35.293  INFO 14248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 10:59:42.734  INFO 14248 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
+2023-11-12 10:59:42.736  INFO 14248 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2023-11-12 11:02:45.501  INFO 12312 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 12312 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 11:02:45.502  INFO 12312 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 11:02:45.546  INFO 12312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 11:02:45.546  INFO 12312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 11:02:46.100  INFO 12312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 11:02:46.110  INFO 12312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 11:02:46.110  INFO 12312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 11:02:46.154  INFO 12312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 11:02:46.154  INFO 12312 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 608 ms
+2023-11-12 11:02:46.228  INFO 12312 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 11:02:46.311  INFO 12312 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 11:02:46.653  INFO 12312 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 11:02:46.742  INFO 12312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 11:02:46.768  INFO 12312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 11:02:46.775  INFO 12312 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.542 seconds (JVM running for 2.09)
+2023-11-12 11:02:56.555  INFO 12312 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 11:02:56.555  INFO 12312 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 11:02:56.556  INFO 12312 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 11:06:48.428  INFO 12312 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 11:06:48.430  INFO 12312 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 11:06:51.338  INFO 8468 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 8468 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 11:06:51.339  INFO 8468 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 11:06:51.365  INFO 8468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 11:06:51.365  INFO 8468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 11:06:51.879  INFO 8468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 11:06:51.884  INFO 8468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 11:06:51.884  INFO 8468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 11:06:51.910  INFO 8468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 11:06:51.910  INFO 8468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 544 ms
+2023-11-12 11:06:51.978  INFO 8468 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 11:06:52.058  INFO 8468 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 11:06:52.346  INFO 8468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 11:06:52.441  INFO 8468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 11:06:52.460  INFO 8468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 11:06:52.468  INFO 8468 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.331 seconds (JVM running for 1.702)
+2023-11-12 11:06:52.790  INFO 8468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 11:06:52.791  INFO 8468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 11:06:52.792  INFO 8468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 11:12:10.547  WARN 8468 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2023-11-12 11:12:51.779  WARN 8468 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2023-11-12 11:17:13.388  INFO 8468 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 11:17:13.391  INFO 8468 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 11:17:15.918  INFO 8984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 8984 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 11:17:15.919  INFO 8984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 11:17:15.948  INFO 8984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 11:17:15.948  INFO 8984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 11:17:16.478  INFO 8984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 11:17:16.483  INFO 8984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 11:17:16.483  INFO 8984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 11:17:16.513  INFO 8984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 11:17:16.513  INFO 8984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2023-11-12 11:17:16.581  INFO 8984 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 11:17:16.665  INFO 8984 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 11:17:16.976  INFO 8984 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 11:17:17.073  INFO 8984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 11:17:17.093  INFO 8984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 11:17:17.098  INFO 8984 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.393 seconds (JVM running for 1.77)
+2023-11-12 11:17:24.949  INFO 8984 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 11:17:24.951  INFO 8984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 11:17:24.952  INFO 8984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-12 11:21:14.272  INFO 8984 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 11:21:14.275  INFO 8984 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-12 11:30:17.882  INFO 6880 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Starting DementiaEldlyScreeningPlatformApplication using Java 11.0.19 on DESKTOP-IM2PIA6 with PID 6880 (D:\Project\JAVA\DESP\DESP\target\classes started by 74059 in D:\Project\JAVA\DESP\DESP)
+2023-11-12 11:30:17.883  INFO 6880 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : No active profile set, falling back to 1 default profile: "default"
+2023-11-12 11:30:17.909  INFO 6880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12 11:30:17.909  INFO 6880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12 11:30:18.698  INFO 6880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12 11:30:18.719  INFO 6880 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12 11:30:18.720  INFO 6880 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-11-12 11:30:18.750  INFO 6880 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12 11:30:18.750  INFO 6880 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 841 ms
+2023-11-12 11:30:18.822  INFO 6880 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-12 11:30:18.905  INFO 6880 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-12 11:30:19.266  INFO 6880 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2023-11-12 11:30:19.352  INFO 6880 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12 11:30:19.375  INFO 6880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12 11:30:19.385  INFO 6880 --- [restartedMain] ementiaEldlyScreeningPlatformApplication : Started DementiaEldlyScreeningPlatformApplication in 1.741 seconds (JVM running for 2.134)
+2023-11-12 11:30:34.009  INFO 6880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12 11:30:34.010  INFO 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12 11:30:34.010  INFO 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-11-12 11:31:42.110  INFO 6880 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-12 11:31:42.113  INFO 6880 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

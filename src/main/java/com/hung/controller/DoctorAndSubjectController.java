@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +28,9 @@ public class DoctorAndSubjectController {
 
     @RequestMapping("/query_history_record")
     @ResponseBody
-    public Result queryAllRecordOfDoctor(Integer doctor_id){
+    public Result queryAllRecordOfDoctor(HttpServletRequest request){
+        HttpSession session=request.getSession();
+        String doctor_id=(String) session.getAttribute("weixin_id");
         try {
             Map<String,Object> map=new HashMap<>();
             int subjectNumber=doctorAndSubjectServiceInterface.queryTotalSubjectByDoctorId(doctor_id);
@@ -65,7 +69,7 @@ public class DoctorAndSubjectController {
 
     @RequestMapping("/queryTotalSubjectByDoctorId")
     @ResponseBody
-    public int queryTotalSubjectByDoctorId(@RequestParam Integer doctor_id){
+    public int queryTotalSubjectByDoctorId(@RequestParam String doctor_id){
         return doctorAndSubjectServiceInterface.queryTotalSubjectByDoctorId(doctor_id);
     }
 

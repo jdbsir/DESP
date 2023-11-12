@@ -17,9 +17,8 @@ public class NpiqController {
 
     @RequestMapping("/collect_table_7")
     @ResponseBody
-    public Result insertNpiq(@RequestBody Npiq npiq, @RequestParam Long subject_id,@RequestParam Long unix_timestamp){
+    public Result insertNpiq(@RequestBody Npiq npiq, @RequestParam Long subject_id){
         npiq.setSubjectId(subject_id);
-        npiq.setUnixTimestamp(unix_timestamp);
         return npiqServiceInterface.insetNpiq(npiq);
     }
 

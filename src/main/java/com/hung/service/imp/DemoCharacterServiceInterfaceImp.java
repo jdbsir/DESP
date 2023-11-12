@@ -66,7 +66,7 @@ public class DemoCharacterServiceInterfaceImp implements DemoCharacterServiceInt
     }
 
     @Override
-    public int queryDemoCharacterTotalByDoctorId(Integer doctor_id) {
+    public int queryDemoCharacterTotalByDoctorId(String doctor_id) {
         return demoCharacterMapper.queryDemoCharacterTotalByDoctorId(doctor_id);
     }
 }

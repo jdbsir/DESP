@@ -67,7 +67,7 @@ CREATE TABLE `doctor` (
 DROP TABLE IF EXISTS `doctor_subject`;
 CREATE TABLE `doctor_subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `doctor_id` int(11) NOT NULL,
+  `doctor_id` varchar(255) NOT NULL,
   `id_card` bigint(18) NOT NULL,
   `is_check` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)

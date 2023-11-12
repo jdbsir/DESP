@@ -21,9 +21,9 @@ public interface DoctorAndSubjectMapper extends BaseMapper<DoctorAndSubject> {
     /**
      * 该方法根据医生ID查询此医生下的受试者总数
      * */
-    int queryTotalSubjectByDoctorId(Integer doctor_id);
+    int queryTotalSubjectByDoctorId(String doctor_id);
 
-    List<DoctorAndSubject> queryAllRecordOfDoctor(Integer doctorId);
+    List<DoctorAndSubject> queryAllRecordOfDoctor(String doctorId);
 
 
 }
