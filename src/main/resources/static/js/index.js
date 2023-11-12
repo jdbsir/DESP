@@ -44,8 +44,8 @@
         }
         const subjectNumberText = baseInfo.querySelector(showQSArray[0]);
         const recordNumberText = baseInfo.querySelector(showQSArray[1]);
-        subjectNumberText.innerHTML = data['subject_number'];
-        recordNumberText.innerHTML = data['record_number'];
+        subjectNumberText.innerHTML = data['subject-number'];
+        recordNumberText.innerHTML = data['record-number'];
         subjectNumberText.parentElement.classList.remove('hidden');
         recordNumberText.parentElement.classList.remove('hidden');
         baseInfo.querySelector(hiddenQSArray[0]).parentElement.classList.add('hidden');
@@ -59,22 +59,24 @@
 
         // 记录列表
         const recordList = document.getElementById('record-list');
-        data = data['history_record'];
-        for (let subjectId in data) {
+        data = data['doctorAndSubjects'];
+        for (let i = 0; i < data.length; i++) {
+            let subjectData = data[i];
             let items = [];
-            data[subjectId].forEach((record) => {
+            subjectData.forEach((record) => {
                 items.push(`
                     <li class="item">
                         <a href="/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
                     </li>
                 `);
             });
+
             recordList.appendChild(htmlToNode(`
-                <li class="subject-item" data-subject-id="${subjectId}">
+                <li class="subject-item" data-subject-id="${subjectData['id_card']}">
                     <details>
                         <summary>
-                            <span class="title">${data[subjectId][0]['name']}（${data[subjectId][0]['subject_id']}）</span>
-                            <a href="collect-table-1.html?subject_id=${data[subjectId][0]['subject_id']}" class="add-record">添加</a>
+                            <span class="title">${subjectData[0]['name']}（${subjectData[0]['id_card']}）</span>
+                            <a href="collect-table-1.html?id_card=${subjectData[0]['id_card']}" class="add-record">添加</a>
                         </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>
