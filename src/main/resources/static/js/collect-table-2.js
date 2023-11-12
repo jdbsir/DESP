@@ -44,21 +44,21 @@
             }
         }
 
-        // 转换成正数float
-        const positiveFloatCheckObject = {
+        // 转换成正数int
+        const positiveIntCheckObject = {
             'smoke_year': '吸烟年数',
             'smoke_day': '平均吸烟（支/天）',
             'alcohol_day': '平均饮酒（毫升/天）',
             'drink_tea_day': '平均喝茶（杯/天）',
             'oiltea_day': '平均喝油茶（碗/天）'
         };
-        for (let k in positiveFloatCheckObject) {
+        for (let k in positiveIntCheckObject) {
             let v = data[k];
             if (v !== '' && !positiveFloatCheck(v)) {
-                alert(`${positiveFloatCheckObject[k]}不合法！`);
+                alert(`${positiveIntCheckObject[k]}不合法！`);
                 return undefined;
             }
-            data[k] = v === '' ? '' : parseFloat(v);
+            data[k] = v === '' ? 0 : parseInt(v);
         }
 
         // 发送并处理请求

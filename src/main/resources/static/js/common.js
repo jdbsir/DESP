@@ -484,21 +484,32 @@ function DropdownSelect(title, name, labelArr, valueArr, options) {
     }
 
     function getValue() {
-        const otherInput = getNode().querySelector(`input[name="${name}_other"]`);
-        if (options.otherLabel !== undefined && otherInput !== null && otherInput.required) {
-            return otherInput.value;
-        }
-        const optionArray = getNode().querySelectorAll(`select[name="${name}"] > option[value]`);
         let value = null;
+        const optionArray = getNode().querySelectorAll(`select[name="${name}"] > option[value]`);
         for (let i = 0; i < optionArray.length; i++) {
             if (optionArray[i].selected) {
-                value = optionArray[i].value;
+                value = parseInt(optionArray[i].value);
+                break;
             }
         }
-        if (value !== null && /^[0-9]+$/g.test(value)) {
-            value = parseInt(value);
+
+        // 1. 没有“其他”输入框
+        if (options.otherLabel === undefined) {
+            return value;
         }
-        return value;
+
+        // 2. 有“其他”输入框，但没有选择“其他”
+        const result = {};
+        if (value !== null) {
+            result[name] = value;
+            result[`${name}_other`] = '';
+            return result;
+        }
+
+        // 3. 有“其他”输入框，并且选择“其他”
+        result[name] = getNode().querySelector(`select[name="${name}"] > option[data-other-input="1"]`).innerHTML;
+        result[`${name}_other`] = getNode().querySelector(`input[name="${name}_other"]`).value;
+        return result;
     }
 
     function setValue(k, v) {
@@ -872,8 +883,8 @@ window.collectTableComponent = [
                 ['0', '1', '2'],
                 {id: 'smoke_rate_box', hidden: true}
             ),
-            LeftRightInput('text', '吸烟年数', 'smoke_year', {id: 'smoke_year_box', hidden: true, dataRequired: true}),
-            LeftRightInput('text', '平均吸烟（支/天）', 'smoke_day', {id: 'smoke_day_box', hidden: true, dataRequired: true}),
+            LeftRightInput('number', '吸烟年数', 'smoke_year', {id: 'smoke_year_box', hidden: true, dataRequired: true}),
+            LeftRightInput('number', '平均吸烟（支/天）', 'smoke_day', {id: 'smoke_day_box', hidden: true, dataRequired: true}),
             BinaryRadio('您是否饮酒', '是', '否', 'alcohol_abuse', '1', '0', {controlComponent: '#alcohol_abuse_rate_box #alcohol_type_box #alcohol_day_box'}),
             DropdownSelect(
                 '饮酒频率',
@@ -889,7 +900,7 @@ window.collectTableComponent = [
                 ['0', '1', '2'],
                 {otherLabel: '其他酒类', id: 'alcohol_type_box', required: true, hidden: true}
             ),
-            LeftRightInput('text', '平均饮酒（毫升/天）', 'alcohol_day', {id: 'alcohol_day_box', hidden: true, dataRequired: true}),
+            LeftRightInput('number', '平均饮酒（毫升/天）', 'alcohol_day', {id: 'alcohol_day_box', hidden: true, dataRequired: true}),
             BinaryRadio('您是否喝茶', '是', '否', 'drink_tea', '1', '0', {controlComponent: '#drink_tea_rate_box #drink_tea_day_box'}),
             DropdownSelect(
                 '喝茶频率',
@@ -898,7 +909,7 @@ window.collectTableComponent = [
                 ['0', '1', '2'],
                 {id: 'drink_tea_rate_box', hidden: true}
             ),
-            LeftRightInput('text', '平均喝茶（杯/天，按50毫升杯子为准）', 'drink_tea_day', {id: 'drink_tea_day_box', hidden: true, dataRequired: true}),
+            LeftRightInput('number', '平均喝茶（杯/天，按50毫升杯子为准）', 'drink_tea_day', {id: 'drink_tea_day_box', hidden: true, dataRequired: true}),
             BinaryRadio('您是否喝油茶', '是', '否', 'oiltea', '1', '0', {controlComponent: '#oiltea_rate_box #oiltea_day_box'}),
             DropdownSelect(
                 '喝油茶频率',
@@ -907,7 +918,7 @@ window.collectTableComponent = [
                 ['0', '1', '2'],
                 {id: 'oiltea_rate_box', hidden: true}
             ),
-            LeftRightInput('text', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
+            LeftRightInput('number', '平均喝油茶（碗/天）', 'oiltea_day', {id: 'oiltea_day_box', hidden: true, dataRequired: true}),
             BinaryRadio('您是否有阅读（读书/看报）习惯', '是', '否', 'read_book', '1', '0', {controlComponent: '#read_rate_box'}),
             DropdownSelect(
                 '阅读频率',

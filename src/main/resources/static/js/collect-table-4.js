@@ -87,7 +87,7 @@
                 return undefined;
             }
 
-            if (data['MOCA'] < 26) {
+            if (data['moca'] < 26) {
                 location.href = `/collect-table-5.html${location.search}`;
             } else {
                 location.href = `/collect-table-6.html${location.search}`;

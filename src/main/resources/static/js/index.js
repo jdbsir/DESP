@@ -79,7 +79,7 @@
                     <details>
                         <summary>
                             <span class="title">${records[0]['name']}（${subjectData['id_card']}）</span>
-                            <a href="collect-table-1.html?id_card=${records[0]['id_card']}" class="add-record">添加</a>
+                            <a href="collect-table-1.html?id_card=${subjectData['id_card']}" class="add-record">添加</a>
                         </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>

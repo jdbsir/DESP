@@ -35,7 +35,7 @@
         for (let i = 0; i < npiqChildren.length; i = i + 3) {
             let name = npiqChildren[i].getName();
             let answer = npiqChildren[i].getValue();
-            let sev = answer === 0 ? 0 : npiqChildren[i + 1].getValue();
+            let sev = parseInt(answer === 0 ? 0 : npiqChildren[i + 1].getValue());
             NPISCORE = NPISCORE + Number(answer !== 1 ? 0 : sev + 1);
         }
 
@@ -52,7 +52,7 @@
         for (let i = 0; i < npiqChildren.length; i = i + 3) {
             let name = npiqChildren[i].getName();
             let answer = npiqChildren[i].getValue();
-            let sev = answer === 0 ? 0 : npiqChildren[i + 1].getValue();
+            let sev = parseInt(answer === 0 ? 0 : npiqChildren[i + 1].getValue());
             data[name] = answer;
             data[`${name}SEV`] = sev;
             NPISCORE = NPISCORE + Number(answer === 0 ? 0 : sev + 1);

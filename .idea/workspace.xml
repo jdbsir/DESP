@@ -6,21 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log" beforeDir="false" afterPath="$PROJECT_DIR$/dementia_eld_screening_platform.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/DoctorAndSubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/HealthStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DemoCharacterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DemoCharacterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DoctorAndSubjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/mapper/DoctorAndSubjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/DemoCharacterServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/DemoCharacterServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/DoctorAndSubjectServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/DoctorAndSubjectServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DemoCharacterServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/service/imp/DoctorAndSubjectServiceInterfaceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DemoCharacterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DemoCharacterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DoctorAndSubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.hung.mapper/DoctorAndSubjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/collect-table-7.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +190,7 @@
       <workItem from="1698995284228" duration="2865000" />
       <workItem from="1699168859346" duration="8599000" />
       <workItem from="1699234475005" duration="19435000" />
-      <workItem from="1699321623721" duration="74526000" />
+      <workItem from="1699321623721" duration="78626000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
