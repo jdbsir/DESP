@@ -1444,7 +1444,6 @@ def generate_sql_main(json_data, save_path=None):
     sql_list = []
 
     # 删除所有相关的表的记录
-    sql_list.append('-- 删除所有相关的表的记录')
     table_name_list = [
         'doctor',
         'doctor_subject',
@@ -1459,7 +1458,6 @@ def generate_sql_main(json_data, save_path=None):
     ]
     for table_name in table_name_list:
         sql_list.append('DELETE FROM `{}`;'.format(table_name))
-    sql_list.append('\n')
 
     # 生成SQL语句
     demo_character_delta_id = 1
