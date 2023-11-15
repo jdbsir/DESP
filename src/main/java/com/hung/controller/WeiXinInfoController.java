@@ -31,18 +31,14 @@ public class WeiXinInfoController {
     @RequestMapping("/weixin")
     @ResponseBody
     public Result insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state,HttpServletRequest request) {
-        HttpSession session=request.getSession();
-        session.setAttribute("weixin_id", "2");
-        return Result.success();
-        /*
-        GetWeiXinUserInfo info = new GetWeiXinUserInfo();
-        JSONObject json = info.getJson(code);
-        String weixin_id=json.getString("openid");
+//        GetWeiXinUserInfo info = new GetWeiXinUserInfo();
+//        JSONObject json = info.getJson(code);
+//        String weixin_id=json.getString("openid");
+        String weixin_id = "2";
 
         if ( weixin_id== null) {
             return Result.error("微信授权失败");
         } else {
-            // TODO 把openid存进session，把新医生存入doctor
             List<Doctor> doctors=doctorServiceInterface.queryDoctor(weixin_id);
             if(doctors.isEmpty()){
                 try {
@@ -60,7 +56,7 @@ public class WeiXinInfoController {
             session.setAttribute("weixin_id",weixin_id);
             return Result.success();
 
-        }*/
+        }
     }
     private Map<String, String> getUrlPramNameAndValue(String url){
         String regEx="(\\?|&+)(.+?)=([^&]*)";//匹配参数名和参数值的正则表达式
