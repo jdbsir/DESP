@@ -1,4 +1,5 @@
 import os
+import pdb
 import unittest
 import pymysql
 import requests
@@ -19,6 +20,7 @@ class Config(object):
         'index': '/index.html',
         'login': '/weixin',
         'query_history_record': '/query_history_record',
+        'search': '/queryAllRecordOfDoctorByObscure',
         'query_demo_character': '/query_demo_character',
         'query_life_style': '/query_life_style',
         'query_health_statu': '/query_health_statu',
@@ -93,10 +95,14 @@ class TestCase(unittest.TestCase):
         url = Config.get_route('login') + '?code=123456&state=STATE'
         response = self.client_session.get(url)
         self.assertTrue(response.status_code == 200)
-        self.assertTrue(response.json.get('code', 0) == 1)
+        self.assertTrue(response.json().get('code', 0) == 1)
 
     def is_login(self):
         url = Config.get_route('query_history_record')
         response = self.client_session.get(url)
         self.assertTrue(response.status_code == 200)
-        return response.json.get('code', 0) == 1
+        try:
+            response_json = response.json()
+        except requests.exceptions.JSONDecodeError:
+            return False
+        return response_json.get('code', 0) == 1
