@@ -1,4 +1,5 @@
 import os
+import pdb
 import unittest
 import pymysql
 import requests
@@ -19,14 +20,15 @@ class Config(object):
         'index': '/index.html',
         'login': '/weixin',
         'query_history_record': '/query_history_record',
-        'query_demo_character': '/query_demo_character',
-        'query_life_style': '/query_life_style',
-        'query_health_statu': '/query_health_statu',
-        'query_moca': '/query_moca',
-        'query_mmse': '/query_mmse',
-        'query_gdscale': '/query_gdscale',
-        'query_npiq': '/query_npiq',
-        'query_adl': '/query_adl',
+        'search': '/queryAllRecordOfDoctorByObscure',
+        'query_demo_character': '/queryDemoCharacterById',
+        'query_life_style': '/querylifestyle',
+        'query_health_statu': '/queryhealth',
+        'query_moca': '/querymoca',
+        'query_mmse': '/querymmse',
+        'query_gdscale': '/querygdscale',
+        'query_npiq': '/querynpiq',
+        'query_adl': '/queryadl',
         'insert_1': '/collect_table_1',
         'insert_2': '/collect_table_2',
         'insert_3': '/collect_table_3',
@@ -77,7 +79,6 @@ class TestCase(unittest.TestCase):
         for table_name in table_name_list:
             cursor.execute('DELETE FROM `{}`;'.format(table_name))
         self.db.commit()
-        cursor.close()
 
     def generate_test_data(self, doctor_number=4):
         json_data = generate_json_main(doctor_number)
@@ -86,17 +87,20 @@ class TestCase(unittest.TestCase):
         for sql in sql_list:
             cursor.execute(sql)
         self.db.commit()
-        cursor.close()
         return json_data
     
     def login(self):
         url = Config.get_route('login') + '?code=123456&state=STATE'
         response = self.client_session.get(url)
         self.assertTrue(response.status_code == 200)
-        self.assertTrue(response.json.get('code', 0) == 1)
+        self.assertTrue(response.json().get('code', 0) == 1)
 
     def is_login(self):
         url = Config.get_route('query_history_record')
         response = self.client_session.get(url)
         self.assertTrue(response.status_code == 200)
-        return response.json.get('code', 0) == 1
+        try:
+            response_json = response.json()
+        except requests.exceptions.JSONDecodeError:
+            return False
+        return response_json.get('code', 0) == 1

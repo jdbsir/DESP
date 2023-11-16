@@ -216,8 +216,8 @@ def generate_nutrient():
 def generate_smoke():
     smoke = random.randint(0, 1)
     smoke_rate = 0
-    smoke_year = ''
-    smoke_day = ''
+    smoke_year = 0
+    smoke_day = 0
     if smoke == 1:
         smoke_rate = random.randint(0, 2)
         smoke_year = random.randint(1, 40)
@@ -230,7 +230,7 @@ def generate_alcohol_abuse():
     alcohol_abuse_rate = 0
     alcohol_type = '000'
     alcohol_type_other = ''
-    alcohol_day = ''
+    alcohol_day = 0
     if alcohol_abuse == 1:
         alcohol_abuse_rate = random.randint(0, 2)
         alcohol_type = ''.join([str(random.randint(0, 1)) for i in range(3)])
@@ -242,7 +242,7 @@ def generate_alcohol_abuse():
 def generate_drink_tea():
     drink_tea = random.randint(0, 1)
     drink_tea_rate = 0
-    drink_tea_day = ''
+    drink_tea_day = 0
     if drink_tea == 1:
         drink_tea_rate = random.randint(0, 2)
         drink_tea_day = random.randint(1, 10)
@@ -252,7 +252,7 @@ def generate_drink_tea():
 def generate_oiltea():
     oiltea = random.randint(0, 1)
     oiltea_rate = 0
-    oiltea_day = ''
+    oiltea_day = 0
     if oiltea == 1:
         oiltea_rate = random.randint(0, 2)
         oiltea_day = random.randint(1, 5)
@@ -1444,7 +1444,6 @@ def generate_sql_main(json_data, save_path=None):
     sql_list = []
 
     # 删除所有相关的表的记录
-    sql_list.append('-- 删除所有相关的表的记录')
     table_name_list = [
         'doctor',
         'doctor_subject',
@@ -1459,7 +1458,6 @@ def generate_sql_main(json_data, save_path=None):
     ]
     for table_name in table_name_list:
         sql_list.append('DELETE FROM `{}`;'.format(table_name))
-    sql_list.append('\n')
 
     # 生成SQL语句
     demo_character_delta_id = 1

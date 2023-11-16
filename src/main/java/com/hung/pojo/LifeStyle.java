@@ -93,7 +93,7 @@ public class LifeStyle {
     private String recreationalActivitiesOther;//其他文娱活动
     private String social;//社交活动
     @TableField("social_other")
-    private String social_other;//其他社交活动
+    private String socialOther;//其他社交活动
     @TableField("personal_relationship")
     private Integer personalRelationship;//与子女的关系
 
