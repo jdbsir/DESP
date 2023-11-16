@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://172.29.23.250:4080/desp?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: $|OW##S>k'9w
     type: com.alibaba.druid.pool.DruidDataSource #引入自定义的Druid数据源
     druid:
       initial-size: 5
