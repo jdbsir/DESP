@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-09.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-10.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-12.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESP.log" beforeDir="false" afterPath="$PROJECT_DIR$/DESP.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hung/MapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hung/MapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +39,13 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Environment\Maven\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Environment/Maven/apache-maven-3.9.4" />
-        <option name="userSettingsFile" value="D:\Environment\Maven\apache-maven-3.9.4\conf\settings.xml" />
+        <option name="localRepository" value="D:\log\maven\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../log/maven" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\log\maven\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="vmOptionsForImporter" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
-      </MavenImportingSettings>
-    </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
   <component name="ProjectId" id="2WYlq9AxTkQ5QaiihCA50iEPnfA" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -64,35 +54,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/JAVA/DESP/DESP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\JAVA\DESP\DESP" />
@@ -135,6 +108,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MapperTest.testDe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DementiaEldlyScreeningPlatform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hung" />
+      <option name="MAIN_CLASS_NAME" value="com.hung.MapperTest" />
+      <option name="METHOD_NAME" value="testDe" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MapperTest.testDoctorAndSubjectController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DementiaEldlyScreeningPlatform" />
       <extension name="coverage">
@@ -151,16 +140,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MapperTest.testEncrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DementiaEldlyScreeningPlatform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hung" />
+      <option name="MAIN_CLASS_NAME" value="com.hung.MapperTest" />
+      <option name="METHOD_NAME" value="testEncrypt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DementiaEldlyScreeningPlatformApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="DementiaEldlyScreeningPlatform" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hung.DementiaEldlyScreeningPlatformApplication" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MapperTest.testDe" />
+        <item itemvalue="JUnit.MapperTest.testEncrypt" />
         <item itemvalue="JUnit.MapperTest.testDoctorAndSubjectController" />
         <item itemvalue="JUnit.MapperTest.testDASQuery" />
         <item itemvalue="JUnit.DementiaEldlyScreeningPlatformApplicationTests.test1" />
@@ -195,6 +202,8 @@
       <workItem from="1699321623721" duration="82069000" />
       <workItem from="1700036377550" duration="3320000" />
       <workItem from="1700117911819" duration="2302000" />
+      <workItem from="1700123196450" duration="79000" />
+      <workItem from="1700123285086" duration="2914000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
