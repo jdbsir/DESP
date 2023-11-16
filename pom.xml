@@ -60,8 +60,9 @@
 
         <!--数据库相关 -->
         <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-mxj-db-files</artifactId>
+            <version>5.0.12</version>
             <scope>runtime</scope>
         </dependency>
         <!-- 引入druid线程池-->
