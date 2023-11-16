@@ -1,8 +1,10 @@
 __pycache__/
-.idea/
+.ieda
+.idea/*
 .idea/workspace.xml
 DESP.log
 target/
 tmp.py
 src/test/python/unit_test/venv
 src/test/python/unit_test/start.ps1
+src/test/java/com/hung/*

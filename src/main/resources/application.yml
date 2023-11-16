@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://172.29.23.250:4080/desp?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
-    password: $|OW##S>k'9w
+    password: ENC(4ZYAtqsPID+Ve4RpjMxJAEw8sZuv4UTZ)
     type: com.alibaba.druid.pool.DruidDataSource #引入自定义的Druid数据源
     druid:
       initial-size: 5
@@ -26,6 +26,7 @@ spring:
       validation-query: select 'x'
       test-on-borrow: false
       test-on-return: false
+
 
 mybatis-plus:
   configuration:
@@ -41,4 +42,9 @@ logging:
   file:
     name: DESP.log
 
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    password: DESP
 
