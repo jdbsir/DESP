@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e82fc80-da95-4a58-a14c-1c2cb87d4f32" name="Changes" comment="收集表1第一部分-插入代码修改">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-09.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-10.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-12.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementia_eld_screening_platform.log.2023-11-14.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/pojo/LifeStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESP.log" beforeDir="false" afterPath="$PROJECT_DIR$/DESP.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +189,7 @@
       <workItem from="1699321623721" duration="82069000" />
       <workItem from="1700036377550" duration="3320000" />
       <workItem from="1700117911819" duration="2302000" />
+      <workItem from="1700129053536" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="添加DESP项目">
       <option name="closed" value="true" />
