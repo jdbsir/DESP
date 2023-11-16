@@ -1,5 +1,7 @@
 __pycache__/
 .idea/
+.idea/workspace.xml
+DESP.log
 target/
 tmp.py
 src/test/python/unit_test/venv
