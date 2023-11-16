@@ -488,9 +488,12 @@ function DropdownSelect(title, name, labelArr, valueArr, options) {
         const optionArray = getNode().querySelectorAll(`select[name="${name}"] > option[value]`);
         for (let i = 0; i < optionArray.length; i++) {
             if (optionArray[i].selected) {
-                value = parseInt(optionArray[i].value);
+                value = optionArray[i].value;
                 break;
             }
+        }
+        if (/^[0-9]+$/.test(value)) {
+            value = parseInt(value);
         }
 
         // 1. 没有“其他”输入框
