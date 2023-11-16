@@ -1,4 +1,5 @@
 import pdb
+import json
 from collections import OrderedDict
 from config import Config, TestCase
 from generate_sql_data import generate_json_main
@@ -44,7 +45,6 @@ class TestInsertRecord(TestCase):
         data = generate_json_main(2)[1]
         id_card = list(data.keys())[0]
         record = data[id_card][0]
-        pdb.set_trace()
 
         demo_character_id = None
         for route_name, table_name in self.insert_route_mapping.items():
@@ -54,10 +54,13 @@ class TestInsertRecord(TestCase):
                 url = url + '?subject_id={}'.format(demo_character_id)
             else:
                 client_record['id_card'] = id_card
-            response = self.client_session.post(url, client_record)
+            response = self.client_session.post(url, json.dumps(client_record), headers={
+                'Content-Type': 'application/json'
+            })
             self.assertTrue(response.status_code == 200)
             self.assertTrue(response.json().get('code', 0) == 1)
 
+            pdb.set_trace()
             keys = ', '.join([f'`{k}`' for k in client_record.keys()])
 
             if table_name == 'demo_character':

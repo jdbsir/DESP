@@ -7,7 +7,7 @@ from test_insert_record import TestInsertRecord
 if __name__ == '__main__':
     # 运行所有单元测试
     """
-    tests = unittest.TestLoader().discover('.', pattern='test_history_record.py')
+    tests = unittest.TestLoader().discover('.', pattern='test_homepage.py')
     unittest.TextTestRunner(verbosity=2).run(tests)
     """
 
