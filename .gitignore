@@ -7,4 +7,4 @@ target/
 tmp.py
 src/test/python/unit_test/venv
 src/test/python/unit_test/start.ps1
-src/test/java/com/hung/*
+src/test/java/com/hung/*git
