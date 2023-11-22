@@ -32,11 +32,10 @@ public class WeiXinInfoController {
     @RequestMapping("/weixin")
     @ResponseBody
     public Result insertWeiXinInfoFromURL(@RequestParam String code,@RequestParam String state,HttpServletRequest request) {
-//        GetWeiXinUserInfo info = new GetWeiXinUserInfo();
-//        JSONObject json = info.getJson(code);
-//        String weixin_id=json.getString("openid");
-        System.out.println(code);
-        String weixin_id = "2";
+        GetWeiXinUserInfo info = new GetWeiXinUserInfo();
+        JSONObject json = info.getJson(code);
+        String weixin_id=json.getString("openid");
+//        String weixin_id = "2";
 
         if ( weixin_id== null) {
             return Result.error("微信授权失败");
