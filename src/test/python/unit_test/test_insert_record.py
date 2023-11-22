@@ -1,4 +1,5 @@
 import pdb
+import json
 from collections import OrderedDict
 from config import Config, TestCase
 from generate_sql_data import generate_json_main
@@ -44,7 +45,6 @@ class TestInsertRecord(TestCase):
         data = generate_json_main(2)[1]
         id_card = list(data.keys())[0]
         record = data[id_card][0]
-        pdb.set_trace()
 
         demo_character_id = None
         for route_name, table_name in self.insert_route_mapping.items():
@@ -54,13 +54,19 @@ class TestInsertRecord(TestCase):
                 url = url + '?subject_id={}'.format(demo_character_id)
             else:
                 client_record['id_card'] = id_card
-            response = self.client_session.post(url, client_record)
+            if table_name in ['moca', 'mmse', 'gdscale', 'npiq', 'adl']:
+                post_data = json.dumps({k.lower():v for k, v in client_record.items()})
+            else:
+                post_data = json.dumps(client_record)
+            response = self.client_session.post(url, post_data, headers={
+                'Content-Type': 'application/json'
+            })
             self.assertTrue(response.status_code == 200)
             self.assertTrue(response.json().get('code', 0) == 1)
-
-            keys = ', '.join([f'`{k}`' for k in client_record.keys()])
+            self.db.commit()
 
             if table_name == 'demo_character':
+                keys = ', '.join([f'`{k}`' for k in client_record.keys() if k != 'id_card'])
                 response_data = response.json().get('data')
                 self.assertTrue(response_data is not None)
                 cursor.execute('SELECT COUNT(*) FROM `doctor_subject`;')
@@ -68,14 +74,16 @@ class TestInsertRecord(TestCase):
                 cursor.execute('SELECT `id`, `id_card`, {} FROM `demo_character`;'.format(keys))
                 sql_record = cursor.fetchone()
                 demo_character_id = sql_record[0]
-                self.assertTrue(id_card == sql_record[1])
-                self.assertTrue(response_data.get('subject_id') == demo_character_id)
-                for i, k in enumerate(keys):
-                    self.assertTrue(client_record[k] == sql_record[i + 2])
+                self.assertTrue(id_card == str(sql_record[1]))
+                self.assertTrue(response_data.get('id') == demo_character_id)
+                client_record.pop('id_card')
+                for i, (k, v) in enumerate(client_record.items()):
+                    self.assertTrue(v == sql_record[i + 2])
             else:
-                cursor.execute('SELECT `subject_id`, {} FROM `{}`;'.format(keys, teble_name))
+                keys = ', '.join([f'`{k}`' for k in client_record.keys()])
+                cursor.execute('SELECT `subject_id`, {} FROM `{}`;'.format(keys, table_name))
                 sql_record = cursor.fetchone()
                 self.assertTrue(demo_character_id == sql_record[0])
-                for i, k in enumerate(keys):
+                for i, (k, v) in enumerate(client_record.items()):
                     self.assertTrue(client_record[k] == sql_record[i + 1])
         cursor.close()

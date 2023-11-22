@@ -1520,5 +1520,5 @@ if __name__ == '__main__':
         if count > 1:
             raise Exception('函数定义名称冲突：{}。定义次数：{}'.format(funcname, count))
 
-    # 测试
+    # 生成json格式的数据和SQL代码
     main()
