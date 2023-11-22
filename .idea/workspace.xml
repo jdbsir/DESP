@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccdc6d39-efc4-458f-96f3-cae4b80bc924" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/filter/SessionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/filter/SessionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,7 @@
       <updated>1700228035779</updated>
       <workItem from="1700228059892" duration="732000" />
       <workItem from="1700228797861" duration="11454000" />
-      <workItem from="1700656353669" duration="1096000" />
+      <workItem from="1700656353669" duration="2356000" />
     </task>
     <servers />
   </component>
