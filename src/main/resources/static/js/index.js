@@ -18,7 +18,7 @@
         connectWeiXin();
 
         const searchIdCard = parseQueryParam()['id_card'];
-        let url = '/query_history_record';
+        let url = '/test/query_history_record';
         let searchResult = false;
         if (searchIdCard !== undefined) {
             url = `/test/queryAllRecordOfDoctorByObscure?id_card=${searchIdCard}`;
@@ -79,7 +79,7 @@
                     <details>
                         <summary>
                             <span class="title">${records[0]['name']}（${subjectData['id_card']}）</span>
-                            <a href="collect-table-1.html?id_card=${subjectData['id_card']}" class="add-record">添加</a>
+                            <a href="/test/collect-table-1.html?id_card=${subjectData['id_card']}" class="add-record">添加</a>
                         </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>

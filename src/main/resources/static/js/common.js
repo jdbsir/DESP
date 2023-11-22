@@ -130,13 +130,13 @@ function setReadonlyForm() {
     nextPageButton.addEventListener('click', (e) => {
         const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
         if (tableIndex === 8) {
-            location.href = '/';
+            location.href = '/test/index.html';
         } else if (tableIndex === 4) {
             const mocaScore = parseInt(document.querySelector('form .show-score-box .text').innerHTML);
             const nextTableIndex = mocaScore < 26 ? 5 : 6;
-            location.href = `collect-table-${nextTableIndex}.html${location.search}`;
+            location.href = `/test/collect-table-${nextTableIndex}.html${location.search}`;
         } else {
-            location.href = `collect-table-${tableIndex + 1}.html${location.search}`;
+            location.href = `/test/collect-table-${tableIndex + 1}.html${location.search}`;
         }
     });
 }
