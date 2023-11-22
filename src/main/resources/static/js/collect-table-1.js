@@ -82,7 +82,7 @@
             const qp = appendQueryParam({
                 'subject_id': response.data.id
             });
-            location.href = `/collect-table-2.html?${qp}`;
+            location.href = `/test/collect-table-2.html?${qp}`;
         });
     }
 })();

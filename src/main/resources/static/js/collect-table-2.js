@@ -65,7 +65,7 @@
         const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/collect-table-3.html${location.search}`;
+                location.href = `/test/collect-table-3.html${location.search}`;
             } else {
                 alert(response.msg);
             }

@@ -192,7 +192,7 @@ function renderCollectTable() {
     // 添加“返回主页”按钮
     const backHomepageButton = htmlToNode(`
         <div class="collect-table-back-homepage">
-            <a href="/index.html">返回主页</a>
+            <a href="/test/index.html">返回主页</a>
         </div>
     `);
     document.getElementById('app').insertBefore(backHomepageButton, form);
@@ -744,7 +744,7 @@ function queryCollectTable() {
     ];
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     const subjectId = tableIndex === 1 ? 'id' : 'subject_id';
-    const url = `/${routeMapping[tableIndex - 1]}?${subjectId}=${parseQueryParam()['id']}`;
+    const url = `/test/${routeMapping[tableIndex - 1]}?${subjectId}=${parseQueryParam()['id']}`;
     return ajaxGetJson(url).then((response) => {
         let data = {};
         if (response.code === 1) {

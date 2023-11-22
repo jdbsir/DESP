@@ -88,9 +88,9 @@
             }
 
             if (data['moca'] < 26) {
-                location.href = `/collect-table-5.html${location.search}`;
+                location.href = `/test/collect-table-5.html${location.search}`;
             } else {
-                location.href = `/collect-table-6.html${location.search}`;
+                location.href = `/test/collect-table-6.html${location.search}`;
             }
         });
     }
