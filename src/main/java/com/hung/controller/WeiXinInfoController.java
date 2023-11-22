@@ -24,6 +24,7 @@ import javax.servlet.http.HttpSession;
 
 @Slf4j
 @Controller
+@RequestMapping("/test")
 public class WeiXinInfoController {
     @Autowired
     private DoctorServiceInterface doctorServiceInterface;
@@ -34,6 +35,7 @@ public class WeiXinInfoController {
 //        GetWeiXinUserInfo info = new GetWeiXinUserInfo();
 //        JSONObject json = info.getJson(code);
 //        String weixin_id=json.getString("openid");
+        System.out.println(code);
         String weixin_id = "2";
 
         if ( weixin_id== null) {
@@ -44,7 +46,7 @@ public class WeiXinInfoController {
                 try {
                     int resultForInsertDoctor=doctorServiceInterface.insertDoctor(weixin_id);
                     if(resultForInsertDoctor<1){
-                        return Result.error("医生数据保持未成功，请重新进入");
+                        return Result.error("医生数据保存未成功，请重新进入");
                     }
                 }catch (Exception e){
                     log.error("插入异常信息如下:"+e.getMessage(),e);

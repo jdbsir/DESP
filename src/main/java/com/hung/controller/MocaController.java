@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping("/test")
 public class MocaController {
     @Autowired
     private MocaServiceInterface mocaServiceInterface;

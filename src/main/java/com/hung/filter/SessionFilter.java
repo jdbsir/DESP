@@ -9,7 +9,7 @@ import java.io.IOException;
 
 @WebFilter(filterName = "sessionFilter",urlPatterns = "/*")
 public class SessionFilter implements Filter {
-    private String[] filterExclusionUrls={"/test/index.html","/index.html","/favicon.ico","/test/css/pico.min.css","/test/css/index.css","/test/css/common.css","/test/js/common.js","/test/js/index.js","/weixin"};
+    private String[] filterExclusionUrls={"/test/index.html","/index.html","/favicon.ico","/test/css/pico.min.css","/test/css/index.css","/test/css/common.css","/test/js/common.js","/test/js/index.js","/test/weixin"};
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {

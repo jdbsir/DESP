@@ -21,7 +21,7 @@ import java.util.List;
  * */
 @Slf4j
 @Controller
-@RequestMapping
+@RequestMapping("/test")
 public class DemoCharacterController {
     @Autowired
     private DemoCharacterServiceInterface demoCharacterServiceInterface;

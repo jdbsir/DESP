@@ -20,6 +20,7 @@ import java.util.Map;
 
 @Slf4j
 @Controller
+@RequestMapping("/test")
 public class DoctorAndSubjectController {
     @Autowired
     private DoctorAndSubjectServiceInterface doctorAndSubjectServiceInterface;
