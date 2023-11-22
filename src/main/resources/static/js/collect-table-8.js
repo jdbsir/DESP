@@ -54,7 +54,7 @@
         const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
             if (response.code === 1) {
-                location.href = `/`;
+                location.href = `/test/index.html`;
             } else {
                 alert(response.msg);
             }

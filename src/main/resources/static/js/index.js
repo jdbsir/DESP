@@ -21,7 +21,7 @@
         let url = '/query_history_record';
         let searchResult = false;
         if (searchIdCard !== undefined) {
-            url = `/queryAllRecordOfDoctorByObscure?id_card=${searchIdCard}`;
+            url = `/test/queryAllRecordOfDoctorByObscure?id_card=${searchIdCard}`;
             searchResult = true;
         }
         ajaxGetJson(url).then((response) => {
@@ -69,7 +69,7 @@
             records.forEach((record) => {
                 items.push(`
                     <li class="item">
-                        <a href="/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
+                        <a href="/test/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
                     </li>
                 `);
             });
@@ -105,11 +105,11 @@
     }
 
     function addNewSubject(e) {
-        location.href = '/collect-table-1.html';
+        location.href = '/test/collect-table-1.html';
     }
 
     function backHomepage(e) {
-        location.href = '/index.html';
+        location.href = '/test/index.html';
     }
 
     function connectWeiXin() {
@@ -118,11 +118,11 @@
             return undefined;
         }
 
-        ajaxGetJson('/weixin' + location.search).then((response) => {
+        ajaxGetJson('/test/weixin' + location.search).then((response) => {
             if (response.code === 0) {
                 alert(response.msg);
             } else {
-                location.assign('/index.html');
+                location.assign('/test/index.html');
             }
         });
     }
@@ -131,6 +131,6 @@
         e.preventDefault();
 
         const form = e.target;
-        location.href = `/index.html?id_card=${form['id_card'].value}`;
+        location.href = `/test/index.html?id_card=${form['id_card'].value}`;
     }
 })();
