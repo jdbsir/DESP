@@ -59,22 +59,29 @@
             document.getElementById('back-homepage').classList.remove('hidden');
         }
 
-        // 记录列表
+        // 渲染记录列表
         const recordList = document.getElementById('record-list');
         data = data['doctorAndSubjects'];
         for (let i = 0; i < data.length; i++) {
+            // 对一个病人的所有记录按时间从新到旧排序
             let subjectData = data[i];
             let items = [];
             let records = subjectData['dem_character_for_index_list'];
+            records.sort((a, b) => {
+                return b['unix_timestamp'] - a['unix_timestamp'];
+            });
+
+            // 生成HTML代码
             records.forEach((record) => {
                 items.push(`
                     <li class="item">
-                        <a href="/test/collect-table-1.html?id=${record['id']}&readonly=1">记录时间：${record['time']}</a>
+                        <a href="/test/collect-table-1.html?id=${record['id']}&readonly=1" class="view-record">记录时间：${record['time']}</a>
                     </li>
                 `);
             });
 
-            recordList.appendChild(htmlToNode(`
+            // 将HTML渲染成元素
+            const subjectItem = htmlToNode(`
                 <li class="subject-item" data-subject-id="${subjectData['id_card']}">
                     <details>
                         <summary>
@@ -84,7 +91,15 @@
                         <ul class="items">${items.join('')}</ul>
                     </details>
                 </li>
+            `);
+
+            // 为病人的最新记录添加“继续填写”按钮
+            subjectItem.querySelector('details .items > .item:first-child').appendChild(htmlToNode(`
+                <a href="/test/collect-table-1.html?id_card=${subjectData['id_card']}" class="continue-fill-btn">继续填写</a>
             `));
+
+            // 添加元素到页面
+            recordList.appendChild(subjectItem);
         }
     }
 
