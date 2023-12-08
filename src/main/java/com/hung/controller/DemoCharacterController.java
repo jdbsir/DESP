@@ -3,8 +3,7 @@ package com.hung.controller;
 import com.hung.common.Result;
 import com.hung.pojo.DemoCharacter;
 import com.hung.pojo.DoctorAndSubject;
-import com.hung.service.DemoCharacterServiceInterface;
-import com.hung.service.DoctorAndSubjectServiceInterface;
+import com.hung.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +27,20 @@ public class DemoCharacterController {
     private DemoCharacterServiceInterface demoCharacterServiceInterface;
     @Autowired
     private DoctorAndSubjectServiceInterface doctorAndSubjectServiceInterface;
+    @Autowired
+    private LifeStyleServiceInterface lifeStyleServiceInterface;
+    @Autowired
+    private HealthStatusServiceInterface healthStatusServiceInterface;
+    @Autowired
+    private MocaServiceInterface mocaServiceInterface;
+    @Autowired
+    private MmseServiceInterface mmseServiceInterface;
+    @Autowired
+    private GdscaleServiceInterface gdscaleServiceInterface;
+    @Autowired
+    private NpiqServiceInterface npiqServiceInterface;
+    @Autowired
+    private AdlServiceInterface adlServiceInterface;
 
     /**
      * 受试者调查数据插入
@@ -65,6 +79,21 @@ public class DemoCharacterController {
     public Result queryDemoCharacterById(@RequestParam Integer id){
         try {
             List<DemoCharacter> demoCharacters=demoCharacterServiceInterface.queryDemoCharacterById(id);
+            List<Result> resultList=new ArrayList<Result>();
+            resultList.add(lifeStyleServiceInterface.queryLife(id.longValue()));
+            resultList.add(healthStatusServiceInterface.queryHealth(id.longValue()));
+            resultList.add(mocaServiceInterface.queryMoca(id.longValue()));
+            resultList.add(mmseServiceInterface.queryMmse(id.longValue()));
+            resultList.add(gdscaleServiceInterface.queryGdscale(id.longValue()));
+            resultList.add(npiqServiceInterface.queryNpiq(id.longValue()));
+            resultList.add(adlServiceInterface.queryAdl(id.longValue()));
+            for(int i =0;i<resultList.size();i++){
+                if(resultList.get(i).getData()!=null){
+                    continue;
+                }
+                int page = i+2;
+                return Result.continueInsert(String.valueOf(page),demoCharacters);
+            }
             return Result.success(demoCharacters);
         }catch (Exception e){
             log.error("查询数据出错，异常如下:"+e.getMessage(),e);

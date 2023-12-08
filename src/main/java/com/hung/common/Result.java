@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Result {
+
     private Integer code;
     private String msg;
     private  Object data;
@@ -24,4 +25,5 @@ public class Result {
     public static  Result error(String msg){//失败响应
         return new Result(0,msg,null);
     }
+    public static  Result continueInsert(String msg,Object data){ return new Result(3,msg,data);}
 }
