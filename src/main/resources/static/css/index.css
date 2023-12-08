@@ -106,10 +106,32 @@
     list-style: none;
 }
 
-#record-list > .subject-item details .items > .item a {
+#record-list > .subject-item details .items > .item .view-record {
     display: block;
     padding: 16px 8px;
     border-top: 1px solid #5bcdf3;
     background-color: #d2f4ff;
     color: #08769b;
+}
+
+#record-list > .subject-item details .items > .item:first-child {
+    position: relative;
+}
+
+#record-list > .subject-item details .items > .item:first-child .continue-fill-btn {
+    position: absolute;
+    top: 12px;
+    right: 23px;
+    width: 84px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: #1095c1;
+    color: #fff;
+    text-align: center;
+    line-height: 33px;
+}
+
+#record-list > .subject-item details .items > .item:first-child .continue-fill-btn:hover {
+    background-color: #08769b;
+    text-decoration: none;
 }
