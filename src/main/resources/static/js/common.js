@@ -747,8 +747,12 @@ function queryCollectTable() {
     const url = `/test/${routeMapping[tableIndex - 1]}?${subjectId}=${parseQueryParam()['id']}`;
     return ajaxGetJson(url).then((response) => {
         let data = {};
-        if (response.code === 1) {
+        if (response.code === 1 && response.data !== null) {
             data = tableIndex === 1 ? response.data[0] : response.data;
+        } else if (response.code === 1 && response.data === null) {
+            // TODO
+            const jumpQueryParam = `?id_card=${response['id_card']}&subject_id=${response['subject_id']}`;
+            location.href = `/test/collect-table-${tableIndex + 1}.html${jumpQueryParam}`;
         } else {
             alert(response.msg);
         }

@@ -95,7 +95,7 @@
 
             // 为病人的最新记录添加“继续填写”按钮
             subjectItem.querySelector('details .items > .item:first-child').appendChild(htmlToNode(`
-                <a href="/test/collect-table-1.html?id_card=${subjectData['id_card']}" class="continue-fill-btn">继续填写</a>
+                <a href="/test/collect-table-1.html?id=${records[0]['id']}&readonly=1" class="continue-fill-btn">继续填写</a>
             `));
 
             // 添加元素到页面
