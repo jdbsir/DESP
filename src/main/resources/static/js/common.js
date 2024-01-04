@@ -81,11 +81,6 @@ function fullCollectTable1(data) {
             continue;
         }
         let node = form.querySelector(`[name="${name}"]`);
-        try {
-            node.parentElement;
-        } catch (err) {
-            debugger;
-        }
         while (node.parentElement.self === undefined) {
             node = node.parentElement;
         }
@@ -744,17 +739,30 @@ function queryCollectTable() {
     ];
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     const subjectId = tableIndex === 1 ? 'id' : 'subject_id';
-    const url = `/test/${routeMapping[tableIndex - 1]}?${subjectId}=${parseQueryParam()['id']}`;
+    const qp = parseQueryParam();
+    const url = `/test/${routeMapping[tableIndex - 1]}?${subjectId}=${qp['id']}`;
     return ajaxGetJson(url).then((response) => {
         let data = {};
-        if (response.code === 1 && response.data !== null) {
-            data = tableIndex === 1 ? response.data[0] : response.data;
-        } else if (response.code === 1 && response.data === null) {
-            // TODO
-            const jumpQueryParam = `?id_card=${response['id_card']}&subject_id=${response['subject_id']}`;
-            location.href = `/test/collect-table-${tableIndex + 1}.html${jumpQueryParam}`;
-        } else {
-            alert(response.msg);
+        const code = response.code;
+        const jumpIndex = qp['jump_index'];
+        /**
+         * response.code in [0, 1, 2]
+         * qp['jump_index'] ===|!== undefined
+         * tableIndex ===|!== 1
+         */
+        if (code === 1 && jumpIndex === undefined && tableIndex !== 1) {
+            data = response.data;
+        } else if (code === 1 && jumpIndex === undefined && tableIndex === 1 ||
+                   code === 2 && jumpIndex !== undefined && tableIndex === 1) {
+            data = response.data[0];
+        } else if (code === 2 && jumpIndex === undefined && tableIndex === 1) {
+            const onlyPath = location.href.split('?', 2)[0];
+            const newSearch = appendQueryParam({'jump_index': jumpIndex});
+            location.href = `${onlyPath}?${newSearch}`;
+        } else if (code === 1 && jumpIndex !== undefined && tableIndex === 0 &&
+                   tableIndex >= parseInt(jumpIndex)) {
+            const search = `subject_id=${qp['id']}`;
+            location.href = `/test/collect-table-${jumpIndex}.html?${search}`;
         }
         return new Promise((resolve, reject) => { resolve(data) });
     });

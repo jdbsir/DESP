@@ -75,7 +75,10 @@
             records.forEach((record) => {
                 items.push(`
                     <li class="item">
-                        <a href="/test/collect-table-1.html?id=${record['id']}&readonly=1" class="view-record">记录时间：${record['time']}</a>
+                        <a href="/test/collect-table-1.html?id=${record['id']}&readonly=1"
+                            class="view-record">
+                            记录时间：${record['time']}
+                        </a>
                     </li>
                 `);
             });
@@ -85,8 +88,13 @@
                 <li class="subject-item" data-subject-id="${subjectData['id_card']}">
                     <details>
                         <summary>
-                            <span class="title">${records[0]['name']}（${subjectData['id_card']}）</span>
-                            <a href="/test/collect-table-1.html?id_card=${subjectData['id_card']}" class="add-record">添加</a>
+                            <span class="title">
+                                ${records[0]['name']}（${subjectData['id_card']}）
+                            </span>
+                            <a href="/test/collect-table-1.html?id_card=${subjectData['id_card']}"
+                                class="add-record">
+                                添加
+                            </a>
                         </summary>
                         <ul class="items">${items.join('')}</ul>
                     </details>
@@ -94,9 +102,14 @@
             `);
 
             // 为病人的最新记录添加“继续填写”按钮
-            subjectItem.querySelector('details .items > .item:first-child').appendChild(htmlToNode(`
-                <a href="/test/collect-table-1.html?id=${records[0]['id']}&readonly=1" class="continue-fill-btn">继续填写</a>
-            `));
+            const continueFillBtn = htmlToNode(`
+                <a href="javascript:;" data-id="${records[0]['id']}" class="continue-fill-btn">
+                    继续填写
+                </a>
+            `)
+            const firstItem = subjectItem.querySelector('details .items > .item:first-child');
+            continueFillBtn.addEventListener('click', continueFill);
+            firstItem.appendChild(continueFillBtn);
 
             // 添加元素到页面
             recordList.appendChild(subjectItem);
@@ -147,5 +160,20 @@
 
         const form = e.target;
         location.href = `/test/index.html?id_card=${form['id_card'].value}`;
+    }
+
+    function continueFill(e) {
+        const id = e.target.getAttribute('data-id');
+        const url = `/test/queryDemoCharacterById?id=${id}`;
+        ajaxGetJson(url).then((response) => {
+            if (response.code === 1) {
+                alert('该记录已填写完毕');
+            } else if (response.code === 2) {
+                const jumpIndex = response.msg;
+                location.href = `/test/collect-table-${jumpIndex}.html?subject_id=${id}`;
+            } else {
+                alert(response.msg);
+            }
+        });
     }
 })();
