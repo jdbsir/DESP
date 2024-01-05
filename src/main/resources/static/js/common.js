@@ -745,11 +745,6 @@ function queryCollectTable() {
         let data = {};
         const code = response.code;
         const jumpIndex = qp['jump_index'];
-        /**
-         * response.code in [0, 1, 2]
-         * qp['jump_index'] ===|!== undefined
-         * tableIndex ===|!== 1
-         */
         if (code === 1 && jumpIndex === undefined && tableIndex !== 1) {
             data = response.data;
         } else if (code === 1 && jumpIndex === undefined && tableIndex === 1 ||
@@ -757,12 +752,15 @@ function queryCollectTable() {
             data = response.data[0];
         } else if (code === 2 && jumpIndex === undefined && tableIndex === 1) {
             const onlyPath = location.href.split('?', 2)[0];
-            const newSearch = appendQueryParam({'jump_index': jumpIndex});
+            const newSearch = appendQueryParam({'jump_index': response.msg});
             location.href = `${onlyPath}?${newSearch}`;
-        } else if (code === 1 && jumpIndex !== undefined && tableIndex === 0 &&
-                   tableIndex >= parseInt(jumpIndex)) {
-            const search = `subject_id=${qp['id']}`;
-            location.href = `/test/collect-table-${jumpIndex}.html?${search}`;
+        } else if (code === 1 && jumpIndex !== undefined && tableIndex !== 1){
+            if (tableIndex >= parseInt(jumpIndex)) {
+                const search = `subject_id=${qp['id']}`;
+                location.href = `/test/collect-table-${jumpIndex}.html?${search}`;
+            } else {
+                data = response.data
+            }
         }
         return new Promise((resolve, reject) => { resolve(data) });
     });
