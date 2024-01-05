@@ -757,7 +757,7 @@ function queryCollectTable() {
             data = response.data[0];
         } else if (code === 2 && jumpIndex === undefined && tableIndex === 1) {
             const onlyPath = location.href.split('?', 2)[0];
-            const newSearch = appendQueryParam({'jump_index': jumpIndex});
+            const newSearch = appendQueryParam({'jump_index': response.msg});
             location.href = `${onlyPath}?${newSearch}`;
         } else if (code === 1 && jumpIndex !== undefined && tableIndex === 0 &&
                    tableIndex >= parseInt(jumpIndex)) {
