@@ -10,4 +10,6 @@ src/test/python/unit_test/start.ps1
 src/test/java/com/hung/*git
 src/main/resources/app.py
 src/main/resources/venv
+DESP.log.*.gz
 src/main/resources/templates/tmp.txt
+

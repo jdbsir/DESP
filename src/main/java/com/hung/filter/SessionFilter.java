@@ -18,7 +18,6 @@ public class SessionFilter implements Filter {
         HttpSession session = httpRequest.getSession();
 
         String url = httpRequest.getRequestURI().substring(httpRequest.getContextPath().length());
-        System.out.println(url);
         if (isFliter(url)) {
             // session内容check
             if (session.getAttribute("weixin_id") != null) {
