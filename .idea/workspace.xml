@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccdc6d39-efc4-458f-96f3-cae4b80bc924" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/AdlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/GdscaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/controller/NpiqController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/collect-table-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <workItem from="1705471338516" duration="1326000" />
       <workItem from="1715587886931" duration="191000" />
       <workItem from="1715588458937" duration="832000" />
-      <workItem from="1716947580839" duration="3422000" />
+      <workItem from="1716947580839" duration="4066000" />
     </task>
     <servers />
   </component>
