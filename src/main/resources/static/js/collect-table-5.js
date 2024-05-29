@@ -61,10 +61,15 @@
         // 发送并处理请求
         const postUrl = `${form.action}${location.search}`;
         ajaxPostJson(postUrl, data).then((response) => {
-            if (response.code === 1) {
-                location.href = `/test/collect-table-6.html${location.search}`;
-            } else {
+            if (response.code === 0) {
                 alert(response.msg);
+                return undefined;
+            }
+
+            if (data['MMSE'] > 21) {
+                location.href = `/test/collect-table-8.html${location.search}`;
+            } else {
+                location.href = `/test/collect-table-6.html${location.search}`;
             }
         });
     }

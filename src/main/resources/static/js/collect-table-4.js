@@ -87,13 +87,11 @@
                 return undefined;
             }
 
-            location.href = `/test/collect-table-5.html${location.search}`;
-
-            // if (data['moca'] < 26) {
-            //     location.href = `/test/collect-table-5.html${location.search}`;
-            // } else {
-            //     location.href = `/test/collect-table-6.html${location.search}`;
-            // }
+            if (data['moca'] > 25) {
+                location.href = `/test/collect-table-8.html${location.search}`;
+            } else {
+                location.href = `/test/collect-table-5.html${location.search}`;
+            }
         });
     }
 })();
