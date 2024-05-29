@@ -3,7 +3,7 @@
 
     // 渲染html
     renderCollectTable();
-    const form = document.querySelector('form[name="adl"]');
+    const form = document.querySelector('form[name="gdscale"]');
     form.addEventListener('submit', submitForm);
 
     // readonly模式
@@ -12,43 +12,48 @@
     // 当勾选、取消勾选一个选项时，实时计算分数
     const showScoreBox = htmlToNode(`
         <div class="show-score-box">
-            <span class="title">ADL分数：</span>
-            <span class="text">14</span>
+            <span class="title">GD分数：</span>
+            <span class="text">0</span>
         </div>
     `);
     form.insertBefore(showScoreBox, document.getElementById('collect-submit-btn'));
-    form.querySelectorAll('select').forEach((select) => {
-        select.addEventListener('change', (e) => {
-            showScoreBox.querySelector('.text').innerHTML = computeADLScore();
+    form.querySelectorAll('input[type="radio"]').forEach((input) => {
+        input.addEventListener('change', (e) => {
+            const data = getFormData();
+            const GDTOTAL = computeGDTotal(data);
+            showScoreBox.querySelector('.text').innerHTML = GDTOTAL;
         });
     });
 
-    function computeADLScore() {
-        let ADLSCORE = 0;
-        const adlChildren = window.collectTableComponent[7].formChildren;
-        for (let i = 0; i < adlChildren.length; i++) {
-            let obj = adlChildren[i];
+    function getFormData() {
+        // 获取表单数据
+        const data = {};
+        const gdscaleChildren = window.collectTableComponent[7].formChildren;
+        for (let i = 0; i < gdscaleChildren.length; i++) {
+            let obj = gdscaleChildren[i];
+            let key = obj.getName();
             let value = obj.getValue();
-            ADLSCORE = ADLSCORE + value + 1;
+            data[key] = value;
         }
 
-        return ADLSCORE;
+        return data;
+    }
+
+    function computeGDTotal(data) {
+        let GDTOTAL = 0;
+        for (let k in data) {
+            GDTOTAL = GDTOTAL + data[k];
+        }
+        return GDTOTAL;
     }
 
     function submitForm(e) {
         e.preventDefault();
 
         // 获取表单数据并计分
-        const data = {};
-        let ADLSCORE = 0;
-        const adlChildren = window.collectTableComponent[7].formChildren;
-        for (let i = 0; i < adlChildren.length; i++) {
-            let obj = adlChildren[i];
-            let value = obj.getValue();
-            data[obj.getName()] = value;
-            ADLSCORE = ADLSCORE + value + 1;
-        }
-        data['adlscore'] = ADLSCORE;
+        let data = getFormData();
+        data['GDTOTAL'] = computeGDTotal(data);
+        data = upperToLower(data);
 
         // 发送并处理请求
         const postUrl = `${form.action}${location.search}`;
