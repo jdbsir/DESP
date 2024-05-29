@@ -16,7 +16,7 @@ public class AdlController {
     @Autowired
     private AdlServiceInterface adlServiceInterface;
 
-    @RequestMapping("/collect_table_8")
+    @RequestMapping("/collect_table_7")
     @ResponseBody
     public Result insertAdl(@RequestBody Adl adl,@RequestParam Long subject_id){
         adl.setSubjectId(subject_id);

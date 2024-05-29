@@ -16,7 +16,7 @@ public class NpiqController {
     @Autowired
     private NpiqServiceInterface npiqServiceInterface;
 
-    @RequestMapping("/collect_table_7")
+    @RequestMapping("/collect_table_6")
     @ResponseBody
     public Result insertNpiq(@RequestBody Npiq npiq, @RequestParam Long subject_id){
         npiq.setSubjectId(subject_id);

@@ -16,7 +16,7 @@ public class GdscaleController {
     @Autowired
     private GdscaleServiceInterface gdscaleServiceInterface;
 
-    @RequestMapping("/collect_table_6")
+    @RequestMapping("/collect_table_8")
     @ResponseBody
     public Result insertGdscale(@RequestBody Gdscale gdscale, @RequestParam Long subject_id){
         gdscale.setSubjectId(subject_id);
