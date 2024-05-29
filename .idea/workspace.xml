@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccdc6d39-efc4-458f-96f3-cae4b80bc924" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESP.log.2023-12-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hung/filter/SessionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hung/filter/SessionFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +83,11 @@
       <workItem from="1701414186889" duration="760000" />
       <workItem from="1701742387008" duration="12724000" />
       <workItem from="1703575414814" duration="1399000" />
-      <workItem from="1704352753648" duration="5337000" />
+      <workItem from="1704352753648" duration="6131000" />
+      <workItem from="1705471338516" duration="1326000" />
+      <workItem from="1715587886931" duration="191000" />
+      <workItem from="1715588458937" duration="832000" />
+      <workItem from="1716947580839" duration="2057000" />
     </task>
     <servers />
   </component>
