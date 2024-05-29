@@ -128,7 +128,11 @@ function setReadonlyForm() {
             location.href = '/test/index.html';
         } else if (tableIndex === 4) {
             const mocaScore = parseInt(document.querySelector('form .show-score-box .text').innerHTML);
-            const nextTableIndex = mocaScore < 26 ? 5 : 6;
+            const nextTableIndex = mocaScore > 25 ? 8 : 5;
+            location.href = `/test/collect-table-${nextTableIndex}.html${location.search}`;
+        } else if (tableIndex === 5) {
+            const mmseScore = parseInt(document.querySelector('form .show-score-box .text').innerHTML);
+            const nextTableIndex = mmseScore > 21 ? 8 : 6;
             location.href = `/test/collect-table-${nextTableIndex}.html${location.search}`;
         } else {
             location.href = `/test/collect-table-${tableIndex + 1}.html${location.search}`;
@@ -140,9 +144,9 @@ function readonlyMode() {
     const scoreKeyMapping = {
         4: 'MOCA',
         5: 'MMSE',
-        6: 'GDTOTAL',
-        7: 'NPISCORE',
-        8: 'adlscore'
+        6: 'NPISCORE',
+        7: 'adlscore',
+        8: 'GDTOTAL'
     };
 
     if (parseQueryParam()['readonly'] !== '1') {
@@ -152,8 +156,12 @@ function readonlyMode() {
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     return queryCollectTable().then((data) => {
         // 把后端响应的字段转换为大写
-        if (tableIndex >= 4 && tableIndex <= 7) {
-            data = lowerToUpper(data);
+        const upperTableIndex = [4, 5, 6, 8];
+        for (let i = 0; i < upperTableIndex.length; i++) {
+            if (upperTableIndex[i] === tableIndex) {
+                data = lowerToUpper(data);
+                break;
+            }
         }
 
         // 渲染表单组件
@@ -733,15 +741,19 @@ function queryCollectTable() {
         'queryhealth',
         'querymoca',
         'querymmse',
-        'querygdscale',
         'querynpiq',
-        'queryadl'
+        'queryadl',
+        'querygdscale'
     ];
     const tableIndex = parseInt(location.pathname.split('-').pop().split('.')[0]);
     const subjectId = tableIndex === 1 ? 'id' : 'subject_id';
     const qp = parseQueryParam();
     const url = `/test/${routeMapping[tableIndex - 1]}?${subjectId}=${qp['id']}`;
     return ajaxGetJson(url).then((response) => {
+        if (tableIndex === 8) {
+            return new Promise((resolve, reject) => { resolve(response.data) });
+        }
+
         let data = {};
         const code = response.code;
         const jumpIndex = qp['jump_index'];

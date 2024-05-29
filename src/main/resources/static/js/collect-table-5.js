@@ -55,7 +55,8 @@
 
         // 整理表单数据
         let data = getFormData();
-        data['MMSE'] = computeMMSEScore(data);
+        const mmse = computeMMSEScore(data);
+        data['MMSE'] = mmse;
         data = upperToLower(data);
 
         // 发送并处理请求
@@ -66,7 +67,7 @@
                 return undefined;
             }
 
-            if (data['MMSE'] > 21) {
+            if (mmse > 21) {
                 location.href = `/test/collect-table-8.html${location.search}`;
             } else {
                 location.href = `/test/collect-table-6.html${location.search}`;
