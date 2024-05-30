@@ -12,6 +12,23 @@
     // readonly模式
     readonlyMode();
 
+    // 当填写了身份证号时，自动填充出生年月、性别
+    const idCardInput = document.getElementById('id_card');
+    idCardInput.addEventListener('change', autoFillByIdCard);
+
+    function autoFillByIdCard(e) {
+        const idCard = idCardInput.value;
+
+        // 自动填充出生年月：第7-14位表示出生年月日
+        const year = idCard.slice(6, 10);
+        const month = borthday.slice(10, 12);
+        document.getElementById('born_date').value = year + '-' + month;
+
+        // 自动填充性别：第17位为奇数表示男，偶数表示女
+        const fillRadioId = parseInt(idCard[16]) % 2 == 0 ? 'gender_woman' : 'gender_man';
+        document.getElementById(fillRadioId).click();
+    }
+
     function submitForm(e) {
         e.preventDefault();
 
