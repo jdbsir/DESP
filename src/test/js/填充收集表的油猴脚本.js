@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        */collect-table-*.html*
+// @match        */test/collect-table-*.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
 // @grant        unsafeWindow
 // @grant        none
@@ -16,7 +16,7 @@
 
     const data = [
         {
-            "subject_id": "450127199401011106",
+            "id_card": "450127199401011106",
             "name": "谢基悦",
             "gender": "man",
             "born_date": "1999-10",
@@ -60,14 +60,14 @@
             "alcohol_abuse_rate": 2,
             "alcohol_type": "101",
             "alcohol_type_other": "",
-            "alcohol_day": 6.667,
+            "alcohol_day": 6,
             "drink_tea": 1,
             "drink_tea_rate": 2,
             "drink_tea_day": 1,
             "oiltea": 0,
             "oiltea_rate": 0,
             "oiltea_day": "",
-            "read": 0,
+            "read_book": 0,
             "read_rate": 0,
             "watch_tv": 0,
             "watch_tv_rate": 0,
@@ -178,38 +178,6 @@
             "MMDRAW": 1
         },
         {
-            "GDSATIS": 0,
-            "GDDROP": 1,
-            "GDEMPTY": 0,
-            "GDBORED": 1,
-            "GDSPIRIT": 0,
-            "GDMIND": 1,
-            "GDENERGY": 1,
-            "GDAFRAID": 1,
-            "GDHAPPY": 1,
-            "GDHELP": 1,
-            "GDFIDGET": 1,
-            "GDHOME": 1,
-            "GDFUTURE": 1,
-            "GDMEMORY": 1,
-            "GDALIVE": 1,
-            "GDDEPRESSED": 1,
-            "GDMEANINGLESS": 1,
-            "GDWORRY": 1,
-            "GDEXCITING": 0,
-            "GDNEWJOB": 0,
-            "GDVITALITY": 0,
-            "GDHOPE": 0,
-            "GDBETTER": 1,
-            "GDSAD": 1,
-            "GDCRYING": 0,
-            "GDCONCENTRATE": 0,
-            "GDMORNING": 0,
-            "GDPARTY": 0,
-            "GDDECISION": 1,
-            "GDCLEAR": 0
-        },
-        {
             "NPIA": 1,
             "NPIASEV": 1,
             "NPIB": 1,
@@ -250,6 +218,38 @@
             "bathroom": 3,
             "phone": 3,
             "money": 0
+        },
+        {
+            "GDSATIS": 0,
+            "GDDROP": 1,
+            "GDEMPTY": 0,
+            "GDBORED": 1,
+            "GDSPIRIT": 0,
+            "GDMIND": 1,
+            "GDENERGY": 1,
+            "GDAFRAID": 1,
+            "GDHAPPY": 1,
+            "GDHELP": 1,
+            "GDFIDGET": 1,
+            "GDHOME": 1,
+            "GDFUTURE": 1,
+            "GDMEMORY": 1,
+            "GDALIVE": 1,
+            "GDDEPRESSED": 1,
+            "GDMEANINGLESS": 1,
+            "GDWORRY": 1,
+            "GDEXCITING": 0,
+            "GDNEWJOB": 0,
+            "GDVITALITY": 0,
+            "GDHOPE": 0,
+            "GDBETTER": 1,
+            "GDSAD": 1,
+            "GDCRYING": 0,
+            "GDCONCENTRATE": 0,
+            "GDMORNING": 0,
+            "GDPARTY": 0,
+            "GDDECISION": 1,
+            "GDCLEAR": 0
         }
     ];
 
