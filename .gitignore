@@ -13,3 +13,6 @@ src/main/resources/venv
 DESP.log.*.gz
 src/main/resources/templates/tmp.txt
 MavenRepository
+
+pom.xml
+src/main/resources/application.yml
